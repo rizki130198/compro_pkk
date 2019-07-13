@@ -11,10 +11,9 @@
 				<div class="responsive-menu"></div>
 				<div class="mainmenu">
 					<ul id="primary-menu">
-						<li><a class="nav-link active" href="#home">Beranda</a></li>
-						<li><a class="nav-link" href="#blog">Berita</a></li>
-						<li><a class="nav-link" href="">Tentang Kami</a></li>
-						<li><a class="nav-link" href="#contact">Hubungi Kami</a></li>
+						<?php foreach ($menu as $key): ?>
+							<li><a class="nav-link" href="#<?=$key->menu?>"><?=$key->menu?></a></li>
+						<?php endforeach ?>
 					</ul>
 				</div>
 			</div>

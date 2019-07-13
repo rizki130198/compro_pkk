@@ -6,6 +6,12 @@ class Main extends CI_Controller {
 	{
 		$data['title'] = 'Selamat Datang di Company Profile PKK - Home';
 		$data['link_view'] = 'pages/home';
+		$data['home'] = $this->first_model->getHome();
+		$data['post'] = $this->first_model->getPost();
+		$data['menu'] = $this->first_model->getMenu();
+		$data['submenu'] = $this->first_model->getSubmenu();
+		$data['tentang'] = $this->first_model->getTentang();
+
 		$this->load->view('utama',$data);
 	}
 	public function login()
@@ -13,9 +19,45 @@ class Main extends CI_Controller {
 		$data['title'] = 'Login PKK';
 		$this->load->view('pages/login',$data);
 	}
+	public function ajaxPaging($rownum = 0)
+	{
+		$this->load->library('pagination');
+
+		$config['use_page_numbers'] = TRUE;
+        $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination">';
+        $config['full_tag_close']   = '</ul></nav></div>';
+        $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
+        $config['num_tag_close']    = '</span></li>';
+        $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
+        $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+        $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['next_tag_close']  = '<span aria-hidden="true"></span></span></li>';
+        $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['prev_tag_close']  = '</span></li>';
+        $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
+        $config['first_tag_close'] = '</span></li>';
+        $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
+        $config['last_tag_close']  = '</span></li>';
+
+		$config['base_url'] = base_url('main/ajaxPaging');
+		$config['total_rows'] = $this->first_model->getPagingBerita();
+		$config['per_page'] = 6;
+
+		$this->pagination->initialize($config);
+		$data['row'] = $rownum;
+		$data['result'] = $this->first_model->getPostPaging($config['per_page'],$rownum);
+		$data['pagination'] =  $this->pagination->create_links();
+
+		echo json_encode($data);
+		
+	}
 	public function page_not_found()
 	{
 		$data['title'] = "404 PAGE NOT FOUND";
 		$this->load->view('not_found',$data);
+	}
+	public function actlogin()
+	{
+		$this->first_model->login();
 	}
 }
