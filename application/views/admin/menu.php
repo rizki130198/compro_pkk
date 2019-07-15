@@ -4,11 +4,11 @@
 			<div class="col-md-12">
 				<a href="<?=site_url('tambah_menu')?>" class="btn btn-primary">Tambah Menu</a>
 				<div class="card">
-					<div class="card-header card-header-primary">
+					<div class="card-header" data-background-color="purple">
 						<h4 class="card-title ">Data menu</h4>
 						<p class="card-category"> Isi dari menu Company Profile</p>
 					</div>
-					<div class="card-body">
+					<div class="card-content">
 						<div class="table-responsive">
 							<table class="table">
 								<thead class=" text-primary">

@@ -48,6 +48,7 @@
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <!-- Slick JS -->
     <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
     <!-- owl carousel JS -->
     <script src="assets/js/owl.carousel.min.js"></script>
     <!-- Popup JS -->

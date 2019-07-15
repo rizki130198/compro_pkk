@@ -3,11 +3,11 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
-					<div class="card-header card-header-primary">
+					<div class="card-header" data-background-color="purple">
 						<h4 class="card-title ">Data Home</h4>
 						<p class="card-category"> Isi Home</p>
 					</div>
-					<div class="card-body">
+					<div class="card-content">
 						<div class="table-responsive">
 							<table class="table table-striped table-bordered" style="width:100%" id="tablehome">
 								<thead class="text-primary">
@@ -38,11 +38,11 @@
 				</div>
 				<div class="col-md-12">
 					<div class="card">
-						<div class="card-header card-header-primary">
+						<div class="card-header" data-background-color="purple">
 							<h4 class="card-title ">Tentang Koperasi</h4>
 							<p class="card-category"></p>
 						</div>
-						<div class="card-body">
+						<div class="card-content">
 							<div class="table-responsive">
 								<table class="table table-striped table-bordered" style="width:100%" id="tabletentang">
 									<thead class="text-primary">
@@ -68,11 +68,11 @@
 					</div>
 					<div class="col-md-12">
 						<div class="card">
-							<div class="card-header card-header-primary">
+							<div class="card-header" data-background-color="purple">
 								<h4 class="card-title ">Data Kontak</h4>
 								<p class="card-category"> Isi Kontak</p>
 							</div>
-							<div class="card-body">
+							<div class="card-content">
 								<div class="table-responsive">
 									<table class="table table-striped table-bordered" style="width:100%" id="tablekontak">
 										<thead class="text-primary">

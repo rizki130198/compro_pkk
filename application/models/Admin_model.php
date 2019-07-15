@@ -7,6 +7,42 @@ class Admin_model extends CI_Model {
 		$query = $this->db->get('home');
 		return $query->result();
 	}
+	public function proses_regis()
+	{
+		$v_user = $this->db->get_where('user', array('nama' => $this->input->post('nama',TRUE)))->row();
+		$v_email = $this->db->get_where('user', array('email' => $this->input->post('email',TRUE)))->row();
+		if (count($v_user) > 0 ) {
+			$this->session->set_flashdata('gagal', 'Nama yang anda masukan sudah terdaftar');
+		}else{
+			if (count($v_email) > 0) {
+				$this->session->set_flashdata('gagal', 'Nama yang anda masukan sudah terdaftar');
+			}else{
+				$val = $this->db->insert('user', array(
+					'nama' => $this->input->post('nama',TRUE),
+					'email' => $this->input->post('email',TRUE),
+					'password' => md5($this->input->post('password',TRUE)),
+					'nohp' => $this->input->post('nohp'),
+					'role' => $this->input->post('role'),
+					'created_at' => date('Y-m-d H:i:s')
+				));
+				if ($val == TRUE) {
+					$this->session->set_flashdata('sukses', 'Berhasil di daftarkan');
+				}
+			}
+		}
+		redirect('admincontroller/pengguna');
+	}
+	public function load_user()
+	{
+		$this->db->order_by('iduser', 'DESC');
+		$query = $this->db->get('user');
+		return $query->result_array();
+	}
+	public function actDeleteUser($id)
+	{
+		$this->db->where('iduser', $id);
+		$this->db->delete('user');
+	}
 	public function lihat_menu()
 	{
 		$this->db->select('id_menu,menu');

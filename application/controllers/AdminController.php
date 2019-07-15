@@ -14,12 +14,14 @@ class AdminController extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Home';
+		$data['titleNav'] = 'Halaman Dashboard';
 		$data['link_view'] = 'admin/home';
 		$this->load->view('admin/index', $data);
 	}	
 	public function menu()
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Menu';
+		$data['titleNav'] = 'Halaman Pengaturan Menu';
 		$data['link_view'] = 'admin/menu';
 		$data['menu'] = $this->admin_model->lihat_menu();
 		$this->load->view('admin/index', $data);
@@ -27,13 +29,44 @@ class AdminController extends CI_Controller {
 	public function berita()
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';
+		$data['titleNav'] = 'Halaman Pengaturan Berita';
 		$data['link_view'] = 'admin/berita';
 		$data['post'] = $this->admin_model->getPost();
 		$this->load->view('admin/index', $data);
 	}
+	public function daf_pengguna()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Tambah Pengguna';
+		$data['titleNav'] = 'Halaman Tambah Pengguna';
+		$data['link_view'] = 'admin/daf_pengguna';
+		$data['post'] = $this->admin_model->getPost();
+		$this->load->view('admin/index', $data);
+	}
+	public function pengguna()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Pengguna';
+		$data['titleNav'] = 'Halaman Data Pengguna';
+		$data['link_view'] = 'admin/pengguna';
+		$data['post'] = $this->admin_model->getPost();
+		$this->load->view('admin/index', $data);
+	}
+	public function load_user()
+	{
+		$data = $this->admin_model->load_user();
+		echo json_encode($data);
+	}
+	public function deleteUsers()
+	{
+		$this->admin_model->actDeleteUser($this->input->post('iduser'));
+	}
+	public function proses_regis()
+	{
+		$this->admin_model->proses_regis();
+	}
 	public function settinghome()
 	{
-		$data['title'] = 'Selamat Datang di Halaman Admin - Pengaturan';
+		$data['title'] = 'Selamat Datang di Halaman Admin - Home';
+		$data['titleNav'] = 'Halaman Pengaturan Home';
 		$data['link_view'] = 'admin/settinghome';
 		$data['home'] = $this->admin_model->getHome();
 		$data['tentang'] = $this->admin_model->getTentang();
@@ -96,6 +129,11 @@ class AdminController extends CI_Controller {
 			$json = array('gagal'=>false);
 		}
 		echo json_encode($json);
+	}
+	public function keluar()
+	{
+		$sess = $this->session->sess_destroy();
+		redirect('login');
 	}
 
 }
