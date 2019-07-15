@@ -64,36 +64,42 @@ class Admin_model extends CI_Model {
 	}
 	public function addBerita()
 	{
-		$query = $this->db->insert('menu', array(
-			'menu'=>$this->input->post('menu')
+		$query = $this->db->insert('berita', array(
+			'judul'=>$this->input->post('judul'),
+			'deskripsi'=>$this->input->post('berita'),
+			'created_at'=>date('Y-m-d H:i:s'),
 		));
 		if ($query==true) {
 				// Berhasil
 			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Berita');
-			redirect('admin/');
+			redirect('admincontroller/berita');
 		}else{
 				//Gagal
 			$this->session->set_flashdata('Gagal', 'Gagal Tambah Berita');
-			redirect('admin/');
+			redirect('admincontroller/');
 		}
 	}	
 	public function editBerita()
 	{
 		$ft = $this->input->post('oldFoto');
 		$fbang = ($this->ambilOldFoto($ft)=="")?null:$this->ambilOldFoto($ft);
-		$newfbang = $this->ambilNewFoto('foto_bang');
+		$newfbang = $this->uploadFoto('foto_bang');
 		$ftbangCombine = $this->validasiKosong($fbang,$newfbang);
 
-		$query = $this->db->update('menu',array(
-			'menu'=>$this->input->post('menu'),array(
-				'id_menu'=>$this->input->post('idmenu'))
-		));
+		$query = $this->db->update('berita', array(
+			'judul'=>$this->input->post('judul'),
+			'deskripsi'=>$this->input->post('berita'))
+			,array(
+				'idberita'=>$this->input->post('idberita'))
+		);
 		if ($query==true) {
 				// Berhasil
-			$val = 1;
+			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Berita');
+			redirect('admincontroller/berita');
 		}else{
 				//Gagal
-			$val = 0;
+			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Berita');
+			redirect('admincontroller/');
 		}
 		return $val;
 	}
@@ -116,7 +122,7 @@ class Admin_model extends CI_Model {
 
 		$ft = $this->input->post('oldFoto');
 		$fbang = ($this->ambilOldFoto($ft)=="")?null:$this->ambilOldFoto($ft);
-		$newfbang = $this->ambilNewFoto('foto_bang');
+		$newfbang = $this->uploadFoto('foto_bang');
 		$ftbangCombine = $this->validasiKosong($fbang,$newfbang);
 
 		$query = $this->db->update('menu',array(
@@ -198,7 +204,7 @@ class Admin_model extends CI_Model {
 		$query = $this->db->get('alamat');
 		return $query->result();
 	}
-	public function uploadFoto($param)
+	public function uploadFoto($params)
 	{
 
 		$this->load->library('upload');

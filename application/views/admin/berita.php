@@ -36,7 +36,7 @@
 									<td><?=$key['judul']?></td>
 									<td><?=substr($key['deskripsi'], 0,100)?></td>
 									<td><?=$key['created_at']?></td>
-									<td><a onclick="buttonedit(<?=$key['idberita']?>)" class="btn btn-info">edit</a><a onclick="buttondelete(<?=$key['idberita']?>)" class="btn btn-danger">delete</a></td>
+									<td><a  data-toggle="modal" data-target="#modaleditberita<?=$key['idberita']?>" class="btn btn-info">edit</a><a onclick="buttondelete(<?=$key['idberita']?>)" class="btn btn-danger">delete</a></td>
 								</tr>
 							<?php endforeach ?>
 						</tbody>
@@ -45,6 +45,49 @@
 			</div>
 		</div>
 	</div>
-</div>
+
+	<?php foreach ($post as $modal): ?>
+		<div class="modal fade" id="modaleditberita<?=$modal['idberita']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Edit Berita</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form method="post" action="<?= site_url('admincontroller/actEditBerita') ?>" enctype="multipart/form-data">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group bmd-form-group">
+										<label class="bmd-label-floating">Judul</label>
+										<input type="text" class="form-control" name="judul" value="<?=$modal['judul']?>">
+										<input type="hidden" class="form-control" name="idberita" value="<?=$modal['idberita']?>">
+										<input type="hidden" class="form-control" name="oldfoto" value="">
+										<input type="hidden" class="form-control" name="foto_bang[]" value="">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Isi Berita</label>
+										<div class="form-group bmd-form-group">
+											<textarea class="form-control" id="editor" name="berita" rows="5"><?=$modal['deskripsi']?></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+							<button type="submit" class="btn btn-primary">Ubah</button>
+						</div>
+							</form>
+					</div>
+				</div>
+			</div>
+
+		<?php endforeach ?>
+	</div>
 </div>
 </div>

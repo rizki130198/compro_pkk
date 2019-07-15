@@ -5,7 +5,6 @@ class First_model extends CI_Model {
 
 	public function getHome()
 	{
-		$this->db->select('deskripsi,gambar');
 		$query = $this->db->get('home');
 		return $query->result();
 	}

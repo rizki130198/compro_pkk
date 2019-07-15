@@ -90,7 +90,7 @@
             dataType: 'json',
             success: function(response){
                 $('#pagination').html(response.pagination);
-                console.log(response.pagination);
+                // console.log(response.pagination);
                 createTable(response.result);
             }
         });

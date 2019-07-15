@@ -41,25 +41,21 @@ class AdminController extends CI_Controller {
 		$data['alamat'] = $this->admin_model->getAlamat();
 		$this->load->view('admin/index', $data);
 	}
+	public function getBerita()
+	{
+		$query['berita'] = $this->db->get_where('berita',array('idberita'=>$this->input->post('idnya')))->result();
+		$data['code'] = 200;
+		$data['html'] = $this->load->view('admin/editberita', $query);
+		$data['message'] = 'Error Silakan Hubungi Tim Terkait';
+		echo json_encode($data);
+	}
 	public function actAddBerita()
 	{
 		$val = $this->admin_model->addBerita();
-		if ($val == 1) {
-			$json = array('berhasil'=>true);
-		}else{
-			$json = array('gagal'=>false);
-		}
-		echo json_encode($json);
 	}
 	public function actEditBerita()
 	{
 		$val = $this->admin_model->editBerita();
-		if ($val == 1) {
-			$json = array('berhasil'=>true);
-		}else{
-			$json = array('gagal'=>false);
-		}
-		echo json_encode($json);
 	}	
 	public function actDeleteBerita()
 	{
