@@ -2,7 +2,17 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_model extends CI_Model {
+	public function getHome()
+	{
+		$query = $this->db->get('home');
+		return $query->result();
+	}
+	public function lihat_menu()
+	{
+		$this->db->select('id_menu,menu');
+		return $this->db->get('menu')->result();
 
+	}
 	public function addMenu()
 	{
 		$query = $this->db->insert('menu', array(
@@ -21,7 +31,7 @@ class Admin_model extends CI_Model {
 	{
 		$query = $this->db->update('menu',array(
 			'menu'=>$this->input->post('menu'),array(
-				'idmenu'=>$this->input->post('idmenu'))
+				'id_menu'=>$this->input->post('idmenu'))
 		));
 		if ($query==true) {
 				// Berhasil
@@ -35,7 +45,7 @@ class Admin_model extends CI_Model {
 	public function deleteMenu()
 	{
 		$query = $this->db->delete('menu',array(
-			'idmenu'=>$this->input->post('idmenu')
+			'id_menu'=>$this->input->post('idmenu')
 		));
 		if ($query==true) {
 				// Berhasil
@@ -46,6 +56,12 @@ class Admin_model extends CI_Model {
 		}
 		return $val;
 	}
+	public function getPost()
+	{
+		$this->db->select('idberita,judul,deskripsi,gambar,created_at');
+		$query = $this->db->get('berita');
+		return $query->result_array();
+	}
 	public function addBerita()
 	{
 		$query = $this->db->insert('menu', array(
@@ -54,11 +70,11 @@ class Admin_model extends CI_Model {
 		if ($query==true) {
 				// Berhasil
 			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Berita');
-			redirect('admin/',)
+			redirect('admin/');
 		}else{
 				//Gagal
 			$this->session->set_flashdata('Gagal', 'Gagal Tambah Berita');
-			redirect('admin/',)
+			redirect('admin/');
 		}
 	}	
 	public function editBerita()
@@ -70,7 +86,7 @@ class Admin_model extends CI_Model {
 
 		$query = $this->db->update('menu',array(
 			'menu'=>$this->input->post('menu'),array(
-				'idmenu'=>$this->input->post('idmenu'))
+				'id_menu'=>$this->input->post('idmenu'))
 		));
 		if ($query==true) {
 				// Berhasil
@@ -84,7 +100,7 @@ class Admin_model extends CI_Model {
 	public function deleteBerita()
 	{
 		$query = $this->db->delete('menu',array(
-			'idmenu'=>$this->input->post('idmenu')
+			'id_menu'=>$this->input->post('idmenu')
 		));
 		if ($query==true) {
 				// Berhasil
@@ -105,7 +121,7 @@ class Admin_model extends CI_Model {
 
 		$query = $this->db->update('menu',array(
 			'menu'=>$this->input->post('menu'),array(
-				'idmenu'=>$this->input->post('idmenu'))
+				'id_menu'=>$this->input->post('idmenu'))
 		));
 		if ($query==true) {
 				// Berhasil
@@ -119,7 +135,7 @@ class Admin_model extends CI_Model {
 	public function deleteBeranda()
 	{
 		$query = $this->db->delete('menu',array(
-			'idmenu'=>$this->input->post('idmenu')
+			'id_menu'=>$this->input->post('idmenu')
 		));
 		if ($query==true) {
 
@@ -142,13 +158,20 @@ class Admin_model extends CI_Model {
 		if ($query==true) {
 				// Berhasil
 			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Berita');
-			redirect('admin/',)
+			redirect('admin/');
 		}else{
 				//Gagal
 			$this->session->set_flashdata('Gagal', 'Gagal Tambah Berita');
-			redirect('admin/',)
+			redirect('admin/');
 		}
 	}
+	public function getTentang()
+	{
+		$this->db->select('id_tentang,deskripsi');
+		$query = $this->db->get('tentang');
+		return $query->row();
+	}
+
 	public function editTentang()
 	{
 		$query = $this->db->update('tentang',array(
@@ -163,6 +186,17 @@ class Admin_model extends CI_Model {
 			$val = 0;
 		}
 		return $val;
+	}
+	public function getKontak()
+	{
+		$query = $this->db->get('kontak');
+		return $query->result();
+	}
+	public function getAlamat()
+	{
+		$this->db->select('alamat,nohp,nohp2');
+		$query = $this->db->get('alamat');
+		return $query->result();
 	}
 	public function uploadFoto($param)
 	{

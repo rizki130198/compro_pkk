@@ -40,6 +40,12 @@ class First_model extends CI_Model {
 		$query = $this->db->get('tentang');
 		return $query->row();
 	}
+	public function getAlamat()
+	{
+		$this->db->select('alamat,nohp,nohp2');
+		$query = $this->db->get('alamat');
+		return $query->result();
+	}
 	public function getPagingBerita()
 	{
 		$this->db->select('judul,deskripsi,gambar,created_at');
@@ -48,7 +54,17 @@ class First_model extends CI_Model {
 	}
 	public function login()
 	{
-		# code...
+		$cek = $this->db->get_where('admin',array('username'=>$this->input->post('username'), 'password'=>md5($this->input->post('password'))));
+		if ($cek->num_rows() > 0) {
+			$row = $cek->row();
+			$sessi = array(
+				'nama'=>$row->username,
+			);
+			$this->session->set_userdata($sessi);
+			redirect('admincontroller');
+		}else{
+			redirect('main');
+		}
 	}
 
 }
