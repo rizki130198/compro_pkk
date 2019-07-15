@@ -29,8 +29,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
     <!-- Favicon Icon -->
     <link rel="icon" type="image/png" href="assets/img/favcion.png" />
-  </head>
-  <body data-spy="scroll" data-target=".header" data-offset="50">
+</head>
+<body data-spy="scroll" data-target=".header" data-offset="50">
     <!--TOP NAV-->
     <?php $this->load->view('include/head');?>
     <!--TOP NAV-->
@@ -48,6 +48,7 @@
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <!-- Slick JS -->
     <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
     <!-- owl carousel JS -->
     <script src="assets/js/owl.carousel.min.js"></script>
     <!-- Popup JS -->
@@ -72,5 +73,61 @@
     <script src="assets/js/switcher.js"></script>
     <!-- main JS -->
     <script src="assets/js/main.js"></script>
+    <script type="text/javascript">
+     $(document).ready(function(){
+
+         $('#pagination').on('click','a',function(e){
+           e.preventDefault(); 
+           var pageno = $(this).attr('data-ci-pagination-page');
+           loadPagination(pageno);
+       });
+
+         loadPagination(0);
+
+         function loadPagination(pagno){
+           $.ajax({
+            url: '<?=site_url('/main/ajaxPaging/') ?>'+pagno,
+            type: 'get',
+            dataType: 'json',
+            success: function(response){
+                $('#pagination').html(response.pagination);
+                console.log(response.pagination);
+                createTable(response.result);
+            }
+        });
+       }
+
+       function createTable(result){
+         $('#blog').empty();
+         for(index in result){
+          var judul = result[index].judul;
+          var gambar = result[index].gambar;
+          var deskripsi = result[index].deskripsi;
+          deskripsi = deskripsi.substr(0, 100) + " ...";
+          var created_at = result[index].created_at;
+
+          var body = '<div class="col-lg-4 col-md-6">';
+          body += '<div class="single-post">';
+          body += '<div class="post-thumbnail">';
+          body += '<a href="blog.html">';
+          body += '<img src="'+gambar+'" alt="blog">';
+          body += '</a>';
+          body += '</div><div class="post-details">';
+          body += '<div class="post-author">';
+          body += '<i class="icofont icofont-user"></i>Admin';
+          body += '<i class="icofont icofont-calendar"></i>'+created_at+'';
+          body += '</div>';
+          body += '<h4 class="post-title"><a href="blog.html">'+judul+'</a></h4>';
+          body += '<p>'+deskripsi+'</p>';
+          body += '</div>';
+          body += '</div>';
+          body += '</div>';
+          $('#blog').append(body);
+
+      }
+  }
+
+});
+</script>
 </body>
 </html>

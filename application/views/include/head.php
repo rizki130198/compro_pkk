@@ -11,10 +11,20 @@
 				<div class="responsive-menu"></div>
 				<div class="mainmenu">
 					<ul id="primary-menu">
-						<li><a class="nav-link active" href="#home">Beranda</a></li>
-						<li><a class="nav-link" href="#blog">Berita</a></li>
-						<li><a class="nav-link" href="">Tentang Kami</a></li>
-						<li><a class="nav-link" href="#contact">Hubungi Kami</a></li>
+						<?php foreach ($menu as $key): ?>
+							<li><a class="nav-link" href="#<?=$key->menu?>"><?=$key->menu?></a></li>
+						<?php endforeach ?>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Dropdown
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#">Something else here</a>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
