@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Selamat Datang - Company Profile PKK</title>
+    <title>Koperasi PKK Melati Jaya</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
     <!-- Slick nav CSS -->
@@ -28,9 +28,27 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
     <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="assets/img/favcion.png" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
 </head>
 <body data-spy="scroll" data-target=".header" data-offset="50">
+    <style type="text/css">
+      ul.pagination li span a{
+        /*border: solid 1px #007bff !important;*/
+        color: #555 !important;
+        background-color: transparent !important;
+        background-image: none !important;
+        width: 35px !important;
+        height: 35px !important;
+        line-height: 35px !important;
+        font-size: 14px;
+      }
+      ul.pagination li.page-item span{
+        padding: 0 !important;
+      }
+      .page-item.active .page-link{
+        padding:.5rem .75rem !important;
+      }
+    </style>
     <!--TOP NAV-->
     <?php $this->load->view('include/head');?>
     <!--TOP NAV-->
@@ -45,10 +63,11 @@
     <!-- Bootstrap JS -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Slick nav JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
     <!-- Slick JS -->
     <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
+    
     <!-- owl carousel JS -->
     <script src="assets/js/owl.carousel.min.js"></script>
     <!-- Popup JS -->
