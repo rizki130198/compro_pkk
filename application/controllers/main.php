@@ -15,6 +15,18 @@ class Main extends CI_Controller {
 
 		$this->load->view('utama',$data);
 	}
+	public function detail_b()
+	{
+		$data['title'] = 'Detail Berita';
+		$data['link_view'] = 'pages/berita_detail';
+		$this->load->view('utama',$data);
+	}
+	public function berita()
+	{
+		$data['title'] = 'Detail Berita';
+		$data['link_view'] = 'pages/berita';
+		$this->load->view('utama',$data);
+	}
 	public function login()
 	{
 		$data['title'] = 'Login PKK';

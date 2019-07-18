@@ -90,8 +90,17 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 				<div class="responsive-menu"></div>
 				<div class="mainmenu">
 					<ul id="primary-menu" class="Navigation">
-						<li><a class="nav-link" href="#Beranda">Beranda</a></li>
-						<li><a class="nav-link" href="#Berita">Berita</a></li>
+						<?php if ($this->uri->segment(1) == "") { ?>
+							<li><a class="nav-link" href="#Beranda">Beranda</a></li>
+							<li><a class="nav-link" href="#Tentang">Tentang</a></li>
+							<li><a class="nav-link" href="#Berita">Berita</a></li>
+							<li><a class="nav-link" href="#Hubungi Kami">Hubungi Kami</a></li>
+						<?php }else{ ?>
+							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Beranda</a></li>
+							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Tentang</a></li>
+							<li><a class="nav-link" href="berita">Berita</a></li>
+							<li><a class="nav-link" href="#Hubungi Kami">Hubungi Kami</a></li>
+						<?php } ?>
 						<li class="drop">
 							<a href="#produk">Produk <i class="caret"></i></a>
 							<div class="dropdownContain">
@@ -104,8 +113,6 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 								</div>
 							</div>
 						</li>
-						<li><a class="nav-link" href="#Hubungi Kami">Hubungi Kami</a></li>
-						<li><a class="nav-link" href="#Tentang">Tentang</a></li>
 					</ul>
 				</div>
 			</div>

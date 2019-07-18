@@ -56,3 +56,6 @@ $route['tambah_home'] = 'admincontroller/tambah_home';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'Main/login';
+$route['home'] = 'Main/index';
+$route['berita'] = 'Main/berita';
+$route['detail_b'] = 'Main/detail_b';
