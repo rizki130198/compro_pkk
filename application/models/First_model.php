@@ -64,6 +64,21 @@ class First_model extends CI_Model {
 			redirect('main');
 		}
 	}
+	public function kirimpesan()
+	{
+		$query = $this->db->insert('kontak', array(
+			'name'=>$this->input->post('name'),
+			'email'=>$this->input->post('email'),
+			'subjek'=>$this->input->post('subject'),
+			'pesan'=>$this->input->post('pesan'),
+			'created_at'=>date('Y-m-d H:i:s')
+		));
+		if ($query==true) {
+			redirect('/');
+		}else{
+			redirect('/');
+		}
+	}
 
 }
 

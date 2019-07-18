@@ -73,4 +73,8 @@ class Main extends CI_Controller {
 	{
 		$this->first_model->login();
 	}
+		public function sendmessage()
+	{
+		$this->first_model->kirimpesan();
+	}
 }
