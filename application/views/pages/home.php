@@ -65,6 +65,7 @@
 	</div>
 </section>
 <!-- about section end -->
+
 <!-- feature section start -->
 <section class="feature-area ptb-90" id="Produk">
 	<div class="container">
@@ -162,6 +163,7 @@
 	</div>
 </section>
 <!-- feature section end -->
+
 <!-- blog section start -->
 <section class="blog-area ptb-90" id="Berita">
 	<div class="container">
@@ -256,8 +258,7 @@
 				</div>
 			</div> -->
 		</div>
-		
-           <div id='pagination'></div>
+        <div id='pagination'></div>
 	</div>
 </section><!-- blog section end -->
 <!-- footer section start -->
