@@ -2,6 +2,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
+				<a href="<?=site_url('tambah_home')?>" class="btn btn-primary">Tambah Home</a>
 				<div class="card">
 					<div class="card-header" data-background-color="purple">
 						<h4 class="card-title ">Data Home</h4>
@@ -16,7 +17,7 @@
 											deskripsi
 										</th>
 										<th>
-											Gambar
+										 	Gambar
 										</th><th>
 											Aksi
 										</th>
@@ -27,7 +28,7 @@
 											<tr>
 												<td><?=substr($beranda->deskripsi, 0,100)?></td>
 												<td><?=$beranda->gambar?></td>
-												<td><a onclick="buttonedithome(<?=$beranda->idmenu?>)" class="btn btn-info">edit</a></td>
+												<td><a href="<?=site_url('admincontroller/edithome/'.$beranda->idhome)?>" class="btn btn-info">edit</a></td>
 											</tr>
 										<?php endforeach ?>
 									</tbody>
@@ -58,7 +59,7 @@
 										<tbody>
 											<tr>
 												<td><?=substr($tentang->deskripsi, 0,100)?></td>
-												<td><a onclick="buttonedittentang(<?=$tentang->id_tentang?>)" class="btn btn-info">edit</a></td>
+												<td><a data-toggle="modal" data-target="#modaledittentang<?=$tentang->id_tentang?>" class="btn btn-info">edit</a></td>
 											</tr>
 										</tbody>
 									</table>
@@ -92,10 +93,6 @@
 												<th>
 													Tanggal Pesan
 												</th>
-												<th>
-													Aksi
-												</th>
-
 											</tr></thead>
 											<tbody>
 												<?php foreach ($kontak as $key): ?>
@@ -105,7 +102,6 @@
 														<td><?=$key->subjek?></td>
 														<td><?=$key->pesan?></td>
 														<td><?= date('d F, Y',strtotime($key->created_at))?></td>
-														<td><a onclick="buttondeletekontak(<?=$key->idkontak?>)" class="btn btn-danger">delete</a></td>
 													</tr>
 												<?php endforeach ?>
 											</tbody>
@@ -114,6 +110,37 @@
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal fade" id="modaledittentang<?=$tentang->id_tentang?>" role="dialog"  aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle">Edit Tentang</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form method="post" action="<?= site_url('admincontroller/acteditTentang') ?>" enctype="multipart/form-data"  accept-charset="utf-8">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Isi tentang</label>
+										<div class="form-group bmd-form-group">
+											<textarea class="form-control" name="tentang" rows="5"><?=$tentang->deskripsi?></textarea>
+											<input type="hidden" name="idnya" value="<?=$tentang->id_tentang?>">
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="submit" class="btn btn-primary">Ubah</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

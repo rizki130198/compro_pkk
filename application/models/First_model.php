@@ -41,9 +41,8 @@ class First_model extends CI_Model {
 	}
 	public function getAlamat()
 	{
-		$this->db->select('alamat,nohp,nohp2');
 		$query = $this->db->get('alamat');
-		return $query->result();
+		return $query->row();
 	}
 	public function getPagingBerita()
 	{

@@ -163,19 +163,22 @@ class Admin_model extends CI_Model {
 
 		$ft = $this->input->post('oldFoto');
 		$fbang = ($this->ambilOldFoto($ft)=="")?null:$this->ambilOldFoto($ft);
-		$newfbang = $this->uploadFoto('foto_bang');
+		$newfbang = $this->uploadFoto('foto');
 		$ftbangCombine = $this->validasiKosong($fbang,$newfbang);
 
-		$query = $this->db->update('menu',array(
-			'menu'=>$this->input->post('menu'),array(
-				'id_menu'=>$this->input->post('idmenu'))
+		$query = $this->db->update('home',array(
+			'deskripsi'=>$this->input->post('deskprisi'),
+			'gambar'=>$ftbangCombine),array(
+				'idhome'=>$this->input->post('idnya')
 		));
 		if ($query==true) {
 				// Berhasil
-			$val = 1;
+			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Berita');
+			redirect('admincontroller/settinghome');
 		}else{
 				//Gagal
-			$val = 0;
+			$this->session->set_flashdata('Gagal', 'Gagal Tambah Berita');
+			redirect('admincontroller/settinghome');
 		}
 		return $val;
 	}
@@ -205,11 +208,11 @@ class Admin_model extends CI_Model {
 		if ($query==true) {
 				// Berhasil
 			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Berita');
-			redirect('admin/');
+			redirect('admincontroller/settinghome');
 		}else{
 				//Gagal
 			$this->session->set_flashdata('Gagal', 'Gagal Tambah Berita');
-			redirect('admin/');
+			redirect('admincontroller/settinghome');
 		}
 	}
 	public function getTentang()
@@ -222,15 +225,17 @@ class Admin_model extends CI_Model {
 	public function editTentang()
 	{
 		$query = $this->db->update('tentang',array(
-			'deskripsi'=>$this->input->post('menu'),array(
+			'deskripsi'=>$this->input->post('tentang')),array(
 				'id_tentang'=>$this->input->post('idnya'))
-		));
+		);
 		if ($query==true) {
 				// Berhasil
-			$val = 1;
+			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Berita');
+			redirect('admincontroller/settinghome');
 		}else{
 				//Gagal
-			$val = 0;
+			$this->session->set_flashdata('Gagal', 'Gagal Tambah Berita');
+			redirect('admincontroller/settinghome');
 		}
 		return $val;
 	}

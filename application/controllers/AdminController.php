@@ -144,6 +144,51 @@ class AdminController extends CI_Controller {
 			$json = array('gagal'=>false);
 		}
 		echo json_encode($json);
+	}	
+	public function acteditTentang()
+	{
+		$val = $this->admin_model->editTentang();
+		if ($val == 1) {
+			$json = array('berhasil'=>true);
+		}else{
+			$json = array('gagal'=>false);
+		}
+		echo json_encode($json);
+	}
+		public function tambah_home()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Home';
+		$data['titleNav'] = 'Halaman Tambah Home';
+		$data['link_view'] = 'admin/addhome';
+		$this->load->view('admin/index', $data);
+	}
+	public function edithome($id)
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Home';
+		$data['titleNav'] = 'Halaman Edit Home';
+		$data['link_view'] = 'admin/edit_home';
+		$data['post'] = $this->db->get_where('home',array('idhome'=>$id))->row();
+		$this->load->view('admin/index', $data);
+	}
+	public function acteditHome()
+	{
+		$val = $this->admin_model->editBeranda();
+		if ($val == 1) {
+			$json = array('berhasil'=>true);
+		}else{
+			$json = array('gagal'=>false);
+		}
+		echo json_encode($json);
+	}
+		public function actaddHome()
+	{
+		$val = $this->admin_model->addBeranda();
+		if ($val == 1) {
+			$json = array('berhasil'=>true);
+		}else{
+			$json = array('gagal'=>false);
+		}
+		echo json_encode($json);
 	}
 	public function keluar()
 	{

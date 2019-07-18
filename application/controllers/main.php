@@ -10,6 +10,7 @@ class Main extends CI_Controller {
 		$data['post'] = $this->first_model->getPost();
 		$data['menu'] = $this->first_model->getMenu();
 		$data['submenu'] = $this->first_model->getSubmenu();
+		$data['alamat'] = $this->first_model->getAlamat();
 		$data['tentang'] = $this->first_model->getTentang();
 
 		$this->load->view('utama',$data);
