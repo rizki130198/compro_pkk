@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<a href="<?=site_url('tambah_menu')?>" class="btn btn-primary">Tambah Berita</a>
+				<a href="<?=site_url('tambah_berita')?>" class="btn btn-primary">Tambah Berita</a>
 				<div class="card">
 					<div class="card-header" data-background-color="purple">
 						<h4 class="card-title ">Data Berita</h4>
@@ -36,7 +36,7 @@
 									<td><?=$key['judul']?></td>
 									<td><?=substr($key['deskripsi'], 0,100)?></td>
 									<td><?=$key['created_at']?></td>
-									<td><a  data-toggle="modal" data-target="#modaleditberita<?=$key['idberita']?>" class="btn btn-info">edit</a><a onclick="buttondelete(<?=$key['idberita']?>)" class="btn btn-danger">delete</a></td>
+									<td><a href="<?=site_url('admincontroller/edit_berita/'.$key['idberita'])?>" class="btn btn-info">edit</a><a onclick="buttondeleteberita(<?=$key['idberita']?>)" class="btn btn-danger">delete</a></td>
 								</tr>
 							<?php endforeach ?>
 						</tbody>
@@ -47,7 +47,7 @@
 	</div>
 
 	<?php foreach ($post as $modal): ?>
-		<div class="modal fade" id="modaleditberita<?=$modal['idberita']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal fade" id="modaleditberita<?=$modal['idberita']?>" role="dialog"  aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -57,15 +57,34 @@
 						</button>
 					</div>
 					<div class="modal-body">
-						<form method="post" action="<?= site_url('admincontroller/actEditBerita') ?>" enctype="multipart/form-data">
+						<form method="post" action="<?= site_url('admincontroller/actEditBerita') ?>" enctype="multipart/form-data"  accept-charset="utf-8">
+							<div class="row">
+								<div class="col-md-12">
+									<label>Foto Berita</label>
+									<div class="controls-skpd">
+										<div class="forms-skpd row">
+											<div class="entry-skpd">
+												<div class="row">
+													<div class="col-md-12">
+														<div class="col-md-12">
+															<div class="well">
+																<input type="file" name="foto">
+															</div>
+														</div>  
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 							<div class="row">
 								<div class="col-md-12">
 									<div class="form-group bmd-form-group">
 										<label class="bmd-label-floating">Judul</label>
 										<input type="text" class="form-control" name="judul" value="<?=$modal['judul']?>">
 										<input type="hidden" class="form-control" name="idberita" value="<?=$modal['idberita']?>">
-										<input type="hidden" class="form-control" name="oldfoto" value="">
-										<input type="hidden" class="form-control" name="foto_bang[]" value="">
+										<input type="hidden" class="form-control" name="oldFoto[]">
 									</div>
 								</div>
 								<div class="col-md-12">
@@ -77,12 +96,12 @@
 									</div>
 								</div>
 								<div class="clearfix"></div>
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-							<button type="submit" class="btn btn-primary">Ubah</button>
-						</div>
-							</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+								<button type="submit" class="btn btn-primary">Ubah</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

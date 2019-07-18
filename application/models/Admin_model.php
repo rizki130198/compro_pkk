@@ -99,10 +99,14 @@ class Admin_model extends CI_Model {
 		return $query->result_array();
 	}
 	public function addBerita()
-	{
+	{		$ft = $this->input->post('oldFoto');
+		$fbang = ($this->ambilOldFoto($ft)=="")?null:$this->ambilOldFoto($ft);
+		$newfbang = $this->uploadFoto('foto');
+		$ftbangCombine = $this->validasiKosong($fbang,$newfbang);
 		$query = $this->db->insert('berita', array(
 			'judul'=>$this->input->post('judul'),
 			'deskripsi'=>$this->input->post('berita'),
+			'gambar'=>$ftbangCombine,
 			'created_at'=>date('Y-m-d H:i:s'),
 		));
 		if ($query==true) {
@@ -119,12 +123,13 @@ class Admin_model extends CI_Model {
 	{
 		$ft = $this->input->post('oldFoto');
 		$fbang = ($this->ambilOldFoto($ft)=="")?null:$this->ambilOldFoto($ft);
-		$newfbang = $this->uploadFoto('foto_bang');
+		$newfbang = $this->uploadFoto('foto');
 		$ftbangCombine = $this->validasiKosong($fbang,$newfbang);
 
 		$query = $this->db->update('berita', array(
 			'judul'=>$this->input->post('judul'),
-			'deskripsi'=>$this->input->post('berita'))
+			'deskripsi'=>$this->input->post('berita'),
+			'gambar'=>$ftbangCombine)
 			,array(
 				'idberita'=>$this->input->post('idberita'))
 		);
@@ -141,8 +146,8 @@ class Admin_model extends CI_Model {
 	}
 	public function deleteBerita()
 	{
-		$query = $this->db->delete('menu',array(
-			'id_menu'=>$this->input->post('idmenu')
+		$query = $this->db->delete('berita',array(
+			'idberita'=>$this->input->post('idberita')
 		));
 		if ($query==true) {
 				// Berhasil
@@ -244,7 +249,7 @@ class Admin_model extends CI_Model {
 	{
 
 		$this->load->library('upload');
-		$config['upload_path']          = './public/images/';
+		$config['upload_path']          = './assets/img/';
 		$config['allowed_types']        = 'jpg|png|jpeg';
 		$config['remove_spaces']        = TRUE;
 		$config['encrypt_name']         = TRUE;

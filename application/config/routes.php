@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'main';
 $route['404_override'] = 'main/page_not_found';
+$route['tambah_berita'] = 'admincontroller/tambah_berita';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'Main/login';

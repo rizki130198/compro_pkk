@@ -117,6 +117,7 @@
        }
 
        function createTable(result){
+           var url = "<?=base_url('assets/img/')?>";
          $('#blog').empty();
          for(index in result){
           var judul = result[index].judul;
@@ -129,7 +130,7 @@
           body += '<div class="single-post">';
           body += '<div class="post-thumbnail">';
           body += '<a href="blog.html">';
-          body += '<img src="'+gambar+'" alt="blog">';
+          body += '<img src="'+url+gambar+'" alt="blog">';
           body += '</a>';
           body += '</div><div class="post-details">';
           body += '<div class="post-author">';

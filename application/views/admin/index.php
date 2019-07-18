@@ -17,14 +17,6 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/fonts/font-awesome/css/font-awesome.min.css'); ?>">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 </head>
-<<<<<<< HEAD
-<body class="">
-  <div class="wrapper "> <!--TOP NAV-->
-    <?php $this->load->view('include/sidebar');?>
-    <!--TOP NAV-->
-
-    <?php $this->load->view($link_view);?>
-=======
 <body class="" style="overflow-y: hidden;">
   <div id="loader" style="z-index:9999;position: fixed;width: 100%;height:100%;background: rgba(255,255,255,.8);
   display: flex;
@@ -67,7 +59,6 @@
           &copy; 2019 <a href="">Admin Company Profile - PKK</a>.
         </p>
         <nav class="pull-right" style="margin-right: 12px;">
->>>>>>> ce6a3962af69cfe28e8fb991a5bb1326590812d4
 
         </nav>
       </div>
@@ -80,21 +71,25 @@
 <!-- //DIV MAIN -->
 </div>
 <!-- jquery main JS -->
-<<<<<<< HEAD
+
 <script type="text/javascript">
   var BASE_URL = '<?= site_url('/') ?>';
 </script>
-<script src="<?=base_url('/')?>admin/js/core/jquery.min.js" type="text/javascript"></script>
-<script src="<?=base_url('/')?>admin/js/core/popper.min.js" type="text/javascript"></script>
-<script src="<?=base_url('/')?>admin/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
-<script src="<?=base_url('/')?>admin/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-<script src="<?=base_url('/')?>admin/js/plugins/bootstrap-notify.js"></script>
-<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-<script src="<?=base_url('/')?>admin/js/material-dashboard.min.js?v=2.1.0" type="text/javascript"></script>
-<script src="<?=base_url('/')?>admin/js/admin.js" type="text/javascript"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js" type="text/javascript"></script>
-<?php if ($this->uri->segment(2)=='berita') { ?>
+
+<script type="text/javascript" src="<?=base_url('assets/js/jquery.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/bootstrap.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/material.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/arrive.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/perfect-scrollbar.jquery.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/bootstrap-notify.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/material-dashboard.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/demo.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('assets/js/jquery.nicescroll.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/jquery.dataTables.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/admin.js');?>"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<?php if ($this->uri->segment(2)=='berita' OR $this->uri->segment(1)=='tambah_berita' OR $this->uri->segment(2)=='edit_berita') { ?>
   <script src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
   <script type="text/javascript">
      $(document).ready(function() {
@@ -117,27 +112,6 @@
       })
   </script>
 <?php } ?>
-<!-- Material Dashboard DEMO methods, don't include it in your project! -->
-<script type="text/javascript">
-  $(document).ready(function(){
-   $('#tableberita').DataTable();
-   $('#tablehome').DataTable();
-   $('#tabletentang').DataTable();
-   $('#tablekontak').DataTable();
-   $('#tablealamat').DataTable();
-=======
-<script type="text/javascript" src="<?=base_url('assets/js/jquery.min.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/js/bootstrap.min.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/js/material.min.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/js/arrive.min.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/js/perfect-scrollbar.jquery.min.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/js/bootstrap-notify.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/js/material-dashboard.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/js/demo.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('assets/js/jquery.nicescroll.min.js');?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/js/jquery.dataTables.min.js');?>"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script type="text/javascript">
   jQuery(window).load(function () {
@@ -167,7 +141,7 @@
     responsive: true,
     language: {
       search: "_INPUT_",
-      searchPlaceholder: "Cari Berita",
+      searchPlaceholder: "Cari Menu Home",
     }
   });
    $('#tabletentang').DataTable({
@@ -179,7 +153,7 @@
     responsive: true,
     language: {
       search: "_INPUT_",
-      searchPlaceholder: "Cari Berita",
+      searchPlaceholder: "Cari Deskripsi About",
     }
   });
    $('#tablekontak').DataTable({
@@ -191,7 +165,7 @@
     responsive: true,
     language: {
       search: "_INPUT_",
-      searchPlaceholder: "Cari Berita",
+      searchPlaceholder: "Cari Kontak",
     }
   });
    $('#tablealamat').DataTable({
@@ -203,10 +177,9 @@
     responsive: true,
     language: {
       search: "_INPUT_",
-      searchPlaceholder: "Cari Berita",
+      searchPlaceholder: "Cari Alamat",
     }
   });
->>>>>>> ce6a3962af69cfe28e8fb991a5bb1326590812d4
  });
 </script>
 </body>

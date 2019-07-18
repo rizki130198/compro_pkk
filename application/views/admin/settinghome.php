@@ -27,7 +27,7 @@
 											<tr>
 												<td><?=substr($beranda->deskripsi, 0,100)?></td>
 												<td><?=$beranda->gambar?></td>
-												<td><a onclick="buttonedithome(<?=$beranda->id_menu?>)" class="btn btn-info">edit</a></td>
+												<td><a onclick="buttonedithome(<?=$beranda->idmenu?>)" class="btn btn-info">edit</a></td>
 											</tr>
 										<?php endforeach ?>
 									</tbody>

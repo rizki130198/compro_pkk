@@ -73,6 +73,21 @@ class AdminController extends CI_Controller {
 		$data['kontak'] = $this->admin_model->getKontak();
 		$data['alamat'] = $this->admin_model->getAlamat();
 		$this->load->view('admin/index', $data);
+	}	
+	public function tambah_berita()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';
+		$data['titleNav'] = 'Halaman Tambah Berita';
+		$data['link_view'] = 'admin/addberita';
+		$this->load->view('admin/index', $data);
+	}
+	public function edit_berita($id)
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';
+		$data['titleNav'] = 'Halaman Tambah Berita';
+		$data['link_view'] = 'admin/editberita';
+		$data['post'] = $this->db->get_where('berita',array('idberita'=>$id))->row();
+		$this->load->view('admin/index', $data);
 	}
 	public function getBerita()
 	{
@@ -88,7 +103,7 @@ class AdminController extends CI_Controller {
 	}
 	public function actEditBerita()
 	{
-		$val = $this->admin_model->editBerita();
+		$this->admin_model->editBerita();
 	}	
 	public function actDeleteBerita()
 	{
