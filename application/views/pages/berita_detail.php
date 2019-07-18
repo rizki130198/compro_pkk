@@ -1,14 +1,14 @@
-<!-- breadcrumb area start -->
+breadcrumb area start -->
 <section class="hero-area breadcrumb-area">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="hero-area-content">
-					<h1>Berita Details</h1>
+					<h1><?=$row->judul?></h1>
 					<ul>
 						<li><a href="index.html">Beranda</a></li>
 						<li><a href="blog.html">Berita</a></li>
-						<li><a href="blog-detail.html">Lorem lorem</a></li>
+						<li><a href="blog-detail.html"><?=$row->judul?></a></li>
 					</ul>
 				</div>
 			</div>
@@ -23,17 +23,14 @@
 		<div class="row">
 			<div class="col-lg-8">
 				<div class="blog-details">
-					<img src="assets/img/details.jpg" alt="blog-details">
+					<img src="<?=base_url('assets/img/'.$row->gambar)?>" alt="blog-details">
 					<div class="post-author">
-						<a href="#"><i class="icofont icofont-user"></i>John</a>
-						<a href="#"><i class="icofont icofont-speech-comments"></i>Comments</a>
-						<a href="#"><i class="icofont icofont-calendar"></i>21 Feb 2018</a>
+						<a href="#"><i class="icofont icofont-user"></i>Admin</a>
+						<a href="#"><i class="icofont icofont-calendar"></i><?=$row->created_at?></a>
 					</div>
-					<p>Fames ultrices dolores vitae euismod lobortis corporis facere id nullam aspernatur litora, vitae numquam do molestiae iaculis. Ullamco, assumenda tempor, ullamco blanditiis, Dictum illum nesciunt doloremque, ad sociis! Excepteur tenetur perferendis quisque totam placeat temporibus semper perspiciatis voluptatum maecenas nisl.</p>
-					<p>Ramet quam enim veniam tempus cumque. Integer vel impedit quidem, dolor quod, ullam nemo, impedit nesciunt voluptatum porro, tenetur aliqua ipsa posuere posuere. Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Utenim ad minim veniam quis nostrud exercitation ullamco.</p>
-					<p>Fames ultrices dolores vitae euismod lobortis corporis facere id nullam aspernatur litora, vitae numquam do molestiae iaculis. Ullamco, assumenda tempor, ullamco blanditiis, Dictum illum nesciunt doloremque, ad sociis! Excepteur tenetur perferendis quisque totam placeat temporibus semper perspiciatis voluptatum maecenas nisl impedit nesciunt voluptatum porro, tenetur aliqua ipsa posuere posuere. Lorem ipsum dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt utlabore.</p>
+					<p><?=$row->deskripsi?></p>
 				</div>
-				<div class="blog-reply">
+<!-- 				<div class="blog-reply">
 					<h4>Leave a Reply</h4>
 					<form action="#" method="POST">
 						<div class="row">
@@ -49,11 +46,11 @@
 							</div>
 						</div>
 					</form>
-				</div>
+				</div> -->
 			</div>
 			<div class="col-lg-4">
 				<div class="sidebar">
-					<div class="widget">
+					<!-- <div class="widget">
 						<form action="#">
 							<input type="text" name="search" placeholder="Search here">
 							<button type="submit">Go</button>
@@ -83,9 +80,9 @@
 						<a href="#">Latest</a>
 						<a href="#">Popular</a>
 						<a href="#">Security</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 	</div>
-</section><!-- blog section end -->
+</section><!-- blog section end

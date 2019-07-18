@@ -3,28 +3,29 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="contact-form">
-					<h4>Get in Touch</h4>
+					<h4>Hubungi Kami</h4>
 					<p class="form-message"></p>
-					<form id="contact-form" action="#" method="POST">
-						<input type="text" name="name" placeholder="Enter Your Name">
-						<input type="email" name="email" placeholder="Enter Your Email">
-						<input type="text" name="subject" placeholder="Your Subject">
-						<textarea placeholder="Messege" name="message"></textarea>
-						<button type="submit" name="submit">Send Message</button>
+					<form id="contact-form" action="<?= site_url('main/sendmessage') ?>" method="POST">
+						<input type="text" name="name" placeholder="Masukan Nama Anda">
+						<input type="email" name="email" placeholder="Masukan Email Anda">
+						<input type="text" name="subject" placeholder="Subjek Kamu">
+						<textarea placeholder="pesan" name="message"></textarea>
+						<button type="submit" name="submit">Kirim Pesan</button>
 					</form>
 				</div>
 			</div>
 			<div class="col-lg-6">
 				<div class="contact-address">
-					<h4>Address</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-					<ul class="contact">
+					<h4>Alamat</h4>
+					<p><?=$alamat->alamat?></p>
+					<ul>
 						<li>
 							<div class="contact-address-icon">
 								<i class="icofont icofont-headphone-alt"></i>
 							</div>
 							<div class="contact-address-info">
-								<a href="callto:#">+8801712435941</a>
+								<a href="callto:#"><?=$alamat->nohp?></a>
+								<a href="callto:#"><?=$alamat->nohp2?></a>
 							</div>
 						</li>
 						<li>
@@ -32,7 +33,7 @@
 								<i class="icofont icofont-envelope"></i>
 							</div>
 							<div class="contact-address-info">
-								<a href="mailto:#">Jsoftbd87gmail.com</a>
+								<a href="mailto:#">support@koperasipkkmelatijaya.co.id</a>
 							</div>
 						</li>
 						<li>
@@ -40,14 +41,14 @@
 								<i class="icofont icofont-web"></i>
 							</div>
 							<div class="contact-address-info">
-								<a href="www.jsoftbd.com">www.jsoftbd.com</a>
+								<a href="www.jsoftbd.com">www.koperasipkkmelatijaya.co.id</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="row">
+<!-- 		<div class="row">
 			<div class="col-lg-12">
 				<div class="subscribe-form">
 					<form action="#">
@@ -56,7 +57,7 @@
 					</form>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="copyright-area">

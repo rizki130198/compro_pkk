@@ -77,12 +77,12 @@
                 </a>
                 <div class="<?php if ($this->uri->segment(2)=="daftar"){echo "active-drop";}elseif($this->uri->segment(2)=="data_pengguna"){echo "active-drop";}else{echo "collapse";} ?>" id="pengaturan">
                     <ul class="nav nav-drop">
-                        <li class="<?php if($this->uri->segment(2)=="menu"){echo "active";}?>">
+<!--                         <li class="<?php if($this->uri->segment(2)=="menu"){echo "active";}?>">
                             <a href="<?=site_url('admincontroller/menu');?>">
                                 <span class="sidebar-mini"> MN </span>
                                 <span class="sidebar-normal">Menu</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="<?php if($this->uri->segment(2)=="berita"){echo "active";}?>">
                             <a href="<?=site_url('admincontroller/berita');?>">
                                 <span class="sidebar-mini"> BR </span>

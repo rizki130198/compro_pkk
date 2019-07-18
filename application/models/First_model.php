@@ -17,7 +17,7 @@ class First_model extends CI_Model {
 	public function getPostPaging($isi,$page)
 	{
 		$this->db->limit($isi, $page);
-		$this->db->select('judul,deskripsi,gambar,created_at');
+		$this->db->select('idberita,judul,deskripsi,gambar,created_at');
 		$query = $this->db->get('berita');
 		return $query->result_array();
 	}
@@ -41,9 +41,8 @@ class First_model extends CI_Model {
 	}
 	public function getAlamat()
 	{
-		$this->db->select('alamat,nohp,nohp2');
 		$query = $this->db->get('alamat');
-		return $query->result();
+		return $query->row();
 	}
 	public function getPagingBerita()
 	{
@@ -63,6 +62,21 @@ class First_model extends CI_Model {
 			redirect('admincontroller');
 		}else{
 			redirect('main');
+		}
+	}
+	public function kirimpesan()
+	{
+		$query = $this->db->insert('kontak', array(
+			'name'=>$this->input->post('name'),
+			'email'=>$this->input->post('email'),
+			'subjek'=>$this->input->post('subject'),
+			'pesan'=>$this->input->post('pesan'),
+			'created_at'=>date('Y-m-d H:i:s')
+		));
+		if ($query==true) {
+			redirect('/');
+		}else{
+			redirect('/');
 		}
 	}
 
