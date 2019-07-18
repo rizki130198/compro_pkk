@@ -6,29 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Koperasi PKK Melati Jaya</title>
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/bootstrap.min.css" media="all" />
   <!-- Slick nav CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/slicknav.min.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/slicknav.min.css" media="all" />
   <!-- Iconfont CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/icofont.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/icofont.css" media="all" />
   <!-- Slick CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/slick.css">
 
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?=base_url('/')?>assets/css/font-awesome.min.css">
   <!-- Owl carousel CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/owl.carousel.css">
   <!-- Popup CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/magnific-popup.css">
   <!-- Switcher CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/switcher-style.css">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/switcher-style.css">
   <!-- Animate CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/animate.min.css">
   <!-- Main style CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/style.css" media="all" />
   <!-- Responsive CSS -->
-  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/responsive.css" media="all" />
   <!-- Favicon Icon -->
-  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="icon" type="image/png" href="<?=base_url('/')?>assets/img/logo.png" />
 </head>
 <body data-spy="scroll" data-target=".header" data-offset="50">
   <style type="text/css">
@@ -59,39 +59,39 @@
   <?php $this->load->view('include/foot');?>
   <!--FOOTER-->
   <!-- jquery main JS -->
-  <script src="assets/js/jquery.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/jquery.min.js"></script>
   <!-- Bootstrap JS -->
-  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/bootstrap.min.js"></script>
   <!-- Slick nav JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
-  <script src="assets/js/jquery.slicknav.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/jquery.slicknav.min.js"></script>
   <!-- Slick JS -->
-  <script src="assets/js/slick.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/slick.min.js"></script>
   
   <!-- owl carousel JS -->
-  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/owl.carousel.min.js"></script>
   <!-- Popup JS -->
-  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/jquery.magnific-popup.min.js"></script>
   <!-- Counter JS -->
-  <script src="assets/js/jquery.counterup.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/jquery.counterup.min.js"></script>
   <!-- Counterup waypoints JS -->
-  <script src="assets/js/waypoints.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/waypoints.min.js"></script>
   <!-- YTPlayer JS -->
-  <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/jquery.mb.YTPlayer.min.js"></script>
   <!-- jQuery Easing JS -->
-  <script src="assets/js/jquery.easing.1.3.js"></script>
+  <script src="<?=base_url('/')?>assets/js/jquery.easing.1.3.js"></script>
   <!-- Gmap JS -->
-  <script src="assets/js/gmap3.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/gmap3.min.js"></script>
   <!-- Google map api -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBnKyOpsNq-vWYtrwayN3BkF3b4k3O9A_A"></script>
   <!-- Custom map JS -->
-  <script src="assets/js/custom-map.js"></script>
+  <script src="<?=base_url('/')?>assets/js/custom-map.js"></script>
   <!-- WOW JS -->
-  <script src="assets/js/wow-1.3.0.min.js"></script>
+  <script src="<?=base_url('/')?>assets/js/wow-1.3.0.min.js"></script>
   <!-- Switcher JS -->
-  <script src="assets/js/switcher.js"></script>
+  <script src="<?=base_url('/')?>assets/js/switcher.js"></script>
   <!-- main JS -->
-  <script src="assets/js/main.js"></script>
+  <script src="<?=base_url('/')?>assets/js/main.js"></script>
   <script type="text/javascript">
    $(document).ready(function(){
 
@@ -118,8 +118,10 @@
 
      function createTable(result){
        var url = "<?=base_url('assets/img/')?>";
+       var urlberita = "<?=site_url('main/detail_b/')?>";
        $('#blog').empty();
        for(index in result){
+        var idnya = result[index].idberita;
         var judul = result[index].judul;
         var gambar = result[index].gambar;
         var deskripsi = result[index].deskripsi;
@@ -129,7 +131,7 @@
         var body = '<div class="col-lg-4 col-md-6">';
         body += '<div class="single-post">';
         body += '<div class="post-thumbnail">';
-        body += '<a href="blog.html">';
+        body += '<a href="'+urlberita+idnya+'">';
         body += '<img src="'+url+gambar+'" alt="blog">';
         body += '</a>';
         body += '</div><div class="post-details">';
@@ -137,7 +139,7 @@
         body += '<i class="icofont icofont-user"></i> Admin ';
         body += '<i class="icofont icofont-calendar"></i> '+created_at+' ';
         body += '</div>';
-        body += '<h4 class="post-title"><a href="blog.html">'+judul+'</a></h4>';
+        body += '<h4 class="post-title"><a href="'+urlberita+idnya+'">'+judul+'</a></h4>';
         body += '<p>'+deskripsi+'</p>';
         body += '</div>';
         body += '</div>';

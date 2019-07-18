@@ -17,7 +17,7 @@ class First_model extends CI_Model {
 	public function getPostPaging($isi,$page)
 	{
 		$this->db->limit($isi, $page);
-		$this->db->select('judul,deskripsi,gambar,created_at');
+		$this->db->select('idberita,judul,deskripsi,gambar,created_at');
 		$query = $this->db->get('berita');
 		return $query->result_array();
 	}

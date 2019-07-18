@@ -17,14 +17,14 @@ class Main extends CI_Controller {
 	}
 	public function detail_b()
 	{
+		$id = $this->uri->segment(2);
 		$data['title'] = 'Detail Berita';
-		$data['link_view'] = 'pages/berita_detail';
-		$this->load->view('utama',$data);
-	}
-	public function berita()
-	{
-		$data['title'] = 'Detail Berita';
-		$data['link_view'] = 'pages/berita';
+		$data['link_view'] = 'pages/berita_detail';		
+		$data['home'] = $this->first_model->getHome();
+		$data['post'] = $this->first_model->getPost();
+		$data['alamat'] = $this->first_model->getAlamat();
+		$data['tentang'] = $this->first_model->getTentang();
+		$data['row'] = $this->db->get_where('berita',array('idberita'=>$id))->row();
 		$this->load->view('utama',$data);
 	}
 	public function login()
