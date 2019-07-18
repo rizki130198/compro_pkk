@@ -18,14 +18,13 @@
 				<div class="contact-address">
 					<h4>Address</h4>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
-					<ul>
+					<ul class="contact">
 						<li>
 							<div class="contact-address-icon">
 								<i class="icofont icofont-headphone-alt"></i>
 							</div>
 							<div class="contact-address-info">
 								<a href="callto:#">+8801712435941</a>
-								<a href="callto:#">+881934180093</a>
 							</div>
 						</li>
 						<li>

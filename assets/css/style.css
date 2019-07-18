@@ -380,7 +380,7 @@ input::-webkit-input-placeholder {
     padding-top: 140px;
 	z-index: 1;
 	position: relative;
-    background-image: url(../img/hero-area.jpg);
+    background-image: url(../img/back1.jpeg);
     background-repeat: no-repeat;
     background-position: center;
 	background-attachment: fixed;
@@ -1153,7 +1153,7 @@ h4.post-title a {
 }
 .copyright-area ul li a:hover {
     background: #0074da;
-    color: #fff;
+    /*color: #fff;*/
 }
 .copyright-area ul {
     margin-bottom: 30px;

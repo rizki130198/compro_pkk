@@ -48,6 +48,9 @@
     .page-item.active .page-link{
       padding:.5rem .75rem !important;
     }
+    ul li a:hover{
+      color: #888 !important;
+    }
   </style>
   <!--TOP NAV-->
   <?php $this->load->view('include/head');?>
@@ -67,7 +70,7 @@
   <script src="assets/js/jquery.slicknav.min.js"></script>
   <!-- Slick JS -->
   <script src="assets/js/slick.min.js"></script>
-  
+
   <!-- owl carousel JS -->
   <script src="assets/js/owl.carousel.min.js"></script>
   <!-- Popup JS -->
