@@ -14,11 +14,11 @@
 							<a href="#" class="appao-btn">App Store</a> -->
 						</div>
 					</div>
-					<div class="col-lg-5">
-						<div class="hand-mockup text-lg-left text-center">
-							<img src="assets/img/hand-mockup.png" alt="Hand Mockup" />
-						</div>
-					</div>
+					<!--<div class="col-lg-5">-->
+					<!--	<div class="hand-mockup text-lg-left text-center">-->
+					<!--		<img src="assets/img/hand-mockup.png" alt="Hand Mockup" />-->
+					<!--	</div>-->
+					<!--</div>-->
 				</div>
 			</div>
 		</div>
@@ -166,7 +166,15 @@
 
 <!-- blog section start -->
 <section class="blog-area ptb-90" id="Berita">
-	<div class="container">
+	<div class="container">		
+	<div class="row">
+			<div class="col-lg-12">
+				<div class="sec-title">
+					<h2>Berita PKK<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
+				
+				</div>
+			</div>
+		</div>
 		<div class="row" id="blog">
 			
 <!-- 			<div class="col-lg-4 col-md-6">
