@@ -27,7 +27,7 @@
 											<tr>
 												<td><?=substr($beranda->deskripsi, 0,100)?></td>
 												<td><?=$beranda->gambar?></td>
-												<td><a onclick="buttonedit(<?=$beranda->id_menu?>)" class="btn btn-info">edit</a></td>
+												<td><a onclick="buttonedithome(<?=$beranda->idmenu?>)" class="btn btn-info">edit</a></td>
 											</tr>
 										<?php endforeach ?>
 									</tbody>
@@ -58,7 +58,7 @@
 										<tbody>
 											<tr>
 												<td><?=substr($tentang->deskripsi, 0,100)?></td>
-												<td><a onclick="buttonedit(<?=$tentang->id_tentang?>)" class="btn btn-info">edit</a></td>
+												<td><a onclick="buttonedittentang(<?=$tentang->id_tentang?>)" class="btn btn-info">edit</a></td>
 											</tr>
 										</tbody>
 									</table>
@@ -105,7 +105,7 @@
 														<td><?=$key->subjek?></td>
 														<td><?=$key->pesan?></td>
 														<td><?= date('d F, Y',strtotime($key->created_at))?></td>
-														<td><a onclick="buttonedit(<?=$key->idkontak?>)" class="btn btn-danger">delete</a></td>
+														<td><a onclick="buttondeletekontak(<?=$key->idkontak?>)" class="btn btn-danger">delete</a></td>
 													</tr>
 												<?php endforeach ?>
 											</tbody>

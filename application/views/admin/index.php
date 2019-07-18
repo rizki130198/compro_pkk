@@ -71,6 +71,11 @@
 <!-- //DIV MAIN -->
 </div>
 <!-- jquery main JS -->
+
+<script type="text/javascript">
+  var BASE_URL = '<?= site_url('/') ?>';
+</script>
+
 <script type="text/javascript" src="<?=base_url('assets/js/jquery.min.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/js/bootstrap.min.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/js/material.min.js');?>"></script>
@@ -81,8 +86,32 @@
 <script type="text/javascript" src="<?=base_url('admin/js/demo.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('assets/js/jquery.nicescroll.min.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/js/jquery.dataTables.min.js');?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/js/admin.js');?>"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<?php if ($this->uri->segment(2)=='berita' OR $this->uri->segment(1)=='tambah_berita' OR $this->uri->segment(2)=='edit_berita') { ?>
+  <script src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
+  <script type="text/javascript">
+     $(document).ready(function() {
+                      CKEDITOR.replace('editor', {
+                skin: 'kama',
+                enterMode: CKEDITOR.ENTER_BR,
+                shiftEnterMode:CKEDITOR.ENTER_P,
+                toolbar: [{ name: 'basicstyles', groups: [ 'basicstyles' ], items: [ 'Bold', 'Italic', 'Underline', "-", 'TextColor', 'BGColor' ] },
+                { name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+                { name: 'scripts', items: [ 'Subscript', 'Superscript' ] },
+                { name: 'justify', groups: [ 'blocks', 'align' ], items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+                { name: 'paragraph', groups: [ 'list', 'indent' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'] },
+                { name: 'links', items: [ 'Link', 'Unlink' ] },
+                { name: 'insert', items: [ 'Image'] },
+                { name: 'spell', items: [ 'jQuerySpellChecker' ] },
+                { name: 'table', items: [ 'Table' ] }
+              ],
+          });
+
+      })
+  </script>
+<?php } ?>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script type="text/javascript">
   jQuery(window).load(function () {
@@ -112,7 +141,7 @@
     responsive: true,
     language: {
       search: "_INPUT_",
-      searchPlaceholder: "Cari Berita",
+      searchPlaceholder: "Cari Menu Home",
     }
   });
    $('#tabletentang').DataTable({
@@ -124,7 +153,7 @@
     responsive: true,
     language: {
       search: "_INPUT_",
-      searchPlaceholder: "Cari Berita",
+      searchPlaceholder: "Cari Deskripsi About",
     }
   });
    $('#tablekontak').DataTable({
@@ -136,7 +165,7 @@
     responsive: true,
     language: {
       search: "_INPUT_",
-      searchPlaceholder: "Cari Berita",
+      searchPlaceholder: "Cari Kontak",
     }
   });
    $('#tablealamat').DataTable({
@@ -148,7 +177,7 @@
     responsive: true,
     language: {
       search: "_INPUT_",
-      searchPlaceholder: "Cari Berita",
+      searchPlaceholder: "Cari Alamat",
     }
   });
  });

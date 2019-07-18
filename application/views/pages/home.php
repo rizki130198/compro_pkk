@@ -8,8 +8,8 @@
 				<div class="row">
 					<div class="col-lg-7">
 						<div class="hero-area-content">
-							<h1>It’s all about Promoting your Business</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+							<!-- <h1>It’s all about Promoting your Business</h1> -->
+							<p><?=$beranda->deskripsi?></p>
 							<!-- <a href="#" class="appao-btn">Google Play</a>
 							<a href="#" class="appao-btn">App Store</a> -->
 						</div>
@@ -167,14 +167,6 @@
 <!-- blog section start -->
 <section class="blog-area ptb-90" id="Berita">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="sec-title">
-					<h2>Berita Terbaru<span class="sec-title-border"><span></span><span></span><span></span></span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
-				</div>
-			</div>
-		</div>
 		<div class="row" id="blog">
 			
 <!-- 			<div class="col-lg-4 col-md-6">

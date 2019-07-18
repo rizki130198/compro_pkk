@@ -73,26 +73,37 @@ class AdminController extends CI_Controller {
 		$data['kontak'] = $this->admin_model->getKontak();
 		$data['alamat'] = $this->admin_model->getAlamat();
 		$this->load->view('admin/index', $data);
+	}	
+	public function tambah_berita()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';
+		$data['titleNav'] = 'Halaman Tambah Berita';
+		$data['link_view'] = 'admin/addberita';
+		$this->load->view('admin/index', $data);
+	}
+	public function edit_berita($id)
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';
+		$data['titleNav'] = 'Halaman Tambah Berita';
+		$data['link_view'] = 'admin/editberita';
+		$data['post'] = $this->db->get_where('berita',array('idberita'=>$id))->row();
+		$this->load->view('admin/index', $data);
+	}
+	public function getBerita()
+	{
+		$query['berita'] = $this->db->get_where('berita',array('idberita'=>$this->input->post('idnya')))->result();
+		$data['code'] = 200;
+		$data['html'] = $this->load->view('admin/editberita', $query);
+		$data['message'] = 'Error Silakan Hubungi Tim Terkait';
+		echo json_encode($data);
 	}
 	public function actAddBerita()
 	{
 		$val = $this->admin_model->addBerita();
-		if ($val == 1) {
-			$json = array('berhasil'=>true);
-		}else{
-			$json = array('gagal'=>false);
-		}
-		echo json_encode($json);
 	}
 	public function actEditBerita()
 	{
-		$val = $this->admin_model->editBerita();
-		if ($val == 1) {
-			$json = array('berhasil'=>true);
-		}else{
-			$json = array('gagal'=>false);
-		}
-		echo json_encode($json);
+		$this->admin_model->editBerita();
 	}	
 	public function actDeleteBerita()
 	{
