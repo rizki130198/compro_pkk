@@ -254,7 +254,7 @@ class Admin_model extends CI_Model {
 	{
 
 		$this->load->library('upload');
-		$config['upload_path']          = './assets/img/';
+		$config['upload_path']          = './assets/img/berita/';
 		$config['allowed_types']        = 'jpg|png|jpeg';
 		$config['remove_spaces']        = TRUE;
 		$config['encrypt_name']         = TRUE;

@@ -91,13 +91,15 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 				<div class="mainmenu">
 					<ul id="primary-menu" class="Navigation">
 						<?php if ($this->uri->segment(1) == "") { ?>
-							<li><a class="nav-link" href="#Beranda">Beranda</a></li>
+							<li><a class="nav-link active" href="#home">Beranda</a></li>
 							<li><a class="nav-link" href="#Tentang">Tentang</a></li>
+							<li><a class="nav-link" href="#team">Pengurus</a></li>
 							<li><a class="nav-link" href="#Berita">Berita</a></li>
 							<li><a class="nav-link" href="#Hubungi Kami">Hubungi Kami</a></li>
 						<?php }else{ ?>
-							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Beranda</a></li>
+							<li><a class="nav-link active" href="<?php echo site_url(''); ?>">Beranda</a></li>
 							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Tentang</a></li>
+							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Pengurus</a></li>
 							<li><a class="nav-link" href="berita">Berita</a></li>
 							<li><a class="nav-link" href="#Hubungi Kami">Hubungi Kami</a></li>
 						<?php } ?>

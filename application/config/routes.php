@@ -57,5 +57,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'Main/login';
 $route['home'] = 'Main/index';
+$route['tentang'] = 'Main/tentang';
 $route['berita'] = 'Main/berita';
 $route['detail_b/(:any)'] = 'Main/detail_b';

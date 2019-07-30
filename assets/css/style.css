@@ -361,7 +361,7 @@ input::-webkit-input-placeholder {
 	background: #000529; /* Old browsers */
 	background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #000529 1%,#002055 24%,#395599 67%,#284793 100%);
+	background: #395599;
 }
 .header.sticky {
 	padding: 10px 0;
@@ -380,7 +380,7 @@ input::-webkit-input-placeholder {
     padding-top: 140px;
 	z-index: 1;
 	position: relative;
-    background-image: url(../img/back1.jpeg);
+    background-image: url(../img/blog/blog3.jpg);
     background-repeat: no-repeat;
     background-position: center;
 	background-attachment: fixed;
@@ -901,17 +901,14 @@ input::-webkit-input-placeholder {
 }
 .team-member-img::before {
     content: "";
-    background: #000529; /* Old browsers */
-    background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%);
+    background-color: #395599;
     top: 0;
     right: 0;
     width: 0;
     height: 100%;
     transition: all 0.4s;
     position: absolute;
-    opacity: 0.85;
+    opacity: 0.60;
 }
 .team-member-icon a {
     color: #fff;
@@ -1053,7 +1050,7 @@ h4.post-title a {
     height: 450px;
 }
 .footer {
-    background: url(../img/footer-bg.jpg) no-repeat center / cover;
+    background: url(../img/feature-bg.jpg) no-repeat center / cover;
     position: relative;
     z-index: 1;
     padding-bottom: 35px;
@@ -1065,11 +1062,8 @@ h4.post-title a {
     left: 0;
     width: 100%;
     height: 100%;
-	background: #000529; /* Old browsers */
-	background: -moz-linear-gradient(left, #000529 1%, #002055 24%, #005db5 67%, #0074d9 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #000529 1%,#002055 24%,#005db5 67%,#0074d9 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #000529 1%,#002055 24%,#000529 67%,#002055 100%);
-    opacity: 0.85;
+	background: #333; /* Old browsers */
+    opacity: 0.80;
     z-index: -1;
 }
 .contact-form,

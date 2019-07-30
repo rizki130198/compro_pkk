@@ -1,4 +1,4 @@
-breadcrumb area start -->
+<!--breadcrumb area start -->
 <section class="hero-area breadcrumb-area">
 	<div class="container">
 		<div class="row">
@@ -23,7 +23,8 @@ breadcrumb area start -->
 		<div class="row">
 			<div class="col-lg-8">
 				<div class="blog-details">
-					<img src="<?=base_url('assets/img/'.$row->gambar)?>" alt="blog-details">
+					<h2 style="margin-bottom: 15px;"><?=$row->judul?></h2>
+					<img src="<?=base_url('assets/img/berita/'.$row->gambar)?>" alt="blog-details">
 					<div class="post-author">
 						<a href="#"><i class="icofont icofont-user"></i>Admin</a>
 						<a href="#"><i class="icofont icofont-calendar"></i><?=$row->created_at?></a>
@@ -50,20 +51,11 @@ breadcrumb area start -->
 			</div>
 			<div class="col-lg-4">
 				<div class="sidebar">
-					<!-- <div class="widget">
+					<div class="widget">
 						<form action="#">
 							<input type="text" name="search" placeholder="Search here">
 							<button type="submit">Go</button>
 						</form>
-					</div>
-					<div class="widget">
-						<h4>Categories</h4>
-						<ul>
-							<li><a href="#">Business</a></li>
-							<li><a href="#">Networking</a></li>
-							<li><a href="#">Security</a></li>
-							<li><a href="#">Software</a></li>
-						</ul>
 					</div>
 					<div class="widget">
 						<h4>Latest posts</h4>
@@ -73,16 +65,8 @@ breadcrumb area start -->
 							<li><a href="#">Nintendo compatible NES30 Arcade now</a></li>
 						</ul>
 					</div>
-					<div class="widget widget-tags">
-						<h4>Tags</h4>
-						<a href="#">Business</a>
-						<a href="#">Networking</a>
-						<a href="#">Latest</a>
-						<a href="#">Popular</a>
-						<a href="#">Security</a>
-					</div> -->
 				</div>
 			</div>
 		</div>
 	</div>
-</section><!-- blog section end
+</section><!-- blog section end -->
