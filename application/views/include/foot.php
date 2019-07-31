@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">
-				<div class="contact-form">
+				<div class="contact-form" style="max-height: 75%;">
 					<h4>Hubungi Kami</h4>
 					<p class="form-message"></p>
 					<form id="contact-form" action="<?= site_url('main/sendmessage') ?>" method="POST">
@@ -15,7 +15,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="contact-address">
+				<div class="contact-address" style="max-height: 75%;">
 					<h4>Alamat</h4>
 					<p><?=$alamat->alamat?></p>
 					<ul>
@@ -34,6 +34,7 @@
 							</div>
 							<div class="contact-address-info">
 								<a href="mailto:koperasi.pkkmj@gmail.com">koperasi.pkkmj@gmail.com</a>
+								<a href="">Fax : 021-788-34623</a>
 							</div>
 						</li>
 						<li>
@@ -41,7 +42,7 @@
 								<i class="icofont icofont-web"></i>
 							</div>
 							<div class="contact-address-info">
-								<a href="www.jsoftbd.com">www.koperasipkkmelatijaya.co.id</a>
+								<a href="www.koperasipkkmelatijaya.co.id">www.koperasipkkmelatijaya.co.id</a>
 							</div>
 						</li>
 					</ul>

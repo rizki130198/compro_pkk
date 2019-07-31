@@ -27,6 +27,22 @@ class Main extends CI_Controller {
 		$data['row'] = $this->db->get_where('berita',array('idberita'=>$id))->row();
 		$this->load->view('utama',$data);
 	}
+	public function berita()
+	{
+		$data['title'] = 'Semua Berita PKK';
+		$data['link_view'] = 'pages/berita';
+		$data['alamat'] = $this->first_model->getAlamat();
+		$data['tentang'] = $this->first_model->getTentang();
+		$this->load->view('utama',$data);
+	}
+	public function tentang()
+	{
+		$data['title'] = 'Tentang PKK';
+		$data['link_view'] = 'pages/tentang';
+		$data['alamat'] = $this->first_model->getAlamat();
+		$data['tentang'] = $this->first_model->getTentang();
+		$this->load->view('utama',$data);
+	}
 	public function login()
 	{
 		$data['title'] = 'Login PKK';

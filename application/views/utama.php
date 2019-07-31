@@ -25,6 +25,7 @@
   <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/animate.min.css">
   <!-- Main style CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/style.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/custom.css" media="all" />
   <!-- Responsive CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/responsive.css" media="all" />
   <!-- Favicon Icon -->
@@ -119,7 +120,7 @@
      }
 
      function createTable(result){
-       var url = "<?=base_url('assets/img/')?>";
+       var url = "<?=base_url('assets/img/berita/')?>";
        var urlberita = "<?=site_url('main/detail_b/')?>";
        $('#blog').empty();
        for(index in result){
@@ -134,12 +135,12 @@
         body += '<div class="single-post">';
         body += '<div class="post-thumbnail">';
         body += '<a href="'+urlberita+idnya+'">';
-        body += '<img src="'+url+gambar+'" alt="blog">';
+        body += '<img class="img-berita" src="'+url+gambar+'" alt="blog">';
         body += '</a>';
         body += '</div><div class="post-details">';
         body += '<div class="post-author">';
         body += '<i class="icofont icofont-user"></i> Admin ';
-        body += '<i class="icofont icofont-calendar"></i> '+created_at+' ';
+        body += '<i class="icofont icofont-calendar" style="padding-left: 10px;"></i> '+created_at+' ';
         body += '</div>';
         body += '<h4 class="post-title"><a href="'+urlberita+idnya+'">'+judul+'</a></h4>';
         body += '<p>'+deskripsi+'</p>';
