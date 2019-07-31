@@ -81,12 +81,12 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 <header class="header">
 	<div class="container">
 		<div class="row flexbox-center">
-			<div class="col-lg-2 col-md-3 col-6">
+			<div class="col-lg-3 col-md-3 col-6">
 				<div class="logo">
-					<a href="#home" style="color: #fff;font-size: 14px;">PKK COMPANY PROFILE</a>
+					<a href="#home" style="color: #fff;font-size: 14px;"><img src="<?php echo base_url('assets/img/logo.png'); ?>" style="margin-right: 10px;width: 45px;">Koperasi PKK Melati Jaya</a>
 				</div>
 			</div>
-			<div class="col-lg-10 col-md-9 col-6">
+			<div class="col-lg-9 col-md-9 col-6">
 				<div class="responsive-menu"></div>
 				<div class="mainmenu">
 					<ul id="primary-menu" class="Navigation">
