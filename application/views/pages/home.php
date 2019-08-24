@@ -1,22 +1,26 @@
 <div id="preloader"></div>
 <!-- hero area start -->
-<section class="hero-area" id="home" style="padding-top: 90px !important;">
-	<!-- <div class="hero-area-slider">
-		<?php foreach ($home as $beranda) { ?>
-			<div class="hero-area-single-slide">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-7">
-							<div class="hero-area-content">
-								<h1>Selamat Datang !</h1>
-								<p><?=$beranda->deskripsi?></p>
-							</div>
-						</div>
-					</div>
+<section class="hero-area" id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7">
+				<?php foreach ($home as $beranda) { ?>
+				<div class="hero-area-content">
+					<h1>Selamat Datang !</h1>
+					<div style="border-top:solid 2px #007bff;width: 100px;margin: 10px 0 30px 0;"></div>
+					<h3><?=$beranda->deskripsi?></h3>
+					<a href="#" class="appao-btn-started">Get Started</a>
+					<a href="#Learn" class="appao-btn">Ayo Mulai Pelajari</a>
+				</div>
+				<?php } ?>
+			</div>
+			<div class="col-lg-5">
+				<div class="hand-mockup text-lg-left text-center">
+					<img src="assets/img/home.svg" alt="Hand Mockup" />
 				</div>
 			</div>
-		<?php } ?>
-	</div> -->
+		</div>
+	</div>
 </section>
 <!-- hero area end -->
 
@@ -42,8 +46,35 @@
 </section>
 <!-- about section end -->
 
+<!-- blog section start -->
+<!-- <div style="background: url(assets/img/footer.PNG) center center no-repeat;background-size: cover;width: 100%;height:64px;line-height: 0;"></div> -->
+<section class="blog-area ptb-90" id="Berita" style="background-color: #f8f8f8;box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1);">
+	<div class="container">
+		<h2 style="padding: 0;margin-bottom: 5px;letter-spacing: 2px;text-align: center;">Berita</h2>
+		<center><div class="double-line"></div></center>
+		<div class="row" id="blog" style="margin: 3% auto;">
+
+		</div>
+		<div id='pagination'></div>
+	</div>
+</section>
+<!-- blog section end -->
+
+<!-- video section start -->
+<section class="video-area" id="Learn" style="padding: 70px 0;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h3 style="color: #fff;font-weight: 100;">Bagaimana menjadi anggota Koperasi PKK Melati Jaya...?</h3>
+				<a href=""><button class="btn btn-lg btn-ayo">Ayo Mulai Pelajari</button></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- video section end -->
+
 <!-- team section start -->
-<section class="team-area ptb-90" id="team" style="background-color: #f5f8fd;">
+<section class="team-area ptb-90" id="team">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
@@ -63,52 +94,49 @@
 
 				<!-- Carousel items -->
 				<div class="carousel-inner">
-
 					<div class="carousel-item active">
 						<div class="row">
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
 									<div class="pic">
-										<img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+										<img src="<?php echo base_url('assets/anggota/home/Rusmiaty.jpg'); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">Dana ROBINSON</h3>
-										<span class="post">Marketing Consultant</span>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Dr. Bernard COVA</h3>
-										<span class="post">Marketing - Auteur</span>
+										<h3 class="title">HJ. Rusmiati Saefullah</h3>
+										<span class="post">Ketua</span>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
 									<div class="pic">
-										<img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+										<img src="<?php echo base_url('assets/anggota/home/Arijaty.jpg'); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">Dr. Francis Guilbert</h3>
-										<span class="post">Docteur - Chercheur</span>
+										<h3 class="title">Dra. Arijaty Azhari, Apt</h3>
+										<span class="post">Wakil Ketua</span>
 									</div>
 								</div>
 							</div>
-
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
 									<div class="pic">
-										<img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+										<img src="<?php echo base_url('assets/anggota/home/Ratna.jpg'); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">Dr. Georges WANET</h3>
-										<span class="post">Docteur</span>
+										<h3 class="title">Ratna Ningsih</h3>
+										<span class="post">Wakil Ketua 2</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="our-team">
+									<div class="pic">
+										<img src="<?php echo base_url('assets/anggota/home/Erna K.jpg'); ?>">
+									</div>
+									<div class="team-content">
+										<h3 class="title">Dr. Erna K. Sprapto, M.Pd</h3>
+										<span class="post">Sekretaris</span>
 									</div>
 								</div>
 							</div>
@@ -122,11 +150,11 @@
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
 									<div class="pic">
-										<img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+										<img src="<?php echo base_url('assets/anggota/home/Sri Irianti.jpg'); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">Ted SICHELMAN</h3>
-										<span class="post">Law expert</span>
+										<h3 class="title">Sri Irianti</h3>
+										<span class="post">Bendahara</span>
 									</div>
 								</div>
 							</div>
@@ -134,11 +162,11 @@
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
 									<div class="pic">
-										<img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+										<img src="<?php echo base_url('assets/img/team/man1.png'); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">Dr. Noël ALBERT</h3>
-										<span class="post">Marketing Consultant</span>
+										<h3 class="title">Chairunnisa Nasution</h3>
+										<span class="post">Kepala Unit Usaha</span>
 									</div>
 								</div>
 							</div>
@@ -146,11 +174,11 @@
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
 									<div class="pic">
-										<img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+										<img src="<?php echo base_url('assets/anggota/home/Erna M.jpg'); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">Ray BENEDICKTUS</h3>
-										<span class="post">Experienced Marketing Consultant</span>
+										<h3 class="title">Erna Maharanto</h3>
+										<span class="post">Pengawas</span>
 									</div>
 								</div>
 							</div>
@@ -166,20 +194,6 @@
 	</div>
 </section>
 
-<!-- blog section start -->
-<!-- <div style="background: url(assets/img/footer.PNG) center center no-repeat;background-size: cover;width: 100%;height:64px;line-height: 0;"></div> -->
-<section class="blog-area ptb-90" id="Berita">
-	<div class="container">
-		<h2 style="padding: 0;margin-bottom: 5px;letter-spacing: 2px;text-align: center;">Berita</h2>
-		<center><div class="double-line"></div></center>
-		<div class="row" id="blog" style="margin: 3% auto;">
-
-		</div>
-		<div id='pagination'></div>
-	</div>
-</section>
-<!-- blog section end -->
-
 <!-- counter section start -->
 <div style="background: url(assets/img/footer-grey.PNG) center center no-repeat;background-size: cover;width: 100%;height:64px;line-height: 0;"></div>
 <section style="padding-top: 20px;padding-bottom:50px;background-color: #dedfe1;">
@@ -191,7 +205,7 @@
 				</div>
 			</div>
 			<div class="col-md-4 col-sm-6">
-				<button class="btn btn-primary btn-lg btn-block" style="margin-top: 15px;font-size: 16px;font-weight: bold;padding: 10px;">Mulai Berlangganan</button>
+				<a href=""><button class="btn btn-subsribe btn-lg btn-block">Mulai Berlangganan</button></a>
 			</div>
 		</div>
 	</div>

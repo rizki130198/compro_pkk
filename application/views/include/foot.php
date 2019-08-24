@@ -1,4 +1,4 @@
-<footer class="footer" id="Hubungi Kami">
+<footer class="footer" id="HubungiKami">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6">

@@ -322,6 +322,15 @@
 								</ol>
 							</div>
 						</div>
+						<div class="tab-pane fade" id="lokasi" role="tabpanel" aria-labelledby="list-lokasi-list">
+							<div class="single_about">
+								<h3 style="margin-bottom: 12px;">Legal Officer</h3>
+								<p>Gedung PKK Melati Jaya Jalan Kebagusan Raya No.42, Pasar Minggu, Jakarta Selatan dan Konsultan Hukum H. Rizul Sudarmadi,SH. Mkn, Jalan Alu-alu No.5, Rawamangun Jakarta Timur 13220.</p>
+								<br>
+								<h3 style="margin-bottom: 12px;">Domisili</h3>
+								<p>Kantor Pusat Koperasi PKK MELATI JAYA menempati tanah dan gedung milik pemerintah yang terletak di Jl Kebagusan Raya No.42, Pasar Minggu, Jakarta Selatan 12520, Provinsi DKI Jakarta, Tlp. 021-788.38466, Fax 021-788.34623</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -333,6 +342,7 @@
 						<a class="list-group-item list-group-item-action" id="list-pembina-list" data-toggle="tab" href="#pembina" role="tab" aria-selected="false">Pembina</a>
 						<a class="list-group-item list-group-item-action" id="list-unit-list" data-toggle="tab" href="#unit" role="tab" aria-selected="false">Unit Usaha dan Anak Perusahaan</a>
 						<a class="list-group-item list-group-item-action" id="list-mitra-list" data-toggle="tab" href="#mitra" role="tab" aria-selected="false">Mitra Usaha</a>
+						<a class="list-group-item list-group-item-action" id="list-lokasi-list" data-toggle="tab" href="#lokasi" role="tab" aria-selected="false">Lokasi</a>
 					</div>
 				</div>
 			</div>

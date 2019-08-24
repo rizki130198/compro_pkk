@@ -82,8 +82,11 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 	<div class="container">
 		<div class="row flexbox-center">
 			<div class="col-lg-3 col-md-3 col-6">
-				<div class="logo" style="width: 350px;">
+				<div class="logo-light" style="width: 350px;">
 					<a href="#home"><img src="<?php echo base_url('assets/img/logo/logo.png'); ?>" style=""></a>
+				</div>
+				<div class="logo-dark" style="width: 350px;display: none;">
+					<a href="#home"><img src="<?php echo base_url('assets/img/logo/logo_.png'); ?>" style=""></a>
 				</div>
 			</div>
 			<div class="col-lg-9 col-md-9 col-6">
@@ -93,15 +96,15 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 						<?php if ($this->uri->segment(1) == "") { ?>
 							<li><a class="nav-link active" href="#home">Beranda</a></li>
 							<li><a class="nav-link" href="#Tentang">Tentang</a></li>
-							<li><a class="nav-link" href="#team">Pengurus</a></li>
 							<li><a class="nav-link" href="#Berita">Berita</a></li>
-							<li><a class="nav-link" href="#Hubungi Kami">Hubungi Kami</a></li>
+							<li><a class="nav-link" href="#team">Pengurus</a></li>
+							<li><a class="nav-link" href="#HubungiKami">Hubungi Kami</a></li>
 						<?php }else{ ?>
 							<li><a class="nav-link active" href="<?php echo site_url(''); ?>">Beranda</a></li>
 							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Tentang</a></li>
-							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Pengurus</a></li>
 							<li><a class="nav-link" href="berita">Berita</a></li>
-							<li><a class="nav-link" href="#Hubungi Kami">Hubungi Kami</a></li>
+							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Pengurus</a></li>
+							<li><a class="nav-link" href="#HubungiKami">Hubungi Kami</a></li>
 						<?php } ?>
 						<li class="drop">
 							<a href="#produk">Produk <i class="caret"></i></a>

@@ -1,3 +1,38 @@
+.btn-ayo{
+  background-color: transparent;
+  border-radius: 25px;
+  border:solid 2px #fff;    
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 28px;
+  margin-top:40px;
+  color: #fff;
+}
+a .btn-ayo:hover{
+  background-color: #3a53c4;
+  transition: all 0.2s linear 0s; 
+  border:solid 2px #3a53c4;
+}
+.btn-subsribe{
+  background-color: transparent;
+  border-radius: 25px;
+  border:solid 2px #3a53c4;    
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 8px 28px;
+  color: #3a53c4;
+  margin-top: 15px;
+}
+a .btn-subsribe:hover{
+  background-color: #3a53c4;
+  color: #fff;
+  transition: all 0.2s linear 0s; 
+  border:solid 2px #3a53c4;
+}
 .wrap {
   text-align: center;
   vertical-align: middle;
@@ -205,7 +240,7 @@
   margin-left: 55px;
   margin-top: 0px;
   width: 65px;
-  background: #395599;
+  background: #3a53c4;
   z-index: 0;
 }
 #primary-menu li a:hover{
@@ -214,6 +249,8 @@
 .img-berita{
   width: 100%;
   height: 200px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .list-group a{
   border-left: 5px solid transparent;
@@ -253,11 +290,11 @@ ol li{
 }
 #accordion-style-1 h1,
 #accordion-style-1 a{
-  color:#395599;
+  color:#3a53c4;
 }
 #accordion-style-1 .btn-link {
   font-weight: 400;
-  color: #395599;
+  color: #3a53c4;
   background-color: transparent;
   text-decoration: none !important;
   font-size: 16px;
@@ -266,7 +303,7 @@ ol li{
 }
 
 #accordion-style-1 .card-body {
-  border-top: 2px solid #395599;
+  border-top: 2px solid #3a53c4;
 }
 
 #accordion-style-1 .card-header .btn.collapsed .fa.main{
@@ -274,7 +311,7 @@ ol li{
 }
 
 #accordion-style-1 .card-header .btn .fa.main{
-  background: #395599;
+  background: #3a53c4;
   padding: 13px 11px;
   color: #ffffff;
   width: 35px;
@@ -300,15 +337,19 @@ ol li{
 .blog .carousel-indicators li {
     background: #a3a3a3;
     border-radius: 50%;
-    width: 8px;
-    height: 8px;
-    margin-bottom:10px;
+    width: 12px;
+    height: 12px;
     cursor: pointer;
 }
 
 .blog .carousel-indicators .active {
-background: #707070;
-margin-bottom:10px;
+  background: #3a53c4;
+  margin-bottom:10px;
+  width: 30px;
+  height: 12px;
+  border-radius: 10px;
+  -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+  transition: width 0.5s;/*transition: all 0.3s linear 0s;*/
 }
 
 .our-team-section {
@@ -329,12 +370,14 @@ margin-bottom:10px;
   z-index: 99;
 }
 .our-team {
-  padding: 0 0 40px;
-  background: #f9f9f9;
+  padding: 0 0 10px;
+  height: 326px;
+  background: #fff;
   text-align: center;
   overflow: hidden;
   position: relative;
-  border-bottom: 5px solid #395599;
+  border-bottom: 5px solid #3a53c4;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
 }
 .our-team:hover {
   border-bottom: 5px solid #143278;
@@ -342,8 +385,8 @@ margin-bottom:10px;
 
 .our-team .pic {
   display: inline-block;
-  width: 130px;
-  height: 130px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 50px;
   z-index: 1;
   position: relative;
@@ -353,7 +396,7 @@ margin-bottom:10px;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #395599;
+  background: #3a53c4;
   position: absolute;
   bottom: 135%;
   right: 0;
@@ -372,7 +415,7 @@ margin-bottom:10px;
   border-radius: 50%;
   transform: scale(1);
   transition: all 0.9s ease 0s;
-  box-shadow: 0 0 0 8px #f7f5ec;
+  box-shadow: 0 0 0 8px #fff;
   transform: scale(0.7);
   position: relative;
   z-index: 2;

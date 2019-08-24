@@ -137,11 +137,11 @@
         body += '<a href="'+urlberita+idnya+'">';
         body += '<img class="img-berita" src="'+url+gambar+'" alt="blog">';
         body += '</a>';
-        body += '</div><div class="post-details">';
+        body += '</div>';
         body += '<div class="post-author">';
         body += '<i class="icofont icofont-user"></i> Admin ';
         body += '<i class="icofont icofont-calendar" style="padding-left: 10px;"></i> '+created_at+' ';
-        body += '</div>';
+        body += '</div><div class="post-details">';
         body += '<h4 class="post-title"><a href="'+urlberita+idnya+'">'+judul+'</a></h4>';
         body += '<p>'+deskripsi+'</p>';
         body += '</div>';
