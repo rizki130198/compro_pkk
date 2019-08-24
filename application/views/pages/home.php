@@ -10,7 +10,7 @@
 					<div style="border-top:solid 2px #007bff;width: 100px;margin: 10px 0 30px 0;"></div>
 					<h3><?=$beranda->deskripsi?></h3>
 					<a href="#" class="appao-btn-started">Get Started</a>
-					<a href="#Learn" class="appao-btn">Ayo Mulai Pelajari</a>
+					<a href="#" class="appao-btn">Pelajari lebih lanjut</a>
 				</div>
 				<?php } ?>
 			</div>
@@ -61,12 +61,13 @@
 <!-- blog section end -->
 
 <!-- video section start -->
-<section class="video-area" id="Learn" style="padding: 70px 0;">
+<section class="video-area" style="padding: 50px 0;">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12">
-				<h3 style="color: #fff;font-weight: 100;">Bagaimana menjadi anggota Koperasi PKK Melati Jaya...?</h3>
-				<a href=""><button class="btn btn-lg btn-ayo">Ayo Mulai Pelajari</button></a>
+				<h3 style="color: #fff;">Ayo daftar menjadi anggota PKK Melati Jaya.</h3>
+				<h4 style="color: #fff;margin-top: 20px;font-weight: 100;">Dan ada banyak keungtungannya, tunggu apa lagi?</h4>
+				<a href=""><button class="btn btn-lg btn-ayo">Mulai Bergabung</button></a>
 			</div>
 		</div>
 	</div>
@@ -162,7 +163,7 @@
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
 									<div class="pic">
-										<img src="<?php echo base_url('assets/img/team/man1.png'); ?>">
+										<img src="<?php echo base_url('assets/anggota/home/neni.jpg'); ?>">
 									</div>
 									<div class="team-content">
 										<h3 class="title">Chairunnisa Nasution</h3>

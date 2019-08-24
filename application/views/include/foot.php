@@ -24,8 +24,8 @@
 								<i class="icofont icofont-headphone-alt"></i>
 							</div>
 							<div class="contact-address-info">
-								<a href="callto:#"><?=$alamat->nohp?></a>
-								<a href="callto:#"><?=$alamat->nohp2?></a>
+								<p style="margin: 0;padding: 0;"><?=$alamat->nohp?></p>
+								<p style="margin: 0;padding: 0;"><?=$alamat->nohp2?></p>
 							</div>
 						</li>
 						<li>
@@ -33,8 +33,8 @@
 								<i class="icofont icofont-envelope"></i>
 							</div>
 							<div class="contact-address-info">
-								<a href="mailto:koperasi.pkkmj@gmail.com">koperasi.pkkmj@gmail.com</a>
-								<a href="">Fax : 021-788-34623</a>
+								<p href="mailto:koperasi.pkkmj@gmail.com" style="margin: 0;padding: 0;">koperasi.pkkmj@gmail.com</p>
+								<p style="margin: 0;padding: 0;">Fax : 021-788-34623</p>
 							</div>
 						</li>
 						<li>
@@ -42,7 +42,7 @@
 								<i class="icofont icofont-web"></i>
 							</div>
 							<div class="contact-address-info">
-								<a href="www.koperasipkkmelatijaya.co.id">www.koperasipkkmelatijaya.co.id</a>
+								<a href="<?php echo site_url('http://koperasipkkmelatijaya.co.id/'); ?>">www.koperasipkkmelatijaya.co.id</a>
 							</div>
 						</li>
 					</ul>

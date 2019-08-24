@@ -1093,6 +1093,8 @@ h4.post-title a {
 }
 .contact-form,
 .contact-address {
+    border-radius: 10px;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
     background: #fff;
     padding: 40px 65px;
     margin-bottom: 40px;
@@ -1172,7 +1174,7 @@ h4.post-title a {
 }
 .copyright-area ul li a:hover {
     background: #0074da;
-    /*color: #fff;*/
+    color: #fff !important;
 }
 .copyright-area ul {
     margin-bottom: 30px;
