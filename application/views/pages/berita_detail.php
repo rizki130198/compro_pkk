@@ -1,4 +1,3 @@
-<!--breadcrumb area start -->
 <section class="hero-area breadcrumb-area">
 	<div class="container">
 		<div class="row">
@@ -6,9 +5,9 @@
 				<div class="hero-area-content">
 					<h1><?=$row->judul?></h1>
 					<ul>
-						<li><a href="index.html">Beranda</a></li>
-						<li><a href="blog.html">Berita</a></li>
-						<li><a href="blog-detail.html"><?=$row->judul?></a></li>
+						<li><a href="<?=site_url('/')?>">Beranda</a></li>
+						<li><a href="<?=site_url('/')?>">Berita</a></li>
+						<li><a href="#"><?=$row->judul?></a></li>
 					</ul>
 				</div>
 			</div>

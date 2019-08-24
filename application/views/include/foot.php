@@ -33,8 +33,8 @@
 								<i class="icofont icofont-envelope"></i>
 							</div>
 							<div class="contact-address-info">
+								<a href="mailto:koperasi.pkkmj@gmail.com">koperasi.pkkmj@gmail.com</a>
 								<a href="">Fax : 021-788-34623</a>
-								<a href="mailto:#">support@koperasipkkmelatijaya.co.id</a>
 							</div>
 						</li>
 						<li>
@@ -42,7 +42,7 @@
 								<i class="icofont icofont-web"></i>
 							</div>
 							<div class="contact-address-info">
-								<a href="www.jsoftbd.com">www.koperasipkkmelatijaya.co.id</a>
+								<a href="www.koperasipkkmelatijaya.co.id">www.koperasipkkmelatijaya.co.id</a>
 							</div>
 						</li>
 					</ul>

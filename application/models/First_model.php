@@ -63,7 +63,7 @@ class First_model extends CI_Model {
 		}else{
 			redirect('main');
 		}
-	}
+	}	
 	public function kirimpesan()
 	{
 		$query = $this->db->insert('kontak', array(

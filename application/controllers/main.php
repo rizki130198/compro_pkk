@@ -17,7 +17,7 @@ class Main extends CI_Controller {
 	}
 	public function detail_b()
 	{
-		$id = $this->uri->segment(2);
+		$id = $this->uri->segment(3);
 		$data['title'] = 'Detail Berita';
 		$data['link_view'] = 'pages/berita_detail';		
 		$data['home'] = $this->first_model->getHome();
@@ -88,8 +88,8 @@ class Main extends CI_Controller {
 	public function actlogin()
 	{
 		$this->first_model->login();
-	}
-		public function sendmessage()
+	}	
+	public function sendmessage()
 	{
 		$this->first_model->kirimpesan();
 	}
