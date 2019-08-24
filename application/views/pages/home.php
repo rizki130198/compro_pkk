@@ -87,9 +87,7 @@
 						</div>
 						<h4 class="post-title"><a href="blog.html">Lorem ipsum dolor sit</a></h4>
 						<p>Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-					</div>
-=======
-<!-- counter section end -->
+					</div> -->
 <!-- team section start -->
 <section class="team-area ptb-90" id="team">
 	<div class="container">
