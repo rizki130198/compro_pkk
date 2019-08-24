@@ -3,14 +3,14 @@
 <section class="hero-area" id="home">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-7">
+			<div class="col-lg-7 col-header">
 				<?php foreach ($home as $beranda) { ?>
 				<div class="hero-area-content">
 					<h1>Selamat Datang !</h1>
-					<div style="border-top:solid 2px #007bff;width: 100px;margin: 10px 0 30px 0;"></div>
-					<h3><?=$beranda->deskripsi?></h3>
+					<div class="garis-header"></div>
+					<h3 class="desc-home"><?=$beranda->deskripsi?></h3>
 					<a href="#" class="appao-btn-started">Get Started</a>
-					<a href="#" class="appao-btn">Pelajari lebih lanjut</a>
+					<a href="<?php echo site_url('learn_more'); ?>" class="appao-btn">Pelajari lebih lanjut</a>
 				</div>
 				<?php } ?>
 			</div>
@@ -27,18 +27,21 @@
 <!-- about section start -->
 <section class="about-area ptb-90" id="Tentang">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-6 col-sm-6">
+		<div class="sec-title">
+			<h2 style="padding: 0;margin-bottom: 5px;letter-spacing: 2px;">Tentang</h2>
+			<center><div class="double-line"></div></center>
+		</div>
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-md-6 col-xs-6 col-tentang">
 				<img src="<?php echo base_url('assets/img/back1.jpeg'); ?>" width="80%">
 			</div>
-			<div class="col-md-6 col-sm-6">
+			<div class="col-md-6 col-xs-6">
 				<div class="sec-title" style="text-align: left;">
-					<h2 style="padding: 0;margin-bottom: 5px;letter-spacing: 2px;">Koperasi PKK Melati Jaya</h2>
-					<div class="double-line"></div>
+					<h3 style="padding: 0;margin-bottom: 10px;letter-spacing: 2px;color: #666;font-weight: 100;">Koperasi PKK Melati Jaya</h3>
 					<p><?=$tentang->deskripsi?></p>
 					<br>
 					<br>
-					<a href="<?php echo site_url('tentang'); ?>"><button class="btn btn-primary">Selengkapnya</button></a>
+					<a href="<?php echo site_url('tentang'); ?>"><button class="btn btn-subsribe">Selengkapnya</button></a>
 				</div>
 			</div>
 		</div>
@@ -200,12 +203,12 @@
 <section style="padding-top: 20px;padding-bottom:50px;background-color: #dedfe1;">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-sm-6">
+			<div class="col-md-8 col-xs-12">
 				<div style="text-align: left;padding-right: 25px;">
 					<h2 style="margin-bottom: 20px;font-weight: 100;">Ayo mulai berlangganan dengan <br>Koperasi PKK Melati Jaya</h2>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-6">
+			<div class="col-md-4 col-xs-12">
 				<a href=""><button class="btn btn-subsribe btn-lg btn-block">Mulai Berlangganan</button></a>
 			</div>
 		</div>

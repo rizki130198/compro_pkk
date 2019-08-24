@@ -20,16 +20,16 @@ ul li a:hover {
 	margin-left: -8px;
 }
 .dropdownContain {
-	width: 160px;
+	width: 265px;
 	position: absolute;
 	z-index: 2;
 	left: 50%;
-	margin-left: -80px; /* half of width */
+	margin-left: -132px; /* half of width */
 	top: -400px;
 	margin-top: -35px;
 }
 .dropOut {
-	width: 160px;
+	width: 265px;
 	background: white;
 	float: left;
 	position: relative;
@@ -55,7 +55,7 @@ ul li a:hover {
 .dropOut ul li {
 	text-align: left;
 	float: left;
-	width: 135px;
+	width: 240px;
 	padding: 5px;
 	margin: 0px 10px;
 	color: #777;
@@ -100,20 +100,21 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 							<li><a class="nav-link" href="#team">Pengurus</a></li>
 							<li><a class="nav-link" href="#HubungiKami">Hubungi Kami</a></li>
 						<?php }else{ ?>
-							<li><a class="nav-link active" href="<?php echo site_url(''); ?>">Beranda</a></li>
-							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Tentang</a></li>
-							<li><a class="nav-link" href="berita">Berita</a></li>
+							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Beranda</a></li>
+							<li><a class="nav-link <?php if($this->uri->segment(1)=="tentang"){echo "active";}?>" href="<?php echo site_url('tentang'); ?>">Tentang</a></li>
+							<li><a class="nav-link <?php if($this->uri->segment(1)=="berita"){echo "active";}?>" href="<?php echo site_url('berita'); ?>">Berita</a></li>
 							<li><a class="nav-link" href="<?php echo site_url(''); ?>">Pengurus</a></li>
 							<li><a class="nav-link" href="#HubungiKami">Hubungi Kami</a></li>
 						<?php } ?>
 						<li class="drop">
-							<a href="#produk">Produk <i class="caret"></i></a>
+							<a href="#produk">Instansi <i class="caret"></i></a>
 							<div class="dropdownContain">
 								<div class="dropOut">
 									<div class="triangle"></div>
 									<ul>
-										<li>PKK Mark</li>
-										<li>Simpan Pinjam</li>
+										<li>Unit usaha & anak perusahaan</li>
+										<!-- <li>PKK Mark</li> -->
+										<!-- <li>Simpan Pinjam</li> -->
 									</ul>
 								</div>
 							</div>

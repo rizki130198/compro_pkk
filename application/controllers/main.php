@@ -35,6 +35,14 @@ class Main extends CI_Controller {
 		$data['tentang'] = $this->first_model->getTentang();
 		$this->load->view('utama',$data);
 	}
+	public function learn_more()
+	{
+		$data['title'] = 'Pelajari Lebih Lanjut';
+		$data['link_view'] = 'pages/learn_more';
+		$data['alamat'] = $this->first_model->getAlamat();
+		$data['tentang'] = $this->first_model->getTentang();
+		$this->load->view('utama',$data);
+	}
 	public function tentang()
 	{
 		$data['title'] = 'Tentang PKK';

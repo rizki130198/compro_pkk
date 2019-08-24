@@ -59,4 +59,5 @@ $route['login'] = 'Main/login';
 $route['home'] = 'Main/index';
 $route['tentang'] = 'Main/tentang';
 $route['berita'] = 'Main/berita';
+$route['learn_more'] = 'Main/learn_more';
 $route['detail_b/(:any)'] = 'Main/detail_b';
