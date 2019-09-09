@@ -107,7 +107,7 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 							<li><a class="nav-link" href="#HubungiKami">Hubungi Kami</a></li>
 						<?php } ?>
 						<li class="drop">
-							<a href="#produk">Instansi <i class="caret"></i></a>
+							<a href="#produk">Unit Usaha <i class="caret"></i></a>
 							<div class="dropdownContain">
 								<div class="dropOut">
 									<div class="triangle"></div>

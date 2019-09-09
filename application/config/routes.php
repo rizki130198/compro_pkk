@@ -60,4 +60,6 @@ $route['home'] = 'Main/index';
 $route['tentang'] = 'Main/tentang';
 $route['berita'] = 'Main/berita';
 $route['learn_more'] = 'Main/learn_more';
+$route['unit_usaha'] = 'Main/unit_usaha';
+
 $route['detail_b/(:any)'] = 'Main/detail_b';

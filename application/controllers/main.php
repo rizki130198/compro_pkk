@@ -43,6 +43,14 @@ class Main extends CI_Controller {
 		$data['tentang'] = $this->first_model->getTentang();
 		$this->load->view('utama',$data);
 	}
+	public function unit_usaha()
+	{
+		$data['title'] = 'Unit Usaha dan Anak Perusahaan';
+		$data['link_view'] = 'pages/unit_usaha';
+		$data['alamat'] = $this->first_model->getAlamat();
+		$data['tentang'] = $this->first_model->getTentang();
+		$this->load->view('utama',$data);
+	}
 	public function tentang()
 	{
 		$data['title'] = 'Tentang PKK';
