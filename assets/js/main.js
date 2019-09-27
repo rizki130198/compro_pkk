@@ -196,3 +196,7 @@
 	new WOW().init();
 
 }(jQuery));
+
+$("img").mousedown(function(){
+    return false;
+});

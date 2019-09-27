@@ -363,7 +363,7 @@ input::-webkit-input-placeholder {
     background: transparent;
 }
 .slicknav_menu a.active,
-.mainmenu ul li a:hover,
+.mainmenu ul li a.nav-link:hover,
 .mainmenu ul li a.active {
     border: 1px solid #fff;
 }
@@ -386,11 +386,11 @@ input::-webkit-input-placeholder {
     border: 1px solid transparent;
 }
 .slicknav_menu a.active,
-.header.sticky .mainmenu ul li a:hover,
+.header.sticky .mainmenu ul li a.nav-link:hover,
 .header.sticky .mainmenu ul li a.active {
     border: 1px solid #3a53c4;
 }
-.header.sticky .mainmenu ul li a:hover{
+.header.sticky .mainmenu ul li a.nav-link:hover{
     background-color: #3a53c4 !important;
 }
 .header.sticky .logo-light{

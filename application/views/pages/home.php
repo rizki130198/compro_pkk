@@ -128,8 +128,8 @@
 										<img src="<?php echo base_url('assets/anggota/home/Ratna.jpg'); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">Ratna Ningsih</h3>
-										<span class="post">Wakil Ketua 2</span>
+										<h3 class="title">Dra. Ratna Ningsih</h3>
+										<span class="post">Wakil Ketua II</span>
 									</div>
 								</div>
 							</div>
@@ -170,7 +170,7 @@
 									</div>
 									<div class="team-content">
 										<h3 class="title">Chairunnisa Nasution</h3>
-										<span class="post">Kepala Unit Usaha</span>
+										<span class="post">Wakil Sekretaris dan Unit Usaha</span>
 									</div>
 								</div>
 							</div>
@@ -181,7 +181,7 @@
 										<img src="<?php echo base_url('assets/anggota/home/Erna M.jpg'); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">Erna Maharanto</h3>
+										<h3 class="title">Erna S. Maharanto</h3>
 										<span class="post">Pengawas</span>
 									</div>
 								</div>
