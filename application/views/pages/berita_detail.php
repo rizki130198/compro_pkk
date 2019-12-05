@@ -24,7 +24,7 @@
 				<div class="blog-details">
 					<h2 style="margin-bottom: 15px;"><?=$row->judul?></h2>
 					<img src="<?=base_url('assets/img/berita/'.$row->gambar)?>" alt="blog-details">
-					<div class="post-author">
+					<div class="post-author" style="background-color: #fff;padding-left: 0;">
 						<a href="#"><i class="icofont icofont-user"></i>Admin</a>
 						<a href="#"><i class="icofont icofont-calendar"></i><?=$row->created_at?></a>
 					</div>

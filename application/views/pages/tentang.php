@@ -109,93 +109,119 @@
 												<a href="#"><h4>Erna S. Maharanto</h4></a>
 											</div>
 										</div>
-									</div><
+									</div>
 								</div>
 								<h3 style="margin-bottom: 12px;margin-top: 30px;">Pengurus</h3>
-								<div class="row">
-									<div class="col-lg-4 col-sm-6">
-										<div class="single-team-member">
-											<div class="team-member-img">
-												<img src="assets/img/team/icon.jpg" alt="team">
-												<div class="team-member-icon">
-													<div class="display-table">
-														<div class="display-tablecell">
-															<a href="#"><i class="icofont icofont-social-facebook"></i></a>
-															<a href="#"><i class="icofont icofont-social-twitter"></i></a>
-															<a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
-															<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
+								<div class="blog">
+									<div id="blogCarousel" class="carousel slide" data-ride="carousel">
+
+										<ol class="carousel-indicators">
+											<li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+											<li data-target="#blogCarousel" data-slide-to="1"></li>
+											<li data-target="#blogCarousel" data-slide-to="2"></li>
+										</ol>
+
+										<!-- Carousel items -->
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<div class="row">
+													<div class="col-lg-4 col-md-6 col-sm-6">
+														<div class="our-team">
+															<div class="pic">
+																<img src="<?php echo base_url('assets/anggota/home/Rusmiaty.jpg'); ?>">
+															</div>
+															<div class="team-content">
+																<h3 class="title">HJ. Rusmiati Saefullah</h3>
+																<span class="post">Ketua</span>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4 col-md-6 col-sm-6">
+														<div class="our-team">
+															<div class="pic">
+																<img src="<?php echo base_url('assets/anggota/home/Arijaty.jpg'); ?>">
+															</div>
+															<div class="team-content">
+																<h3 class="title">Dra. Arijaty Azhari, Apt</h3>
+																<span class="post">Wakil Ketua</span>
+															</div>
+														</div>
+													</div>
+													<div class="col-lg-4 col-md-6 col-sm-6">
+														<div class="our-team">
+															<div class="pic">
+																<img src="<?php echo base_url('assets/anggota/home/Ratna.jpg'); ?>">
+															</div>
+															<div class="team-content">
+																<h3 class="title">Dra. Ratna Ningsih</h3>
+																<span class="post">Wakil Ketua II</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--.row-->
+											</div>
+											<!--.item-->
+
+											<div class="carousel-item">
+												<div class="row">
+													<div class="col-lg-4 col-md-6 col-sm-6">
+														<div class="our-team">
+															<div class="pic">
+																<img src="<?php echo base_url('assets/anggota/home/Erna K.jpg'); ?>">
+															</div>
+															<div class="team-content">
+																<h3 class="title">Dr. Erna K. Sprapto, M.Pd</h3>
+																<span class="post">Sekretaris</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-lg-4 col-md-6 col-sm-6">
+														<div class="our-team">
+															<div class="pic">
+																<img src="<?php echo base_url('assets/anggota/home/Sri Irianti.jpg'); ?>">
+															</div>
+															<div class="team-content">
+																<h3 class="title">Sri Irianti</h3>
+																<span class="post">Bendahara</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="col-lg-4 col-md-6 col-sm-6">
+														<div class="our-team">
+															<div class="pic">
+																<img src="<?php echo base_url('assets/anggota/home/neni.jpg'); ?>">
+															</div>
+															<div class="team-content">
+																<h3 class="title">Chairunnisa Nasution</h3>
+																<span class="post">Wakil Sekretaris dan Unit Usaha</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!--.row-->
+											</div>
+											
+											<div class="carousel-item">
+												<div class="row">
+													<div class="col-lg-4 col-md-6 col-sm-6">
+														<div class="our-team">
+															<div class="pic">
+																<img src="<?php echo base_url('assets/anggota/home/Erna M.jpg'); ?>">
+															</div>
+															<div class="team-content">
+																<h3 class="title">Erna S. Maharanto</h3>
+																<span class="post">Pengawas</span>
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="team-member-info">
-												<a href="#"><h4>HJ. Rusmiati Saefullah</h4></a>
-												<p>Ketua</p>
-											</div>
+											<!--.item-->
 										</div>
-									</div>
-									<div class="col-lg-4 col-sm-6">
-										<div class="single-team-member">
-											<div class="team-member-img">
-												<img src="assets/img/team/icon.jpg" alt="team">
-												<div class="team-member-icon">
-													<div class="display-table">
-														<div class="display-tablecell">
-															<a href="#"><i class="icofont icofont-social-facebook"></i></a>
-															<a href="#"><i class="icofont icofont-social-twitter"></i></a>
-															<a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
-															<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="team-member-info">
-												<a href="#"><h4>Dra. Arijaty Azhari, Apt</h4></a>
-												<p>Wakil Ketua</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-sm-6">
-										<div class="single-team-member">
-											<div class="team-member-img">
-												<img src="assets/img/team/icon.jpg" alt="team">
-												<div class="team-member-icon">
-													<div class="display-table">
-														<div class="display-tablecell">
-															<a href="#"><i class="icofont icofont-social-facebook"></i></a>
-															<a href="#"><i class="icofont icofont-social-twitter"></i></a>
-															<a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
-															<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="team-member-info">
-												<a href="#"><h4>Dr. Erna K. Sprapto, M.Pd</h4></a>
-												<p>Sekretaris</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-sm-6 offset-md-4" style="margin-top: 30px;">
-										<div class="single-team-member">
-											<div class="team-member-img">
-												<img src="assets/img/team/icon.jpg" alt="team">
-												<div class="team-member-icon">
-													<div class="display-table">
-														<div class="display-tablecell">
-															<a href="#"><i class="icofont icofont-social-facebook"></i></a>
-															<a href="#"><i class="icofont icofont-social-twitter"></i></a>
-															<a href="#"><i class="icofont icofont-brand-linkedin"></i></a>
-															<a href="#"><i class="icofont icofont-social-pinterest"></i></a>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="team-member-info">
-												<a href="#"><h4>Sri Irianti</h4></a>
-												<p>Bendahara</p>
-											</div>
-										</div>
+										<!--.carousel-inner-->
 									</div>
 								</div>
 							</div>

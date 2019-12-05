@@ -52,6 +52,13 @@ ul li a:hover {
 	float: left;
 	padding: 10px 0;
 }
+
+.dropOut ul a{
+	padding: 0;
+	margin: 0;
+	color: #666 !important;
+}
+
 .dropOut ul li {
 	text-align: left;
 	float: left;
@@ -69,9 +76,8 @@ ul li a:hover {
 	-o-transition: background .1s ease-out;
 	transition: background .1s ease-out;
 }
-
 .dropOut ul li:hover {
-	background: #f6f6f6;
+	background-color: #f6f6f6;
 }
 
 ul li:hover a { color: white; }
@@ -112,7 +118,7 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 								<div class="dropOut">
 									<div class="triangle"></div>
 									<ul>
-										<li>Unit usaha & anak perusahaan</li>
+										<a href="<?php echo site_url('unit_usaha'); ?>"><li>Unit usaha & anak perusahaan</li></a>
 										<!-- <li>PKK Mark</li> -->
 										<!-- <li>Simpan Pinjam</li> -->
 									</ul>
