@@ -41,7 +41,7 @@
 									<div class="form-group">
 										<label>Isi Berita</label>
 										<div class="form-group bmd-form-group">
-											<textarea class="form-control" id="editor" name="berita" rows="5"><?=$post->judul?></textarea>
+											<textarea class="form-control" id="editor" name="berita" rows="5"><?=$post->deskripsi?></textarea>
 										</div>
 									</div>
 								</div>

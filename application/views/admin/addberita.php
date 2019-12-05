@@ -47,7 +47,7 @@
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+              <button type="submit" class="btn btn-primary pull-right">Tambah Berita</button>
               <div class="clearfix"></div>
             </form>
           </div>

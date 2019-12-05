@@ -7,9 +7,9 @@ class AdminController extends CI_Controller {
 	{
 		parent::__construct();
 		date_default_timezone_set("Asia/Jakarta");
-		if ($this->session->userdata('nama')=="") {
-			redirect('/');
-		}
+		// if ($this->session->userdata('nama')=="") {
+		// 	redirect('/');
+		// }
 	}
 	public function index()
 	{
@@ -48,6 +48,14 @@ class AdminController extends CI_Controller {
 		$data['titleNav'] = 'Halaman Data Pengguna';
 		$data['link_view'] = 'admin/pengguna';
 		$data['post'] = $this->admin_model->getPost();
+		$this->load->view('admin/index', $data);
+	}
+	public function pengurus()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Pengurus';
+		$data['titleNav'] = 'Halaman Data Pengurus';
+		$data['link_view'] = 'admin/pengurus';
+		$data['pengurus'] = $this->first_model->getPengurus();
 		$this->load->view('admin/index', $data);
 	}
 	public function load_user()

@@ -48,7 +48,7 @@
 					<p>Dashboard</p>
 				</a>
 			</li>
-			<li class="<?php if ($this->uri->segment(2)=="daf_pengguna"){echo "active-drop";}elseif($this->uri->segment(2)=="pengguna"){echo "active-drop";} ?>">
+<!-- 			<li class="<?php if ($this->uri->segment(2)=="daf_pengguna"){echo "active-drop";}elseif($this->uri->segment(2)=="pengguna"){echo "active-drop";} ?>">
                 <a href="#" data-toggle="collapse" data-target="#pengguna" class="collapsed menu-act">
                     <i class="material-icons">people</i> 
                     <p>Pengguna <b class="caret pull-right"></b></p> 
@@ -69,7 +69,7 @@
                         </li>                        
                     </ul>
                 </div>
-            </li>
+            </li> -->
             <li class="<?php if ($this->uri->segment(2)=="menu"){echo "active-drop";}elseif($this->uri->segment(2)=="berita"){echo "active-drop";}elseif($this->uri->segment(2)=="settinghome"){echo "active-drop";} ?>">
                 <a href="#" data-toggle="collapse" data-target="#pengaturan" class="collapsed menu-act">
                     <i class="material-icons">settings</i> 
@@ -87,6 +87,12 @@
                             <a href="<?=site_url('admincontroller/berita');?>">
                                 <span class="sidebar-mini"> BR </span>
                                 <span class="sidebar-normal">Berita</span>
+                            </a>
+                        </li>
+                        <li class="<?php if($this->uri->segment(2)=="pengurus"){echo "active";}?>">
+                            <a href="<?=site_url('admincontroller/pengurus');?>">
+                                <span class="sidebar-mini"> PGR </span>
+                                <span class="sidebar-normal">Pengurus</span>
                             </a>
                         </li>
                         <li class="<?php if($this->uri->segment(2)=="settinghome"){echo "active";}?>">
