@@ -42,7 +42,7 @@
 									<div class="form-group">
 										<label>Posisi Pengurus</label>
 										<div class="form-group bmd-form-group">
-											<textarea class="form-control" name="posisi" rows="5"><?=$post->deskripsi?></textarea>
+											<textarea class="form-control" name="posisi" rows="5"><?=$post->jabatan?></textarea>
 										</div>
 									</div>
 								</div>

@@ -2,11 +2,11 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-				<a href="<?=site_url('tambah_berita')?>" class="btn btn-primary">Tambah Berita</a>
+				<a href="<?=site_url('admincontroller/tambah_pengurus')?>" class="btn btn-primary">Tambah Pengurus</a>
 				<div class="card">
 					<div class="card-header" data-background-color="purple">
-						<h4 class="card-title ">Data Berita</h4>
-						<p class="card-category"> Isi Berita</p>
+						<h4 class="card-title ">Data Pengurus</h4>
+						<p class="card-category"> Isi Pengurus</p>
 					</div>
 					<div class="card-content">
 						<div class="table-responsive">
@@ -28,12 +28,13 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php $no=1; foreach ($pengurus as $key): ?>
+								<?php $no=1; 
+								foreach ($pengurus as $key): ?>
 								<tr>
 									<td><?=$no++?></td>
-									<td><?=$key['nama']?></td>
-									<td><?=$key['jabatan']?></td>
-									<td><a href="<?=site_url('admincontroller/edit_pengurus/'.$key['id_pengurus'])?>" class="btn btn-info">edit</a><a onclick="buttondeletepengurus(<?=$key['id_pengurus']?>)" class="btn btn-danger">delete</a></td>
+									<td><?=$key->nama;?></td>
+									<td><?=$key->jabatan;?></td>
+									<td><a href="<?=site_url('admincontroller/edit_pengurus/'.$key->id_pengurus)?>" class="btn btn-info">edit</a><a onclick="buttondeletepengurus(<?=$key->id_pengurus?>)" class="btn btn-danger">delete</a></td>
 								</tr>
 							<?php endforeach ?>
 						</tbody>

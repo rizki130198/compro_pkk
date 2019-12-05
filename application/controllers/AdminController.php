@@ -89,6 +89,13 @@ class AdminController extends CI_Controller {
 		$data['link_view'] = 'admin/addberita';
 		$this->load->view('admin/index', $data);
 	}
+	public function tambah_pengurus()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Pengurus';
+		$data['titleNav'] = 'Halaman Tambah Pengurus';
+		$data['link_view'] = 'admin/addpengurus';
+		$this->load->view('admin/index', $data);
+	}
 	public function edit_berita($id)
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';
