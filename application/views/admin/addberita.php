@@ -20,7 +20,7 @@
                             <div class="col-md-12">
                               <div class="well">
                                 <input type="file" name="foto">
-                              <input type="hidden" class="form-control" name="oldFoto[]">
+                                <input type="hidden" class="form-control" name="oldFoto">
                               </div>
                             </div>  
                           </div>

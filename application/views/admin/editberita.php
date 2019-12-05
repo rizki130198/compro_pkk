@@ -20,6 +20,7 @@
 														<div class="col-md-12">
 															<div class="well">
 																<input type="file" name="foto">
+                                								<input type="hidden" value="<?=$post->gambar?>" class="form-control" name="oldFoto">
 															</div>
 														</div>  
 													</div>

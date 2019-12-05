@@ -8,7 +8,7 @@
             <p class="card-category"> Edit Home</p>
           </div>
           <div class="card-content">
-            <form method="post" action="<?= site_url('admincontroller/actaddHome') ?>" enctype="multipart/form-data"  accept-charset="utf-8">
+            <form method="post" action="<?= site_url('admincontroller/actaddPengurus') ?>" enctype="multipart/form-data"  accept-charset="utf-8">
               <div class="row">
                 <div class="col-md-12">
                   <label>Foto Pengurus</label>
@@ -30,11 +30,17 @@
                 </div>
               </div>
               <div class="row">
+                  <div class="col-md-12">
+                  <div class="form-group bmd-form-group">
+                    <label class="bmd-label-floating">Nama</label>
+                    <input type="text" class="form-control" name="nama">
+                  </div>
+                </div>
                 <div class="col-md-12">
                   <div class="form-group">
                     <label>Posisi</label>
                     <div class="form-group bmd-form-group">
-                      <textarea class="form-control" id="editor" name="isi" rows="5"></textarea>
+                      <textarea class="form-control" id="posisi" name="isi" rows="5"></textarea>
                     </div>
                   </div>
                 </div>

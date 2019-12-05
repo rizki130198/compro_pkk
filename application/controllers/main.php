@@ -12,6 +12,7 @@ class Main extends CI_Controller {
 		$data['submenu'] = $this->first_model->getSubmenu();
 		$data['alamat'] = $this->first_model->getAlamat();
 		$data['tentang'] = $this->first_model->getTentang();
+		$data['pengurus'] = $this->first_model->getPengurus();
 
 		$this->load->view('utama',$data);
 	}

@@ -33,7 +33,7 @@
 									<td><?=$no++?></td>
 									<td><?=$key['nama']?></td>
 									<td><?=$key['jabatan']?></td>
-									<td><a href="<?=site_url('admincontroller/edit_pengurus/'.$key['id_pengurus'])?>" class="btn btn-info">edit</a><a onclick="buttondeleteberita(<?=$key['id_pengurus']?>)" class="btn btn-danger">delete</a></td>
+									<td><a href="<?=site_url('admincontroller/edit_pengurus/'.$key['id_pengurus'])?>" class="btn btn-info">edit</a><a onclick="buttondeletepengurus(<?=$key['id_pengurus']?>)" class="btn btn-danger">delete</a></td>
 								</tr>
 							<?php endforeach ?>
 						</tbody>
