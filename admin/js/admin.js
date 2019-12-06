@@ -100,46 +100,31 @@ function buttondeleteberita(id) {
 			var json = JSON.parse(response);
 			// console.log(json.berhasil);
 			if (json.berhasil == true) {
-				$.notify({
-					icon: "add_alert",
-					message: 'Berhasil'
-
-				}, {
-					type: 'success',
-					timer: 3000,
-					placement: {
-						from: 'top',
-						align: 'right'
-					}
-				});
+				$.toast({
+			      type: 'success',
+			      title: ''+response.message+'',
+			      position: 'top-end',
+			      showConfirmButton: false,
+			      timer: 3000
+			    });
 				window.location.reload();
 			} else {
-				$.notify({
-					icon: "add_alert",
-					message: ''+response.message+''
-
-				}, {
-					type: 'danger',
-					timer: 3000,
-					placement: {
-						from: 'top',
-						align: 'right'
-					}
-				});
+				$.toast({
+			      type: 'error',
+			      title: ''+response.message+'',
+			      position: 'top-end',
+			      showConfirmButton: false,
+			      timer: 3000
+			    });
 			}
 		},
 		error: function () {
-			$.notify({
-				icon: "add_alert",
-				message: ''+response.message+''
-
-			}, {
-				type: 'danger',
-				timer: 3000,
-				placement: {
-					from: 'top',
-					align: 'right'
-				}
+			$.toast({
+			    type: 'error',
+			    title: ''+response.message+'',
+			    position: 'top-end',
+			    showConfirmButton: false,
+			    timer: 3000
 			});
 		}
 	});

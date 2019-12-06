@@ -7,7 +7,7 @@
 						<h4 class="card-title ">Data Pengurus</h4>
 						<p class="card-category"> Edit Pengurus</p>
 					</div>
-					<div class="card-content">
+					<div class="card-body">
 						<form method="post" action="<?= site_url('admincontroller/actEditPengurus') ?>" enctype="multipart/form-data"  accept-charset="utf-8">
 							<div class="row">
 								<div class="col-md-12">

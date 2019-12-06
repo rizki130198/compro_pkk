@@ -99,7 +99,7 @@ class AdminController extends CI_Controller {
 	public function edit_berita($id)
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';
-		$data['titleNav'] = 'Halaman Tambah Berita';
+		$data['titleNav'] = 'Halaman Ubah Berita';
 		$data['link_view'] = 'admin/editberita';
 		$data['post'] = $this->db->get_where('berita',array('idberita'=>$id))->row();
 		$this->load->view('admin/index', $data);
@@ -123,7 +123,7 @@ class AdminController extends CI_Controller {
 	public function edit_pengurus($id)
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Pengurus';
-		$data['titleNav'] = 'Halaman Tambah pengurus';
+		$data['titleNav'] = 'Halaman Ubah pengurus';
 		$data['link_view'] = 'admin/edit_pengurus';
 		$data['post'] = $this->db->get_where('pengurus',array('id_pengurus'=>$id))->row();
 		$this->load->view('admin/index', $data);
@@ -196,7 +196,7 @@ class AdminController extends CI_Controller {
 	public function edithome($id)
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Home';
-		$data['titleNav'] = 'Halaman Edit Home';
+		$data['titleNav'] = 'Halaman Ubah Home';
 		$data['link_view'] = 'admin/edit_home';
 		$data['post'] = $this->db->get_where('home',array('idhome'=>$id))->row();
 		$this->load->view('admin/index', $data);

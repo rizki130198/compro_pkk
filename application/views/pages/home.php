@@ -179,15 +179,14 @@
 								</div>
 							</div>
 						</div>
-						<!--.row-->
-					</div> -->
+						<-- row-->
+					</div>
 					<!--.item-->
 				</div>
 				<!--.carousel-inner-->
 			</div>
 			<!--.Carousel-->
 		</div>
-	</div>
 </section>
 
 <!-- counter section start -->

@@ -5,9 +5,8 @@
         <div class="card">
           <div class="card-header" data-background-color="purple">
             <h4 class="card-title ">Data Berita</h4>
-            <p class="card-category"> Isi Berita</p>
           </div>
-          <div class="card-content">
+          <div class="card-body">
             <form method="post" action="<?= site_url('admincontroller/actAddBerita') ?>" enctype="multipart/form-data"  accept-charset="utf-8">
               <div class="row">
                 <div class="col-md-12">
