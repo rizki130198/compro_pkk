@@ -20,7 +20,7 @@
                             <div class="col-md-12">
                               <div class="well">
                                 <input type="file" name="foto">
-                              <input type="hidden" class="form-control" name="oldFoto[]">
+                                <input type="hidden" class="form-control" name="oldFoto">
                               </div>
                             </div>  
                           </div>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+              <button type="submit" class="btn btn-primary pull-right">Tambah Berita</button>
               <div class="clearfix"></div>
             </form>
           </div>

@@ -99,7 +99,8 @@ class Admin_model extends CI_Model {
 		return $query->result_array();
 	}
 	public function addBerita()
-	{		$ft = $this->input->post('oldFoto');
+	{		
+		$ft = $this->input->post('oldFoto');
 		$fbang = ($this->ambilOldFoto($ft)=="")?null:$this->ambilOldFoto($ft);
 		$newfbang = $this->uploadFoto('foto');
 		$ftbangCombine = $this->validasiKosong($fbang,$newfbang);
@@ -249,6 +250,64 @@ class Admin_model extends CI_Model {
 		$this->db->select('alamat,nohp,nohp2');
 		$query = $this->db->get('alamat');
 		return $query->result();
+	}
+	public function addPengurus()
+	{		
+		$newfbang = $this->uploadFoto('gambar');
+		$query = $this->db->insert('pengurus', array(
+			'nama'=>$this->input->post('nama'),
+			'foto'=>$newfbang,
+			'jabatan'=>$this->input->post('posisi'),
+			'created_at'=>date('Y-m-d H:i:s'),
+		));
+		if ($query==true) {
+				// Berhasil
+			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Pengurus');
+			redirect('admincontroller/Pengurus');
+		}else{
+				//Gagal
+			$this->session->set_flashdata('Gagal', 'Gagal Tambah Pengurus');
+			redirect('admincontroller/Pengurus');
+		}
+	}	
+	public function editPengurus()
+	{
+		$ft = $this->input->post('oldFoto');
+		$fbang = ($this->ambilOldFoto($ft)=="")?null:$this->ambilOldFoto($ft);
+		$newfbang = $this->uploadFoto('gambar');
+		$ftbangCombine = $this->validasiKosong($fbang,$newfbang);
+
+		$query = $this->db->update('pengurus', array(
+			'nama'=>$this->input->post('nama'),
+			'posisi'=>$this->input->post('posisi'),
+			'foto'=>$ftbangCombine)
+			,array(
+				'id_pengurus'=>$this->input->post('idPengurus'))
+		);
+		if ($query==true) {
+				// Berhasil
+			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Pengurus');
+			redirect('admincontroller/Pengurus');
+		}else{
+				//Gagal
+			$this->session->set_flashdata('Berhasil', 'Berhasil Tambah Pengurus');
+			redirect('admincontroller/');
+		}
+		return $val;
+	}
+	public function deletePengurus()
+	{
+		$query = $this->db->delete('pengurus',array(
+			'id_pengurus'=>$this->input->post('idPengurus')
+		));
+		if ($query==true) {
+				// Berhasil
+			$val = 1;
+		}else{
+				//Gagal
+			$val = 0;
+		}
+		return $val;
 	}
 	public function uploadFoto($params)
 	{

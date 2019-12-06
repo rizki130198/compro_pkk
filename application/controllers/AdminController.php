@@ -7,9 +7,9 @@ class AdminController extends CI_Controller {
 	{
 		parent::__construct();
 		date_default_timezone_set("Asia/Jakarta");
-		if ($this->session->userdata('nama')=="") {
-			redirect('/');
-		}
+		// if ($this->session->userdata('nama')=="") {
+		// 	redirect('/');
+		// }
 	}
 	public function index()
 	{
@@ -50,6 +50,14 @@ class AdminController extends CI_Controller {
 		$data['post'] = $this->admin_model->getPost();
 		$this->load->view('admin/index', $data);
 	}
+	public function pengurus()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Pengurus';
+		$data['titleNav'] = 'Halaman Data Pengurus';
+		$data['link_view'] = 'admin/pengurus';
+		$data['pengurus'] = $this->first_model->getPengurus();
+		$this->load->view('admin/index', $data);
+	}
 	public function load_user()
 	{
 		$data = $this->admin_model->load_user();
@@ -81,6 +89,13 @@ class AdminController extends CI_Controller {
 		$data['link_view'] = 'admin/addberita';
 		$this->load->view('admin/index', $data);
 	}
+	public function tambah_pengurus()
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Pengurus';
+		$data['titleNav'] = 'Halaman Tambah Pengurus';
+		$data['link_view'] = 'admin/addpengurus';
+		$this->load->view('admin/index', $data);
+	}
 	public function edit_berita($id)
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';
@@ -96,6 +111,22 @@ class AdminController extends CI_Controller {
 		$data['html'] = $this->load->view('admin/editberita', $query);
 		$data['message'] = 'Error Silakan Hubungi Tim Terkait';
 		echo json_encode($data);
+	}
+	public function getPengurus()
+	{
+		$query['pengurus'] = $this->db->get_where('pengurus',array('id_pengurus'=>$this->input->post('idnya')))->result();
+		$data['code'] = 200;
+		$data['html'] = $this->load->view('admin/edit_pngurus', $query);
+		$data['message'] = 'Error Silakan Hubungi Tim Terkait';
+		echo json_encode($data);
+	}
+	public function edit_pengurus($id)
+	{
+		$data['title'] = 'Selamat Datang di Halaman Admin - Pengurus';
+		$data['titleNav'] = 'Halaman Tambah pengurus';
+		$data['link_view'] = 'admin/edit_pengurus';
+		$data['post'] = $this->db->get_where('pengurus',array('id_pengurus'=>$id))->row();
+		$this->load->view('admin/index', $data);
 	}
 	public function actAddBerita()
 	{
@@ -183,6 +214,24 @@ class AdminController extends CI_Controller {
 		public function actaddHome()
 	{
 		$val = $this->admin_model->addBeranda();
+		if ($val == 1) {
+			$json = array('berhasil'=>true);
+		}else{
+			$json = array('gagal'=>false);
+		}
+		echo json_encode($json);
+	}
+	public function actAddPengurus()
+	{
+		$val = $this->admin_model->addPengurus();
+	}
+	public function actEditPengurus()
+	{
+		$this->admin_model->editPengurus();
+	}	
+	public function actDeletePengurus()
+	{
+		$val = $this->admin_model->deletePengurus();
 		if ($val == 1) {
 			$json = array('berhasil'=>true);
 		}else{

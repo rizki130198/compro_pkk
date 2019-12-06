@@ -123,56 +123,25 @@
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="row">
+							<?php foreach ($pengurus as $team) {?>
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
 									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/Rusmiaty.jpg'); ?>">
+										<img src="<?php echo base_url('assets/anggota/home/'.$team->foto); ?>">
 									</div>
 									<div class="team-content">
-										<h3 class="title">HJ. Rusmiati Saefullah</h3>
-										<span class="post">Ketua</span>
+										<h3 class="title"><?=$team->nama?></h3>
+										<span class="post"><?=$team->jabatan?></span>
 									</div>
 								</div>
 							</div>
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/Arijaty.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Dra. Arijaty Azhari, Apt</h3>
-										<span class="post">Wakil Ketua</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/Ratna.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Dra. Ratna Ningsih</h3>
-										<span class="post">Wakil Ketua II</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/Erna K.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Dr. Erna K. Sprapto, M.Pd</h3>
-										<span class="post">Sekretaris</span>
-									</div>
-								</div>
-							</div>
+							<?php } ?>
 						</div>
 						<!--.row-->
 					</div>
 					<!--.item-->
 
-					<div class="carousel-item">
+<!-- 					<div class="carousel-item">
 						<div class="row">
 							<div class="col-lg-3 col-md-6 col-sm-6">
 								<div class="our-team">
@@ -211,7 +180,7 @@
 							</div>
 						</div>
 						<!--.row-->
-					</div>
+					</div> -->
 					<!--.item-->
 				</div>
 				<!--.carousel-inner-->

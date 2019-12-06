@@ -50,6 +50,11 @@ class First_model extends CI_Model {
 		$query = $this->db->get('berita');
 		return $query->num_rows();
 	}
+	public function getPengurus()
+	{
+		$query = $this->db->get('pengurus');
+		return $query->result();
+	}
 	public function login()
 	{
 		$cek = $this->db->get_where('admin',array('username'=>$this->input->post('username'), 'password'=>md5($this->input->post('password'))));
