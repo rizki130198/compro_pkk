@@ -18,10 +18,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 </head>
 <body class="" style="overflow-y: hidden;">
-  <div id="loader" style="z-index:9999;position: fixed;width: 100%;height:100%;background: rgba(255,255,255,.8);
-  display: flex;
-  align-items: center;
-  justify-content: center">
+  <div id="loader" style="z-index:9999;position: fixed;width: 100%;height:100%;background: rgba(255,255,255,.8);display: flex;align-items: center;justify-content: center">
   <div class="wrap">
     <div class="track">
       <div class="ghosts">

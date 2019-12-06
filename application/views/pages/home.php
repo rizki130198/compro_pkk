@@ -1,22 +1,45 @@
 <div id="preloader"></div>
 <!-- hero area start -->
 <section class="hero-area" id="home">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-7 col-header">
-				<?php foreach ($home as $beranda) { ?>
-				<div class="hero-area-content">
-					<h1>Selamat Datang !</h1>
-					<div class="garis-header"></div>
-					<h3 class="desc-home"><?=$beranda->deskripsi?></h3>
-					<a href="#" class="appao-btn-started">Get Started</a>
-					<a href="<?php echo site_url('learn_more'); ?>" class="appao-btn">Pelajari lebih lanjut</a>
+	<div class="hero-area-slider">
+		<div class="hero-area-single-slide">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<?php foreach ($home as $beranda) { ?>
+						<div class="hero-area-content">
+							<h1>Selamat Datang !</h1>
+							<div class="garis-header"></div>
+							<h3 class="desc-home"><?=$beranda->deskripsi?></h3>
+							<a href="#" class="appao-btn-started appao-btn">Get Started</a>
+							<a href="<?php echo site_url('learn_more'); ?>" class="appao-btn">Pelajari lebih lanjut</a>
+						</div>
+						<?php } ?>
+					</div>
+					<div class="col-lg-5">
+						<div class="hand-mockup text-lg-left text-center">
+							<img src="assets/img/home.svg" alt="Hand Mockup" />
+						</div>
+					</div>
 				</div>
-				<?php } ?>
 			</div>
-			<div class="col-lg-5">
-				<div class="hand-mockup text-lg-left text-center">
-					<img src="assets/img/home.svg" alt="Hand Mockup" />
+		</div>
+		<div class="hero-area-single-slide">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="hero-area-content">
+							<h1>It’s all about Promoting your Business</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+							<a href="#" class="appao-btn">Google Play</a>
+							<a href="#" class="appao-btn">App Store</a>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="hand-mockup text-lg-left text-center">
+							<img src="assets/img/home.svg" alt="Hand Mockup" />
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
