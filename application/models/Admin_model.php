@@ -253,7 +253,7 @@ class Admin_model extends CI_Model {
 	}
 	public function addPengurus()
 	{		
-		$newfbang = $this->uploadFoto('gambar');
+		$newfbang = $this->uploadFotopengurus('gambar');
 		$query = $this->db->insert('pengurus', array(
 			'nama'=>$this->input->post('nama'),
 			'foto'=>$newfbang,
@@ -274,12 +274,12 @@ class Admin_model extends CI_Model {
 	{
 		$ft = $this->input->post('oldFoto');
 		$fbang = ($this->ambilOldFoto($ft)=="")?null:$this->ambilOldFoto($ft);
-		$newfbang = $this->uploadFoto('gambar');
+		$newfbang = $this->uploadFotopengurus('gambar');
 		$ftbangCombine = $this->validasiKosong($fbang,$newfbang);
 
 		$query = $this->db->update('pengurus', array(
 			'nama'=>$this->input->post('nama'),
-			'posisi'=>$this->input->post('posisi'),
+			'jabatan'=>$this->input->post('posisi'),
 			'foto'=>$ftbangCombine)
 			,array(
 				'id_pengurus'=>$this->input->post('idPengurus'))
@@ -308,6 +308,38 @@ class Admin_model extends CI_Model {
 			$val = 0;
 		}
 		return $val;
+	}
+	public function uploadFotopengurus($params)
+	{
+
+		$this->load->library('upload');
+		$config['upload_path']          = './assets/anggota/home/';
+		$config['allowed_types']        = 'jpg|png|jpeg';
+		$config['remove_spaces']        = TRUE;
+		$config['encrypt_name']         = TRUE;
+
+		$fb = "";
+		$this->upload->initialize($config);
+		if ($this->upload->do_upload($params)) {
+			$f = $this->upload->data();
+			if (count($f) != 14) {
+				for ($i=0; $i < count($f); $i++) {
+					$abc = $f[$i]['file_name'].',';
+					$fb .= $abc;
+				}
+				$newfotonya = substr($fb, 0, -1);
+			}else{
+				$newfotonya = $f['file_name'];
+			}
+		}else{
+			$f = $this->input->post($params);
+			for ($i=0; $i < count($f); $i++) {
+				$abc = $f[$i].',';
+				$fb .= $abc;
+			}
+			$newfotonya = substr($fb, 0, -1);
+		}
+		return $newfotonya;
 	}
 	public function uploadFoto($params)
 	{

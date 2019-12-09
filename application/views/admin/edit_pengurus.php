@@ -34,7 +34,7 @@
 									<div class="form-group bmd-form-group">
 										<label class="bmd-label-floating">Nama</label>
 										<input type="text" class="form-control" name="nama" value="<?=$post->nama?>">
-										<input type="hidden" class="form-control" name="oldFoto" value="<?=$post->foto?>">
+										<input type="hidden" class="form-control" name="oldFoto[]" value="<?=$post->foto?>">
 										<input type="hidden" class="form-control" name="idPengurus" value="<?=$post->id_pengurus?>">
 									</div>
 								</div>

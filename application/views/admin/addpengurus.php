@@ -39,7 +39,7 @@
                   <div class="form-group">
                     <label>Posisi</label>
                     <div class="form-group bmd-form-group">
-                      <textarea class="form-control" id="posisi" name="isi" rows="5"></textarea>
+                      <textarea class="form-control" id="posisi" name="posisi" rows="5"></textarea>
                     </div>
                   </div>
                 </div>
