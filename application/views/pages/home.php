@@ -5,8 +5,8 @@
 		<div class="hero-area-single-slide">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-7">
-						<?php foreach ($home as $beranda) { ?>
+					<div class="col-lg-12">
+						<!-- <?php foreach ($home as $beranda) { ?>
 						<div class="hero-area-content">
 							<h1>Selamat Datang !</h1>
 							<div class="garis-header"></div>
@@ -14,11 +14,9 @@
 							<a href="#" class="appao-btn-started appao-btn">Get Started</a>
 							<a href="<?php echo site_url('learn_more'); ?>" class="appao-btn">Pelajari lebih lanjut</a>
 						</div>
-						<?php } ?>
-					</div>
-					<div class="col-lg-5">
-						<div class="hand-mockup text-lg-left text-center">
-							<img src="assets/img/home.svg" alt="Hand Mockup" />
+						<?php } ?> -->
+						<div class="hero-area-content">
+							<img src="<?php echo base_url('assets/img/back1.jpeg'); ?>" style="height:400px;border-radius: 12px;">
 						</div>
 					</div>
 				</div>
@@ -27,17 +25,20 @@
 		<div class="hero-area-single-slide">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-7">
+					<div class="col-lg-12">
 						<div class="hero-area-content">
-							<h1>It’s all about Promoting your Business</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
-							<a href="#" class="appao-btn">Google Play</a>
-							<a href="#" class="appao-btn">App Store</a>
+							<img src="<?php echo base_url('assets/img/details.jpg'); ?>" style="height:400px;border-radius: 12px;">
 						</div>
 					</div>
-					<div class="col-lg-5">
-						<div class="hand-mockup text-lg-left text-center">
-							<img src="assets/img/home.svg" alt="Hand Mockup" />
+				</div>
+			</div>
+		</div>
+		<div class="hero-area-single-slide">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="hero-area-content">
+							<img src="<?php echo base_url('assets/img/download-bg.jpg'); ?>" style="height:400px;border-radius: 12px;">
 						</div>
 					</div>
 				</div>

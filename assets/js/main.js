@@ -119,7 +119,7 @@
 	var heroSlider = $('.hero-area-slider');
 	heroSlider.owlCarousel({
 		loop:true,
-		dots: false,
+		dots: true,
 		autoplay: true,
 		autoplayTimeout: 5000,
 		nav: true,
@@ -129,6 +129,8 @@
 		animateOut: 'fadeOut',
 		mouseDrag: true,
 		touchDrag: true,
+		pagination : true,
+    	paginationNumbers: true,
 		responsive:{
 			768:{
 				mouseDrag: false,

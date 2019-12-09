@@ -241,18 +241,21 @@ textarea:focus {
 }
 .owl-dots {
     text-align: center;
-    margin-top: 30px;
+    margin-bottom: 50px;
 }
 .owl-dot {
     width: 10px;
     height: 10px;
-    border: 1px solid #0074da;
+    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     display: inline-block;
     margin: 0 3px;
+    background: rgba(255, 255, 255, 0.5);
 }
 .owl-dot.active {
-    background: #0074da;
+    background: #fff;
+    width: 25px;
+    transition: all 0.5s;
 }
 .display-table {
     display: table;
@@ -424,13 +427,16 @@ input::-webkit-input-placeholder {
 }
 .hero-area-content {
     color: #fff;
-	padding: 80px 0 170px;
+	padding: 30px 0 10px;
 }
 .hero-area-content h1 {
     color: #fff;
 }
 .hero-area-content p {
     margin: 28px 0 25px;
+}
+.hero-area-content img{
+    box-shadow: 0 0 24px -4px rgba(0,0,0,.12);
 }
 .hero-area-content .appao-btn {
     margin-right: 15px;
