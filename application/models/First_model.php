@@ -6,7 +6,7 @@ class First_model extends CI_Model {
 	public function getHome()
 	{
 		$this->db->order_by('idhome', 'desc');
-		$this->db->limit(0,5);
+		$this->db->limit(5);
 		$query = $this->db->get('home');
 		return $query->result();
 	}

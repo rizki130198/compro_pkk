@@ -426,23 +426,26 @@
                 selectHelper:true,
                 select:function(start, end, allDay)
                 {
-                    var title = prompt("Enter Event Title");
-                    var desc = prompt("Enter Event Description");
-                    if(title)
-                    {
-                        var start = $.fullCalendar.formatDate(start, "Y-MM-DD HH:mm:ss");
-                        var end = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
+                    $("#modlaisi").modal('show');
+                    $('#tambaheventadmin').on('click', function(event) {
+                      if($('#judulagenda').val() != null)
+                      {
+                        var start = moment(start).format("Y-MM-DD HH:mm:ss");
+                        var end = moment(end).format("Y-MM-DD HH:mm:ss");
                         $.ajax({
-                            url:"<?php echo base_url(); ?>adminController/insert",
-                            type:"POST",
-                            data:{title:title, desc:desc, start:start, end:end},
-                            success:function()
-                            {
-                                calendar.fullCalendar('refetchEvents');
-                                alert("Added Successfully");
-                            }
-                        })
-                    }
+                          url:"<?php echo base_url(); ?>adminController/insert",
+                          type:"POST",
+                          data:{title:$('#judulagenda').val(), desc:$('#deskripsiagenda').val(), start:start, end:end},
+                          success:function()
+                          {
+                            calendar.fullCalendar('refetchEvents');
+                            alert("Berhasil di Tambah");
+                          }
+                        });
+
+                      }
+                    $("#modlaisi").modal('hide');
+                    });
                 },
                 editable:true,
                 eventResize:function(event)
@@ -461,7 +464,7 @@
                         success:function()
                         {
                             calendar.fullCalendar('refetchEvents');
-                            alert("Event Update");
+                            alert("Acara di Update");
                         }
                     })
                 },
@@ -481,28 +484,34 @@
                     success:function()
                     {
                         calendar.fullCalendar('refetchEvents');
-                        alert("Event Updated");
+                        alert("Acara di update");
                     }
                 })
             },
-            eventClick:function(event)
-            {
-                if(confirm("Are you sure you want to remove it?"))
+            eventClick:function(event, jsEvent, view) {
+
+              $('#modalTitle').html(event.title);
+              $('#modalBody').text(event.desc);
+              $('#tanggalModal').modal('show');
+              $("#hapuseventadmin").click(function() {
+                if(confirm("Yakin Ingin Hapus Data ini ?"))
                 {
-                    var id = event.id;
-                    $.ajax({
-                        url:"<?php echo base_url(); ?>adminController/delete",
-                        type:"POST",
-                        data:{id:id},
-                        success:function()
-                        {
-                            calendar.fullCalendar('refetchEvents');
-                            alert('Event Removed');
-                        }
-                    })
+                  var id = event.id;
+                  $.ajax({
+                    url:"<?php echo base_url(); ?>adminController/delete",
+                    type:"POST",
+                    data:{id:id},
+                    success:function()
+                    {
+                      calendar.fullCalendar('refetchEvents');
+                      alert('Acara di Hapus');
+                      $('#tanggalModal').modal('hide');
+                    }
+                  })
                 }
-            }
-        });
+              });
+            },
+          });
         });
 
     </script>

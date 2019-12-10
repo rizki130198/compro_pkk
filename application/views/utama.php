@@ -28,6 +28,7 @@
   <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/custom.css" media="all" />
   <!-- Responsive CSS -->
   <link rel="stylesheet" type="text/css" href="<?=base_url('/')?>assets/css/responsive.css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
   <!-- Favicon Icon -->
   <link rel="icon" type="image/png" href="<?=base_url('/')?>assets/img/logo.png" />
 </head>
@@ -52,6 +53,9 @@
     ul li a:hover{
       color: #888 !important;
     }
+    .fc-time{
+   display : none;
+}
   </style>
   <!--TOP NAV-->
   <?php $this->load->view('include/head');?>
@@ -83,6 +87,9 @@
   <script src="<?=base_url('/')?>assets/js/jquery.mb.YTPlayer.min.js"></script>
   <!-- jQuery Easing JS -->
   <script src="<?=base_url('/')?>assets/js/jquery.easing.1.3.js"></script>
+
+<script type="text/javascript" src="<?=base_url('admin/plugins/moment/moment.min.js'); ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
   <!-- Gmap JS -->
   <script src="<?=base_url('/')?>assets/js/gmap3.min.js"></script>
   <!-- Google map api -->
@@ -153,6 +160,101 @@
     }
 
   });
+            var calendar = $('#calendar').fullCalendar({
+                header:{
+                    left:'prev,next Hari Ini',
+                    center:'title',
+                    right:'month'
+                },
+                events:"<?php echo base_url(); ?>adminController/load",
+                allDay:false,
+                // selectable:true,
+                // selectHelper:true,
+                select:function(start, end, allDay)
+                {
+                    var title = prompt("Masukan Judul Acara");
+                    var desc = prompt("Masukan Deskripsi Acara");
+                    if(title)
+                    {
+                        var start = $.fullCalendar.formatDate(start, "Y-MM-DD HH:mm:ss");
+                        var end = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
+                        $.ajax({
+                            url:"<?php echo base_url(); ?>adminController/insert",
+                            type:"POST",
+                            data:{title:title, desc:desc, start:start, end:end},
+                            success:function()
+                            {
+                                calendar.fullCalendar('refetchEvents');
+                                alert("Added Successfully");
+                            }
+                        })
+                    }
+                  },
+                  eventClick:  function(event, jsEvent, view) {
+                    $('#modalTitle').html(event.title);
+                    $('#modalBody').text(event.desc);
+                    $('#calendarModal').modal('show');
+                  },
+            //     },
+            //     editable:true,
+            //     eventResize:function(event)
+            //     {
+            //         var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
+            //         var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
+
+            //         var title = event.title;
+            //         var desc = event.desc;
+            //         var id = event.id;
+
+            //         $.ajax({
+            //             url:"<?php echo base_url(); ?>adminController/update",
+            //             type:"POST",
+            //             data:{title:title, desc:desc, start:start, end:end, id:id},
+            //             success:function()
+            //             {
+            //                 calendar.fullCalendar('refetchEvents');
+            //                 alert("Event Update");
+            //             }
+            //         })
+            //     },
+            //     eventDrop:function(event)
+            //     {
+            //         var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
+            //     //alert(start);
+            //     var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
+            //     //alert(end);
+            //     var title = event.title;
+            //     var desc = event.desc;
+            //     var id = event.id;
+            //     $.ajax({
+            //         url:"<?php echo base_url(); ?>adminController/update",
+            //         type:"POST",
+            //         data:{title:title, desc:desc, start:start, end:end, id:id},
+            //         success:function()
+            //         {
+            //             calendar.fullCalendar('refetchEvents');
+            //             alert("Event Updated");
+            //         }
+            //     })
+            // },
+            // eventClick:function(event)
+            // {
+            //     if(confirm("Yakin Ingin "))
+            //     {
+            //         var id = event.id;
+            //         $.ajax({
+            //             url:"<?php echo base_url(); ?>adminController/delete",
+            //             type:"POST",
+            //             data:{id:id},
+            //             success:function()
+            //             {
+            //                 calendar.fullCalendar('refetchEvents');
+            //                 alert('Event Removed');
+            //             }
+            //         })
+            //     }
+            // }
+        });
 </script>
 </body>
 </html>

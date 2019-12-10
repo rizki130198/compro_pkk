@@ -166,13 +166,25 @@
 	<section style="padding-top: 20px;padding-bottom:50px;background-color: #dedfe1;">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 col-xs-12">
-					<div style="text-align: left;padding-right: 25px;">
-						<h2 style="margin-bottom: 20px;font-weight: 100;">Ayo mulai berlangganan dengan <br>Koperasi PKK Melati Jaya</h2>
+				<div id="calendar"></div>
+				<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="modalTitle"></h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body" id="modalBody">
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="col-md-4 col-xs-12">
-					<a href=""><button class="btn btn-subsribe btn-lg btn-block">Mulai Berlangganan</button></a>
 				</div>
 			</div>
 		</div>
