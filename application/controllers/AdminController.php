@@ -81,7 +81,67 @@ class AdminController extends CI_Controller {
 		$data['kontak'] = $this->admin_model->getKontak();
 		$data['alamat'] = $this->admin_model->getAlamat();
 		$this->load->view('admin/index', $data);
+	}
+	public function event_calendar()
+	{
+		$data['title'] = 'Selamat datang di Halaman Admin - Kalender Acara';
+		$data['titleNav'] = 'Halaman Kalender Acara';
+		$data['link_view'] = 'admin/event';
+		$this->load->view('admin/index', $data);
 	}	
+	function load()
+	{
+		$event_data = $this->admin_model->fetch_all_event();
+		foreach($event_data->result_array() as $row)
+		{
+			$data[] = array(
+				'id'	=>	$row['id'],
+				'title'	=>	$row['title'],
+				'desc'	=>	$row['desc'],
+				'start'	=>	$row['start_event'],
+				'end'	=>	$row['end_event']
+			);
+		}
+		echo json_encode($data);
+	}
+
+	function insert()
+	{
+		if($this->input->post('title'))
+		{
+			$data = array(
+				'title'		=>	$this->input->post('title'),
+				'desc'		=>	$this->input->post('desc'),
+				'start_event'=>	$this->input->post('start'),
+				'end_event'	=>	$this->input->post('end')
+			);
+			$this->admin_model->insert_event($data);
+		}
+	}
+
+	function update()
+	{
+		if($this->input->post('id'))
+		{
+			$data = array(
+				'title'			=>	$this->input->post('title'),
+				'desc'		=>	$this->input->post('desc'),
+				'start_event'	=>	$this->input->post('start'),
+				'end_event'		=>	$this->input->post('end')
+			);
+
+			$this->admin_model->update_event($data, $this->input->post('id'));
+		}
+	}
+
+	function delete()
+	{
+		if($this->input->post('id'))
+		{
+			$this->admin_model->delete_event($this->input->post('id'));
+		}
+	}
+
 	public function tambah_berita()
 	{
 		$data['title'] = 'Selamat Datang di Halaman Admin - Berita';

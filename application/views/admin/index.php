@@ -16,6 +16,13 @@
   <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/summernote/summernote-bs4.css'); ?>">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+ <!--  <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/fullcalendar/main.min.css'); ?>">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/fullcalendar-interaction/main.min.css'); ?>">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/fullcalendar-daygrid/main.min.css');?>">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/fullcalendar-timegrid/main.min.css'); ?>">
+  <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/fullcalendar-bootstrap/main.min.css'); ?>"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
+  <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css'); ?>">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <style type="text/css">
@@ -379,26 +386,126 @@
 </script>
 <!-- jQuery -->
 <script type="text/javascript" src="<?=base_url('admin/plugins/jquery/jquery.min.js');?>"></script>
-<!-- jQuery UI 1.11.4 -->
+<script type="text/javascript" src="<?=base_url('admin/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/jquery-ui/jquery-ui.min.js')?>"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
-<script type="text/javascript" src="<?=base_url('admin/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'); ?>"></script>
+<!-- <script type="text/javascript" src="<?=base_url('admin/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js'); ?>"></script> -->
 <script type="text/javascript" src="<?=base_url('admin/dist/js/adminlte.js'); ?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/dist/js/pages/dashboard.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/dist/js/demo.js'); ?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/plugins/moment/moment.min.js'); ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js"></script>
+<!-- <script type="text/javascript" src="<?=base_url('admin/plugins/fullcalendar/main.min.js'); ?>"></script> -->
+<!-- <script type="text/javascript" src="<?=base_url('admin/plugins/fullcalendar-daygrid/main.min.js'); ?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/plugins/fullcalendar-timegrid/main.min.js'); ?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/plugins/fullcalendar-interaction/main.min.js'); ?>"></script> -->
+<script type="text/javascript" src="<?=base_url('admin/plugins/fullcalendar-bootstrap/main.min.js'); ?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js'); ?>"></script>
+<script type="text/javascript" src="<?=base_url('admin/dist/js/pages/dashboard.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/jqvmap/jquery.vmap.min.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/jquery-knob/jquery.knob.min.js'); ?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/plugins/moment/moment.min.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/daterangepicker/daterangepicker.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/summernote/summernote-bs4.min.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/datatables/jquery.dataTables.js');?>"></script> 
 <script type="text/javascript" src="<?=base_url('admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js');?>"></script> 
 <script type="text/javascript" src="<?=base_url('admin/js/admin.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/sweetalert2/sweetalert2.min.js'); ?>"></script>
+<script>
+        $(document).ready(function(){
+            var calendar = $('#calendar').fullCalendar({
+                editable:true,
+                header:{
+                    left:'prev,next today',
+                    center:'title',
+                    right:'month,agendaWeek,agendaDay'
+                },
+                events:"<?php echo base_url(); ?>adminController/load",
+                selectable:true,
+                selectHelper:true,
+                select:function(start, end, allDay)
+                {
+                    var title = prompt("Enter Event Title");
+                    var desc = prompt("Enter Event Description");
+                    if(title)
+                    {
+                        var start = $.fullCalendar.formatDate(start, "Y-MM-DD HH:mm:ss");
+                        var end = $.fullCalendar.formatDate(end, "Y-MM-DD HH:mm:ss");
+                        $.ajax({
+                            url:"<?php echo base_url(); ?>adminController/insert",
+                            type:"POST",
+                            data:{title:title, desc:desc, start:start, end:end},
+                            success:function()
+                            {
+                                calendar.fullCalendar('refetchEvents');
+                                alert("Added Successfully");
+                            }
+                        })
+                    }
+                },
+                editable:true,
+                eventResize:function(event)
+                {
+                    var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
+                    var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
+
+                    var title = event.title;
+                    var desc = event.desc;
+                    var id = event.id;
+
+                    $.ajax({
+                        url:"<?php echo base_url(); ?>adminController/update",
+                        type:"POST",
+                        data:{title:title, desc:desc, start:start, end:end, id:id},
+                        success:function()
+                        {
+                            calendar.fullCalendar('refetchEvents');
+                            alert("Event Update");
+                        }
+                    })
+                },
+                eventDrop:function(event)
+                {
+                    var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
+                //alert(start);
+                var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
+                //alert(end);
+                var title = event.title;
+                var desc = event.desc;
+                var id = event.id;
+                $.ajax({
+                    url:"<?php echo base_url(); ?>adminController/update",
+                    type:"POST",
+                    data:{title:title, desc:desc, start:start, end:end, id:id},
+                    success:function()
+                    {
+                        calendar.fullCalendar('refetchEvents');
+                        alert("Event Updated");
+                    }
+                })
+            },
+            eventClick:function(event)
+            {
+                if(confirm("Are you sure you want to remove it?"))
+                {
+                    var id = event.id;
+                    $.ajax({
+                        url:"<?php echo base_url(); ?>adminController/delete",
+                        type:"POST",
+                        data:{id:id},
+                        success:function()
+                        {
+                            calendar.fullCalendar('refetchEvents');
+                            alert('Event Removed');
+                        }
+                    })
+                }
+            }
+        });
+        });
+
+    </script>
 <?php if ($this->uri->segment(2)=='berita' OR $this->uri->segment(1)=='tambah_berita' OR $this->uri->segment(2)=='edit_berita') { ?>
   <script type="text/javascript" src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
   <script type="text/javascript">
@@ -422,11 +529,11 @@
       })
   </script>
 <?php } ?>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   jQuery(window).load(function () {
     jQuery('#loader').fadeOut('slow');
   });
-</script>
+</script> -->
 <script type="text/javascript">
   $(document).ready(function(){
    $('#tableberita').DataTable({

@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'main';
 $route['404_override'] = 'main/page_not_found';
+$route['event'] = 'admincontroller/event_calendar';
 $route['tambah_berita'] = 'admincontroller/tambah_berita';
 $route['tambah_home'] = 'admincontroller/tambah_home';
 $route['translate_uri_dashes'] = FALSE;
