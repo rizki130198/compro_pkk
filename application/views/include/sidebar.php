@@ -20,9 +20,15 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="<?=site_url('admincontroller')?>" class="nav-link <?=($this->uri->segment(2)=='')?'active':'' ?>">
+                    <a href="<?=site_url('admincontroller')?>" class="nav-link <?=($this->uri->segment(1)=='admincontroller')?'active':'' ?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?=site_url('event')?>" class="nav-link <?=($this->uri->segment(1)=='event')?'active':'' ?>">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p>Kalender Acara</p>
                     </a>
                 </li>
                 <li class="nav-item has-treeview <?php if ($this->uri->segment(2)=="pengurus"){echo "menu-open";}elseif($this->uri->segment(2)=="berita"){echo "menu-open";}elseif($this->uri->segment(2)=="settinghome"){echo "menu-open";} ?>">
