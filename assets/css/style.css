@@ -344,7 +344,8 @@ input::-webkit-input-placeholder {
 	transition: all 0.4s;
     width: 100%;
     z-index: 99;
-	padding: 18px 0;
+	padding: 10px 0;
+    background-color: #fff;
 }
 .mainmenu {
     text-align: right;
@@ -355,7 +356,7 @@ input::-webkit-input-placeholder {
 }
 .mainmenu li a {
     display: inline-block;
-    color: #fff;
+    color: #3a53c4;
     position: relative;
     padding: 5px 16px;
 	margin: 0 3px;
@@ -368,7 +369,10 @@ input::-webkit-input-placeholder {
 .slicknav_menu a.active,
 .mainmenu ul li a.nav-link:hover,
 .mainmenu ul li a.active {
-    border: 1px solid #fff;
+    border: 1px solid #3a53c4;
+}
+.mainmenu ul li a.nav-link:hover{
+    background-color: #3a53c4 !important;
 }
 .mainmenu {
     display: block;
@@ -396,12 +400,12 @@ input::-webkit-input-placeholder {
 .header.sticky .mainmenu ul li a.nav-link:hover{
     background-color: #3a53c4 !important;
 }
-.header.sticky .logo-light{
+/*.header.sticky .logo-light{
     display: none;
 }
 .header.sticky .logo-dark{
     display: block !important;
-}
+}*/
 .header.sticky {
 	padding: 10px 0;
 }

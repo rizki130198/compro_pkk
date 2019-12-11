@@ -109,7 +109,6 @@
 								</div>
 							<?php } ?>
 						</div>
-						<!--.row-->
 					</div>
 					<!--.item-->
 
@@ -166,6 +165,12 @@
 	<section style="padding-top: 20px;padding-bottom:50px;background-color: #dedfe1;">
 		<div class="container">
 			<div class="row">
+				<div class="col-lg-12">
+					<div class="sec-title">
+						<h2 style="padding: 0;margin-bottom: 5px;letter-spacing: 2px;">Kalender Acara</h2>
+						<center><div class="double-line"></div></center>
+					</div>
+				</div>
 				<div id="calendar"></div>
 				<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">

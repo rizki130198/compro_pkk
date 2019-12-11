@@ -54,8 +54,41 @@
       color: #888 !important;
     }
     .fc-time{
-   display : none;
-}
+      display : none;
+    }
+    .fc-left .fc-button{
+      height: 38px;
+    }
+    .fc-center h2{
+      font-weight: 300;
+    }
+    .fc-right .fc-button{
+      color: #fff;
+      background: #2C3E50;
+      opacity: .6;
+      height: 38px;
+    }
+    .fc-head-container{
+      background: #fafafa;
+    }
+    .fc-body{
+      background: #fff;
+    }
+    .fc-event, .fc-event-dot{
+      background: #3a53c4;
+      border: 1px solid #3a53c4;
+      padding: 3px;
+      color: #fff !important;
+    }
+    .fc-ltr .fc-basic-view .fc-day-top .fc-day-number{
+      float: left;
+      font-size: 20px;
+      font-weight: 300;
+      padding-right: 10px;
+    }
+    .fc-unthemed td.fc-today {
+      background: #d5e4ff;
+    }
   </style>
   <!--TOP NAV-->
   <?php $this->load->view('include/head');?>
@@ -164,8 +197,9 @@
                 header:{
                     left:'prev,next Hari Ini',
                     center:'title',
-                    right:'month'
+                    right:'month',
                 },
+                dayNamesShort: ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'],
                 events:"<?php echo base_url(); ?>adminController/load",
                 allDay:false,
                 // selectable:true,
