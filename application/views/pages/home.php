@@ -85,78 +85,24 @@
 		</div>
 		<div class="blog">
 			<div id="blogCarousel" class="carousel slide" data-ride="carousel">
-
-				<ol class="carousel-indicators">
-					<li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#blogCarousel" data-slide-to="1"></li>
-				</ol>
-
-				<!-- Carousel items -->
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<div class="row">
-							<?php foreach ($pengurus as $team) {?>
-								<div class="col-lg-3 col-md-6 col-sm-6">
-									<div class="our-team">
-										<div class="pic">
-											<img src="<?php echo base_url('assets/anggota/home/'.$team->foto); ?>">
-										</div>
-										<div class="team-content">
-											<h3 class="title"><?=$team->nama?></h3>
-											<span class="post"><?=$team->jabatan?></span>
-										</div>
-									</div>
+				<div class="owl-carousel owl-theme">
+					<?php foreach ($pengurus as $team) {?>
+						<div class="item">
+							<div class="our-team">
+								<div class="pic">
+									<img src="<?php echo base_url('assets/anggota/home/'.$team->foto); ?>">
 								</div>
-							<?php } ?>
-						</div>
-					</div>
-					<!--.item-->
-
-<!-- 					<div class="carousel-item">
-						<div class="row">
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/Sri Irianti.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Sri Irianti</h3>
-										<span class="post">Bendahara</span>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/neni.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Chairunnisa Nasution</h3>
-										<span class="post">Wakil Sekretaris dan Unit Usaha</span>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/Erna M.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Erna S. Maharanto</h3>
-										<span class="post">Pengawas</span>
-									</div>
+								<div class="team-content">
+									<h3 class="title"><?=$team->nama?></h3>
+									<span class="post"><?=$team->jabatan?></span>
 								</div>
 							</div>
 						</div>
-						<-- row-->
-					</div>
-					<!--.item-->
+					<?php } ?>
 				</div>
-				<!--.carousel-inner-->
 			</div>
-			<!--.Carousel-->
+		</div>
+		<!--.Carousel-->
 		</div>
 	</section>
 

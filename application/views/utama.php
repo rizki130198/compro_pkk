@@ -136,6 +136,29 @@
   <!-- main JS -->
   <script src="<?=base_url('/')?>assets/js/main.js"></script>
   <script type="text/javascript">
+      $('.owl-carousel').owlCarousel({
+      autoplay:true,
+      autoplayTimeout:2000,
+      autoplayHoverPause:true,
+      loop:true,
+      margin:10,
+      merge:true,
+      lazyLoad:true,
+      dots:true,
+      responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+      }
+  });
+  </script>
+  <script type="text/javascript">
    $(document).ready(function(){
 
      $('#pagination').on('click','a',function(e){
