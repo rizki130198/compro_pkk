@@ -252,7 +252,7 @@ textarea:focus {
     margin: 0 3px;
     background: rgba(255, 255, 255, 0.5);
 }
-.owl-dot.active {
+.hero-area .owl-dot.active {
     background: #fff;
     width: 25px;
     transition: all 0.5s;

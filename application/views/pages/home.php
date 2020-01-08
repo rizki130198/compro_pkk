@@ -65,7 +65,7 @@
 			<div class="col-lg-12">
 				<h3 style="color: #fff;">Ayo daftar menjadi anggota PKK Melati Jaya.</h3>
 				<h4 style="color: #fff;margin-top: 20px;font-weight: 100;">Dan ada banyak keungtungannya, tunggu apa lagi?</h4>
-				<a href=""><button class="btn btn-lg btn-ayo">Mulai Bergabung</button></a>
+				<a href="http://simpanpinjam.koperasipkkmelatijaya.co.id/register" target="_blank"><button class="btn btn-lg btn-ayo">Mulai Bergabung</button></a>
 			</div>
 		</div>
 	</div>
