@@ -93,7 +93,7 @@
 
 				<!-- Carousel items -->
 				<div class="carousel-inner">
-					<div class="carousel-item active">
+					<div class="carousel-item">
 						<div class="row">
 							<?php foreach ($pengurus as $team) {?>
 								<div class="col-lg-3 col-md-6 col-sm-6">
@@ -177,7 +177,7 @@
 								</button>
 							</div>
 							<div class="modal-body" id="modalBody">
-								
+
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

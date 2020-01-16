@@ -421,11 +421,12 @@
                     center:'title',
                     right:'month,agendaWeek,agendaDay'
                 },
-                events:"<?php echo base_url(); ?>adminController/load",
+                events:"<?php echo base_url(); ?>admincontroller/load",
                 selectable:true,
                 selectHelper:true,
                 select:function(start, end, allDay)
                 {
+                    console.log(start+'+'+end+'+'+allDay);
                     $("#modlaisi").modal('show');
                     $('#tambaheventadmin').on('click', function(event) {
                       if($('#judulagenda').val() != null)
@@ -433,7 +434,7 @@
                         var start = moment(start).format("Y-MM-DD HH:mm:ss");
                         var end = moment(end).format("Y-MM-DD HH:mm:ss");
                         $.ajax({
-                          url:"<?php echo base_url(); ?>adminController/insert",
+                          url:"<?php echo base_url(); ?>admincontroller/insert",
                           type:"POST",
                           data:{title:$('#judulagenda').val(), desc:$('#deskripsiagenda').val(), start:start, end:end},
                           success:function()
@@ -458,7 +459,7 @@
                     var id = event.id;
 
                     $.ajax({
-                        url:"<?php echo base_url(); ?>adminController/update",
+                        url:"<?php echo base_url(); ?>admincontroller/update",
                         type:"POST",
                         data:{title:title, desc:desc, start:start, end:end, id:id},
                         success:function()
@@ -478,7 +479,7 @@
                 var desc = event.desc;
                 var id = event.id;
                 $.ajax({
-                    url:"<?php echo base_url(); ?>adminController/update",
+                    url:"<?php echo base_url(); ?>admincontroller/update",
                     type:"POST",
                     data:{title:title, desc:desc, start:start, end:end, id:id},
                     success:function()
@@ -498,7 +499,7 @@
                 {
                   var id = event.id;
                   $.ajax({
-                    url:"<?php echo base_url(); ?>adminController/delete",
+                    url:"<?php echo base_url(); ?>admincontroller/delete",
                     type:"POST",
                     data:{id:id},
                     success:function()
