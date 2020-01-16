@@ -54,8 +54,41 @@
       color: #888 !important;
     }
     .fc-time{
-   display : none;
-}
+      display : none;
+    }
+    .fc-left .fc-button{
+      height: 38px;
+    }
+    .fc-center h2{
+      font-weight: 300;
+    }
+    .fc-right .fc-button{
+      color: #fff;
+      background: #2C3E50;
+      opacity: .6;
+      height: 38px;
+    }
+    .fc-head-container{
+      background: #fafafa;
+    }
+    .fc-body{
+      background: #fff;
+    }
+    .fc-event, .fc-event-dot{
+      background: #3a53c4;
+      border: 1px solid #3a53c4;
+      padding: 3px;
+      color: #fff !important;
+    }
+    .fc-ltr .fc-basic-view .fc-day-top .fc-day-number{
+      float: left;
+      font-size: 20px;
+      font-weight: 300;
+      padding-right: 10px;
+    }
+    .fc-unthemed td.fc-today {
+      background: #d5e4ff;
+    }
   </style>
   <!--TOP NAV-->
   <?php $this->load->view('include/head');?>
@@ -102,6 +135,29 @@
   <script src="<?=base_url('/')?>assets/js/switcher.js"></script>
   <!-- main JS -->
   <script src="<?=base_url('/')?>assets/js/main.js"></script>
+  <script type="text/javascript">
+      $('.owl-carousel').owlCarousel({
+      autoplay:true,
+      autoplayTimeout:2000,
+      autoplayHoverPause:true,
+      loop:true,
+      margin:10,
+      merge:true,
+      lazyLoad:true,
+      dots:true,
+      responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+      }
+  });
+  </script>
   <script type="text/javascript">
    $(document).ready(function(){
 
@@ -164,8 +220,9 @@
                 header:{
                     left:'prev,next Hari Ini',
                     center:'title',
-                    right:'month'
+                    right:'month',
                 },
+                dayNamesShort: ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'],
                 events:"<?php echo base_url(); ?>adminController/load",
                 allDay:false,
                 // selectable:true,

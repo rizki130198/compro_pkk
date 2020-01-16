@@ -3,6 +3,9 @@
 ul li.drop {
 	position: relative;
 }
+ul li.drop:hover {
+	background-color: #3a53c4 !important;
+}
 
 ul li a:hover {
 	color: #eee;
@@ -89,11 +92,11 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 		<div class="row flexbox-center">
 			<div class="col-lg-3 col-md-3 col-6">
 				<div class="logo-light" style="width: 350px;">
-					<a href="#home"><img src="<?php echo base_url('assets/img/logo/logo.png'); ?>" style=""></a>
-				</div>
-				<div class="logo-dark" style="width: 350px;display: none;">
 					<a href="#home"><img src="<?php echo base_url('assets/img/logo/logo_.png'); ?>" style=""></a>
 				</div>
+				<!-- <div class="logo-dark" style="width: 350px;display: none;">
+					<a href="#home"><img src="<?php echo base_url('assets/img/logo/logo_.png'); ?>" style=""></a>
+				</div> -->
 			</div>
 			<div class="col-lg-9 col-md-9 col-6">
 				<div class="responsive-menu"></div>
@@ -119,8 +122,8 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 									<div class="triangle"></div>
 									<ul>
 										<a href="<?php echo site_url('unit_usaha'); ?>"><li>Unit usaha & anak perusahaan</li></a>
-										<!-- <li>PKK Mark</li> -->
-										<!-- <li>Simpan Pinjam</li> -->
+										<a href="https://pkkmart.com/" target="_blank"><li>PKK Mark</li></a>
+										<a href="http://simpanpinjam.koperasipkkmelatijaya.co.id/"><li>Simpan Pinjam</li></a>
 									</ul>
 								</div>
 							</div>

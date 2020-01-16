@@ -65,7 +65,7 @@
 			<div class="col-lg-12">
 				<h3 style="color: #fff;">Ayo daftar menjadi anggota PKK Melati Jaya.</h3>
 				<h4 style="color: #fff;margin-top: 20px;font-weight: 100;">Dan ada banyak keungtungannya, tunggu apa lagi?</h4>
-				<a href=""><button class="btn btn-lg btn-ayo">Mulai Bergabung</button></a>
+				<a href="http://simpanpinjam.koperasipkkmelatijaya.co.id/register" target="_blank"><button class="btn btn-lg btn-ayo">Mulai Bergabung</button></a>
 			</div>
 		</div>
 	</div>
@@ -85,79 +85,24 @@
 		</div>
 		<div class="blog">
 			<div id="blogCarousel" class="carousel slide" data-ride="carousel">
-
-				<ol class="carousel-indicators">
-					<li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#blogCarousel" data-slide-to="1"></li>
-				</ol>
-
-				<!-- Carousel items -->
-				<div class="carousel-inner">
-					<div class="carousel-item">
-						<div class="row">
-							<?php foreach ($pengurus as $team) {?>
-								<div class="col-lg-3 col-md-6 col-sm-6">
-									<div class="our-team">
-										<div class="pic">
-											<img src="<?php echo base_url('assets/anggota/home/'.$team->foto); ?>">
-										</div>
-										<div class="team-content">
-											<h3 class="title"><?=$team->nama?></h3>
-											<span class="post"><?=$team->jabatan?></span>
-										</div>
-									</div>
+				<div class="owl-carousel owl-theme">
+					<?php foreach ($pengurus as $team) {?>
+						<div class="item">
+							<div class="our-team">
+								<div class="pic">
+									<img src="<?php echo base_url('assets/anggota/home/'.$team->foto); ?>">
 								</div>
-							<?php } ?>
-						</div>
-						<!--.row-->
-					</div>
-					<!--.item-->
-
-<!-- 					<div class="carousel-item">
-						<div class="row">
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/Sri Irianti.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Sri Irianti</h3>
-										<span class="post">Bendahara</span>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/neni.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Chairunnisa Nasution</h3>
-										<span class="post">Wakil Sekretaris dan Unit Usaha</span>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="our-team">
-									<div class="pic">
-										<img src="<?php echo base_url('assets/anggota/home/Erna M.jpg'); ?>">
-									</div>
-									<div class="team-content">
-										<h3 class="title">Erna S. Maharanto</h3>
-										<span class="post">Pengawas</span>
-									</div>
+								<div class="team-content">
+									<h3 class="title"><?=$team->nama?></h3>
+									<span class="post"><?=$team->jabatan?></span>
 								</div>
 							</div>
 						</div>
-						<-- row-->
-					</div>
-					<!--.item-->
+					<?php } ?>
 				</div>
-				<!--.carousel-inner-->
 			</div>
-			<!--.Carousel-->
+		</div>
+		<!--.Carousel-->
 		</div>
 	</section>
 
@@ -166,6 +111,12 @@
 	<section style="padding-top: 20px;padding-bottom:50px;background-color: #dedfe1;">
 		<div class="container">
 			<div class="row">
+				<div class="col-lg-12">
+					<div class="sec-title">
+						<h2 style="padding: 0;margin-bottom: 5px;letter-spacing: 2px;">Kalender Acara</h2>
+						<center><div class="double-line"></div></center>
+					</div>
+				</div>
 				<div id="calendar"></div>
 				<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					<div class="modal-dialog" role="document">

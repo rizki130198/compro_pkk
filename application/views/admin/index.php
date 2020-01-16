@@ -25,180 +25,224 @@
   <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css'); ?>">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-<style type="text/css">
-  .wrap {
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 4px;
-}
-.wrap h1{
-  font-size: 30px;
-  padding:50px; 
-}
-.track {
-  display: inline-block;
-  width: 350px;
-  height: 0;
-  border-top: 8px dotted #a1a1a1;
-}
-
-.ghosts {
-  display: block;
-  position: relative;
-  top: 0px;
-  backgound-color: #fff;
-}
-.ghosts .ghost-1, .ghosts .ghost-2 {
-  display: block;
-  position: absolute;
-  width: 45px;
-  height: 55px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  top: -35px;
-}
-.ghosts .ghost-1 .foot-1, .ghosts .ghost-1 .foot-2, .ghosts .ghost-1 .foot-3, .ghosts .ghost-2 .foot-1, .ghosts .ghost-2 .foot-2, .ghosts .ghost-2 .foot-3 {
-  transform: rotate(45deg);
-  display: block;
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  background-color: #222;
-  border-radius: 2px;
-  top: 51px;
-}
-.ghosts .ghost-1:before, .ghosts .ghost-1:after, .ghosts .ghost-2:before, .ghosts .ghost-2:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: blue;
-  border: 4px solid #fff;
-  border-radius: 50%;
-  top: 13px;
-}
-.ghosts .ghost-1 {
-  background-color: #01dbd7;
-  left: -40px;
-}
-.ghosts .ghost-1 .foot-1 {
-  left: 1px;
-}
-.ghosts .ghost-1 .foot-2 {
-  left: 16px;
-}
-.ghosts .ghost-1 .foot-3 {
-  left: 30px;
-}
-.ghosts .ghost-1:before {
-  left: 15px;
-}
-.ghosts .ghost-1:after {
-  left: 30px;
-}
-.ghosts .ghost-2 {
-  background-color: #fe2601;
-  left: 100%;
-  margin-left: -5px;
-}
-.ghosts .ghost-2 .foot-1 {
-  left: 1px;
-}
-.ghosts .ghost-2 .foot-2 {
-  left: 16px;
-}
-.ghosts .ghost-2 .foot-3 {
-  left: 30px;
-}
-.ghosts .ghost-2:before {
-  left: 2px;
-}
-.ghosts .ghost-2:after {
-  left: 18px;
-}
-
-.pacman {
-  width: 0px;
-  height: 0px;
-  position: relative;
-  top: 0px;
-  animation: movepacman 3.5s linear infinite;
-}
-
-.loader {
-  display: inline-block;
-  position: relative;
-}
-.loader .topchomp, .loader .bottomchomp {
-  display: block;
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  border: 30px solid #fef200;
-  border-radius: 50%;
-  top: -48px;
-}
-.loader .topchomp {
-  border-right-color: transparent;
-  animation: topchomp 0.3s linear infinite;
-}
-.loader .topchomp:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  background-color: #222;
-  border-radius: 50%;
-  top: -22px;
-  left: -5px;
-  z-index: 999;
-}
-.loader .bottomchomp {
-  border-top-color: transparent;
-  border-right-color: transparent;
-  animation: bottomchomp 0.3s linear infinite;
-}
-
-@keyframes topchomp {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(45deg);
-  }
-}
-@keyframes bottomchomp {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-45deg);
-  }
-}
-@keyframes movepacman {
-  0% {
-    left: 17%;
-  }
-  45% {
-    left: 83%;
-    transform: rotateY(0deg);
-  }
-  50% {
-    left: 83%;
-    transform: rotateY(180deg);
-  }
-  95% {
-    left: 17%;
-    transform: rotateY(180deg);
-  }
-  100% {
-    left: 17%;
-    transform: rotateY(0deg);
-  }
-}
-</style>
+  <style type="text/css">
+    .wrap {
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 4px;
+    }
+    .wrap h1{
+      font-size: 30px;
+      padding:50px; 
+    }
+    .track {
+      display: inline-block;
+      width: 350px;
+      height: 0;
+      border-top: 8px dotted #a1a1a1;
+    }
+    .ghosts {
+      display: block;
+      position: relative;
+      top: 0px;
+      backgound-color: #fff;
+    }
+    .ghosts .ghost-1, .ghosts .ghost-2 {
+      display: block;
+      position: absolute;
+      width: 45px;
+      height: 55px;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
+      top: -35px;
+    }
+    .ghosts .ghost-1 .foot-1, .ghosts .ghost-1 .foot-2, .ghosts .ghost-1 .foot-3, .ghosts .ghost-2 .foot-1, .ghosts .ghost-2 .foot-2, .ghosts .ghost-2 .foot-3 {
+      transform: rotate(45deg);
+      display: block;
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      background-color: #222;
+      border-radius: 2px;
+      top: 51px;
+    }
+    .ghosts .ghost-1:before, .ghosts .ghost-1:after, .ghosts .ghost-2:before, .ghosts .ghost-2:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background-color: blue;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      top: 13px;
+    }
+    .ghosts .ghost-1 {
+      background-color: #01dbd7;
+      left: -40px;
+    }
+    .ghosts .ghost-1 .foot-1 {
+      left: 1px;
+    }
+    .ghosts .ghost-1 .foot-2 {
+      left: 16px;
+    }
+    .ghosts .ghost-1 .foot-3 {
+      left: 30px;
+    }
+    .ghosts .ghost-1:before {
+      left: 15px;
+    }
+    .ghosts .ghost-1:after {
+      left: 30px;
+    }
+    .ghosts .ghost-2 {
+      background-color: #fe2601;
+      left: 100%;
+      margin-left: -5px;
+    }
+    .ghosts .ghost-2 .foot-1 {
+      left: 1px;
+    }
+    .ghosts .ghost-2 .foot-2 {
+      left: 16px;
+    }
+    .ghosts .ghost-2 .foot-3 {
+      left: 30px;
+    }
+    .ghosts .ghost-2:before {
+      left: 2px;
+    }
+    .ghosts .ghost-2:after {
+      left: 18px;
+    }
+    .pacman {
+      width: 0px;
+      height: 0px;
+      position: relative;
+      top: 0px;
+      animation: movepacman 3.5s linear infinite;
+    }
+    .loader {
+      display: inline-block;
+      position: relative;
+    }
+    .loader .topchomp, .loader .bottomchomp {
+      display: block;
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      border: 30px solid #fef200;
+      border-radius: 50%;
+      top: -48px;
+    }
+    .loader .topchomp {
+      border-right-color: transparent;
+      animation: topchomp 0.3s linear infinite;
+    }
+    .loader .topchomp:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      background-color: #222;
+      border-radius: 50%;
+      top: -22px;
+      left: -5px;
+      z-index: 999;
+    }
+    .loader .bottomchomp {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      animation: bottomchomp 0.3s linear infinite;
+    }
+    @keyframes topchomp {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(45deg);
+      }
+    }
+    @keyframes bottomchomp {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(-45deg);
+      }
+    }
+    @keyframes movepacman {
+      0% {
+        left: 17%;
+      }
+      45% {
+        left: 83%;
+        transform: rotateY(0deg);
+      }
+      50% {
+        left: 83%;
+        transform: rotateY(180deg);
+      }
+      95% {
+        left: 17%;
+        transform: rotateY(180deg);
+      }
+      100% {
+        left: 17%;
+        transform: rotateY(0deg);
+      }
+    }
+    .fc-left .fc-button{
+      height: 38px;
+    }
+    .fc-state-disabled{
+      color: #fff;
+      background-color: #2C3E50;
+      border-color: #2C3E50;
+    }
+    .fc-state-disabled:hover{
+      color: #2C3E50;
+    }
+    .fc-center h2{
+      font-weight: 300;
+    }
+    .fc-right .fc-button{
+      color: #495057;
+      height: 38px;
+      background: #f8f9fa;
+      border-bottom-color: #ddd;
+      border-color: #ddd;
+    }
+    .fc-right .fc-state-active{
+      background: #1a252f !important;
+      border-bottom-color: #1a252f;
+      border-color: #1a252f;
+      color: #fff;
+    }  
+    .fc-head-container{
+      background: #fafafa;
+    }
+    .fc-body{
+      background: #fff;
+    }
+    .fc-event, .fc-event-dot{
+      background: #3a53c4;
+      border: 1px solid #3a53c4;
+      padding: 3px;
+      color: #fff !important;
+    }
+    .fc-ltr .fc-basic-view .fc-day-top .fc-day-number{
+      float: left;
+      font-size: 20px;
+      font-weight: 300;
+      padding-right: 10px;
+    }
+    .fc-unthemed td.fc-today {
+      background: #d5e4ff;
+    }
+  </style>
 <!-- <div id="loader" style="z-index:9999;position: fixed;width: 100%;height:100%;background: rgba(255,255,255,.8);display: flex;align-items: center;justify-content: center">
   <div class="wrap">
     <div class="track">
@@ -413,65 +457,64 @@
 <script type="text/javascript" src="<?=base_url('admin/js/admin.js');?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/sweetalert2/sweetalert2.min.js'); ?>"></script>
 <script>
-        $(document).ready(function(){
-            var calendar = $('#calendar').fullCalendar({
-                editable:true,
-                header:{
-                    left:'prev,next today',
-                    center:'title',
-                    right:'month,agendaWeek,agendaDay'
-                },
-                events:"<?php echo base_url(); ?>admincontroller/load",
-                selectable:true,
-                selectHelper:true,
+  $(document).ready(function(){
+    var calendar = $('#calendar').fullCalendar({
+      editable:true,
+      header:{
+        left:'prev,next today',
+        center:'title',
+        right:'month,agendaWeek,agendaDay'
+      },
+      events:"<?php echo base_url(); ?>admincontroller/load",
+      selectable:true,
+      selectHelper:true,
+                // selectConstraint: {
+                //     start: $.fullCalendar.moment().subtract(1, 'days'),
+                //     end: $.fullCalendar.moment().startOf('month').add(1, 'month')
+                // },
                 select:function(start, end, allDay)
                 {
-                    console.log(start+'+'+end+'+'+allDay);
-                    $("#modlaisi").modal('show');
-                    $('#tambaheventadmin').on('click', function(event) {
-                      if($('#judulagenda').val() != null)
-                      {
-                        var start = moment(start).format("Y-MM-DD HH:mm:ss");
-                        var end = moment(end).format("Y-MM-DD HH:mm:ss");
-                        $.ajax({
-                          url:"<?php echo base_url(); ?>admincontroller/insert",
-                          type:"POST",
-                          data:{title:$('#judulagenda').val(), desc:$('#deskripsiagenda').val(), start:start, end:end},
-                          success:function()
-                          {
-                            calendar.fullCalendar('refetchEvents');
-                            alert("Berhasil di Tambah");
-                          }
-                        });
-
-                      }
+                  $("#modlaisi").modal('show');
+                  $('#tambaheventadmin').on('click', function(event) {
+                    if($('#judulagenda').val() != null)
+                    {
+                      var startday = moment(start).format("Y-MM-DD HH:mm:ss");
+                      var endday = moment(end).format("Y-MM-DD HH:mm:ss");
+                      $.ajax({
+                        url:"<?php echo base_url(); ?>adminController/insert",
+                        type:"POST",
+                        data:{title:$('#judulagenda').val(), desc:$('#deskripsiagenda').val(), start:startday, end:endday},
+                        success:function()
+                        {
+                          calendar.fullCalendar('refetchEvents');
+                          location.reload();
+                        }
+                      });
+                    }
                     $("#modlaisi").modal('hide');
-                    });
+                  });
                 },
                 editable:true,
                 eventResize:function(event)
                 {
-                    var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
-                    var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
-
-                    var title = event.title;
-                    var desc = event.desc;
-                    var id = event.id;
-
-                    $.ajax({
-                        url:"<?php echo base_url(); ?>admincontroller/update",
-                        type:"POST",
-                        data:{title:title, desc:desc, start:start, end:end, id:id},
-                        success:function()
-                        {
-                            calendar.fullCalendar('refetchEvents');
-                            alert("Acara di Update");
-                        }
-                    })
+                  var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
+                  var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
+                  var title = event.title;
+                  var desc = event.desc;
+                  var id = event.id;
+                  $.ajax({
+                    url:"<?php echo base_url(); ?>admincontroller/update",
+                    type:"POST",
+                    data:{title:title, desc:desc, start:start, end:end, id:id},
+                    success:function()
+                    {
+                      location.reload();
+                    }
+                  })
                 },
                 eventDrop:function(event)
                 {
-                    var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
+                  var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");
                 //alert(start);
                 var end = $.fullCalendar.formatDate(event.end, "Y-MM-DD HH:mm:ss");
                 //alert(end);
@@ -479,65 +522,61 @@
                 var desc = event.desc;
                 var id = event.id;
                 $.ajax({
-                    url:"<?php echo base_url(); ?>admincontroller/update",
-                    type:"POST",
-                    data:{title:title, desc:desc, start:start, end:end, id:id},
-                    success:function()
-                    {
-                        calendar.fullCalendar('refetchEvents');
-                        alert("Acara di update");
-                    }
+                  url:"<?php echo base_url(); ?>admincontroller/update",
+                  type:"POST",
+                  data:{title:title, desc:desc, start:start, end:end, id:id},
+                  success:function()
+                  {
+                    calendar.fullCalendar('refetchEvents');
+                    alert("Acara di update");
+                  }
                 })
-            },
-            eventClick:function(event, jsEvent, view) {
-
-              $('#modalTitle').html(event.title);
-              $('#modalBody').text(event.desc);
-              $('#tanggalModal').modal('show');
-              $("#hapuseventadmin").click(function() {
-                if(confirm("Yakin Ingin Hapus Data ini ?"))
-                {
-                  var id = event.id;
-                  $.ajax({
-                    url:"<?php echo base_url(); ?>admincontroller/delete",
-                    type:"POST",
-                    data:{id:id},
-                    success:function()
-                    {
-                      calendar.fullCalendar('refetchEvents');
-                      alert('Acara di Hapus');
-                      $('#tanggalModal').modal('hide');
-                    }
-                  })
-                }
-              });
-            },
-          });
-        });
-
-    </script>
+              },
+              eventClick:function(event, jsEvent, view) {
+                $('#modalTitle').html(event.title);
+                $('#modalBody').text(event.desc);
+                $('#tanggalModal').modal('show');
+                $("#hapuseventadmin").click(function() {
+                  if(confirm("Yakin Ingin Hapus Data ini ?"))
+                  {
+                    var id = event.id;
+                    $.ajax({
+                      url:"<?php echo base_url(); ?>adminController/delete",
+                      type:"POST",
+                      data:{id:id},
+                      success:function()
+                      {
+                        calendar.fullCalendar('refetchEvents');
+                        $('#tanggalModal').modal('hide');
+                      }
+                    })
+                  }
+                });
+              },
+            });
+});
+</script>
 <?php if ($this->uri->segment(2)=='berita' OR $this->uri->segment(1)=='tambah_berita' OR $this->uri->segment(2)=='edit_berita') { ?>
   <script type="text/javascript" src="https://cdn.ckeditor.com/4.8.0/full-all/ckeditor.js"></script>
   <script type="text/javascript">
-     $(document).ready(function() {
-                      CKEDITOR.replace('editor', {
-                skin: 'kama',
-                enterMode: CKEDITOR.ENTER_BR,
-                shiftEnterMode:CKEDITOR.ENTER_P,
-                toolbar: [{ name: 'basicstyles', groups: [ 'basicstyles' ], items: [ 'Bold', 'Italic', 'Underline', "-", 'TextColor', 'BGColor' ] },
-                { name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
-                { name: 'scripts', items: [ 'Subscript', 'Superscript' ] },
-                { name: 'justify', groups: [ 'blocks', 'align' ], items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-                { name: 'paragraph', groups: [ 'list', 'indent' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'] },
-                { name: 'links', items: [ 'Link', 'Unlink' ] },
-                { name: 'insert', items: [ 'Image'] },
-                { name: 'spell', items: [ 'jQuerySpellChecker' ] },
-                { name: 'table', items: [ 'Table' ] }
-              ],
-          });
-
-      })
-  </script>
+   $(document).ready(function() {
+    CKEDITOR.replace('editor', {
+      skin: 'kama',
+      enterMode: CKEDITOR.ENTER_BR,
+      shiftEnterMode:CKEDITOR.ENTER_P,
+      toolbar: [{ name: 'basicstyles', groups: [ 'basicstyles' ], items: [ 'Bold', 'Italic', 'Underline', "-", 'TextColor', 'BGColor' ] },
+      { name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
+      { name: 'scripts', items: [ 'Subscript', 'Superscript' ] },
+      { name: 'justify', groups: [ 'blocks', 'align' ], items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+      { name: 'paragraph', groups: [ 'list', 'indent' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'] },
+      { name: 'links', items: [ 'Link', 'Unlink' ] },
+      { name: 'insert', items: [ 'Image'] },
+      { name: 'spell', items: [ 'jQuerySpellChecker' ] },
+      { name: 'table', items: [ 'Table' ] }
+      ],
+    });
+  })
+</script>
 <?php } ?>
 <!-- <script type="text/javascript">
   jQuery(window).load(function () {
@@ -609,29 +648,29 @@
  });
 </script>
 <?php if ($this->session->flashdata('gagal')) { ?>
-<div id="error">
-  <script type="text/javascript" charset="utf-8" >
-    $.toast({
-      type: 'error',
-      title: "<?=$this->session->flashdata('gagal')?>",
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000
-    });
-  </script>
-</div>
+  <div id="error">
+    <script type="text/javascript" charset="utf-8" >
+      $.toast({
+        type: 'error',
+        title: "<?=$this->session->flashdata('gagal')?>",
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000
+      });
+    </script>
+  </div>
 <?php }elseif($this->session->flashdata('sukses')){ ?>
-<div id="sukses">
-  <script type="text/javascript" charset="utf-8" >
-    $.toast({
-      type: 'success',
-      title: "<?=$this->session->flashdata('sukses')?>",
-      position: 'top-end',
-      showConfirmButton: false,
-      timer: 3000
-    });
-  </script>
-</div>
+  <div id="sukses">
+    <script type="text/javascript" charset="utf-8" >
+      $.toast({
+        type: 'success',
+        title: "<?=$this->session->flashdata('sukses')?>",
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000
+      });
+    </script>
+  </div>
 <?php } ?>
 </body>
 </html>
