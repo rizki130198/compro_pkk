@@ -8,7 +8,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="hero-area-content">
-								<img src="<?php echo base_url('assets/img/'.$beranda->gambar); ?>" style="height:400px;border-radius: 12px;">
+								<img src="<?php echo base_url('assets/img/berita/'.$beranda->gambar); ?>" style="height:400px;border-radius: 12px;">
 							</div>
 						</div>
 					</div>

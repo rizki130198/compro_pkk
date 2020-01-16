@@ -481,7 +481,7 @@
                       var startday = moment(start).format("Y-MM-DD HH:mm:ss");
                       var endday = moment(end).format("Y-MM-DD HH:mm:ss");
                       $.ajax({
-                        url:"<?php echo base_url(); ?>adminController/insert",
+                        url:"<?php echo base_url(); ?>admincontroller/insert",
                         type:"POST",
                         data:{title:$('#judulagenda').val(), desc:$('#deskripsiagenda').val(), start:startday, end:endday},
                         success:function()
@@ -541,7 +541,7 @@
                   {
                     var id = event.id;
                     $.ajax({
-                      url:"<?php echo base_url(); ?>adminController/delete",
+                      url:"<?php echo base_url(); ?>admincontroller/delete",
                       type:"POST",
                       data:{id:id},
                       success:function()
