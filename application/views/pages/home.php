@@ -8,7 +8,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="hero-area-content">
-								<img src="<?php echo base_url('assets/img/'.$beranda->gambar); ?>" style="height:400px;border-radius: 12px;">
+								<img src="<?php echo base_url('assets/img/berita/'.$beranda->gambar); ?>" style="height:400px;border-radius: 12px;">
 							</div>
 						</div>
 					</div>
@@ -128,7 +128,7 @@
 								</button>
 							</div>
 							<div class="modal-body" id="modalBody">
-								
+
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
