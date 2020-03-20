@@ -22,7 +22,8 @@
   <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/fullcalendar-timegrid/main.min.css'); ?>">
   <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/fullcalendar-bootstrap/main.min.css'); ?>"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.css" />
-  <link rel="stylesheet" type="text/css" href="<?=base_url('admin/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css'); ?>">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
   <style type="text/css">
@@ -450,7 +451,6 @@
 <script type="text/javascript" src="<?=base_url('admin/dist/js/pages/dashboard.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/jqvmap/jquery.vmap.min.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/jquery-knob/jquery.knob.min.js'); ?>"></script>
-<script type="text/javascript" src="<?=base_url('admin/plugins/daterangepicker/daterangepicker.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/summernote/summernote-bs4.min.js'); ?>"></script>
 <script type="text/javascript" src="<?=base_url('admin/plugins/datatables/jquery.dataTables.js');?>"></script> 
 <script type="text/javascript" src="<?=base_url('admin/plugins/datatables-bs4/js/dataTables.bootstrap4.js');?>"></script> 
@@ -566,18 +566,28 @@
       skin: 'kama',
       enterMode: CKEDITOR.ENTER_BR,
       shiftEnterMode:CKEDITOR.ENTER_P,
-      toolbar: [{ name: 'basicstyles', groups: [ 'basicstyles' ], items: [ 'Bold', 'Italic', 'Underline', "-", 'TextColor', 'BGColor' ] },
-      { name: 'styles', items: [ 'Format', 'Font', 'FontSize' ] },
-      { name: 'scripts', items: [ 'Subscript', 'Superscript' ] },
-      { name: 'justify', groups: [ 'blocks', 'align' ], items: [ 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-      { name: 'paragraph', groups: [ 'list', 'indent' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'] },
-      { name: 'links', items: [ 'Link', 'Unlink' ] },
-      { name: 'insert', items: [ 'Image'] },
-      { name: 'spell', items: [ 'jQuerySpellChecker' ] },
-      { name: 'table', items: [ 'Table' ] }
+      toolbar: [{ name: 'document', items: [ 'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates' ] },
+      { name: 'clipboard', items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+      { name: 'editing', items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
+      { name: 'forms', items: [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ] },
+      '/',
+      { name: 'basicstyles', items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ] },
+      { name: 'paragraph', items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ] },
+      { name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+      { name: 'insert', items: [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ] },
+      '/',
+      { name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] },
+      { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+      { name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
+      { name: 'about', items: [ 'About' ] }
       ],
     });
   })
+</script>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
 </script>
 <?php } ?>
 <!-- <script type="text/javascript">

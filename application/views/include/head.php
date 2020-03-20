@@ -122,8 +122,9 @@ ul li:hover .dropOut { opacity: 1; margin-top: 8px; }</style>
 									<div class="triangle"></div>
 									<ul>
 										<a href="<?php echo site_url('unit_usaha'); ?>"><li>Unit usaha & anak perusahaan</li></a>
-										<a href="https://pkkmart.com/" target="_blank"><li>PKK Mark</li></a>
+										<a href="https://pkkmart.com/" target="_blank"><li>PKK Mart</li></a>
 										<a href="http://simpanpinjam.koperasipkkmelatijaya.co.id/"><li>Simpan Pinjam</li></a>
+										<a href="#"><li>Laporan</li></a>
 									</ul>
 								</div>
 							</div>
